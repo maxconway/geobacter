@@ -1,0 +1,789 @@
+name	abbreviation	equation	lowbnd	uppbnd	Present	obj_coef	rule	Knockout cost	Knockin cost	ProteinClass	subSystem
+3-hydroxypimeloyl-CoA dehydrogenase	3HOPCD	[c] : 3hpimcoa + nad <==> 3opimcoa + h + nadh	-Inf	Inf	1	0	Gmet_2072	1	1	Acd	Aromatic Compound degradation
+4-hydroxybenzoyl-CoA thioesterase	4HBTE	[c] : 4hbcoa + h2o <==> 4hbz + coa + h	-Inf	Inf	1	0	Gmet_3556	1	1	Hbzt	Aromatic Compound degradation
+4-hydroxybenzoylCoA reducatse	4HBZR	[c] : 4hbcoa + fdxr-4:2 + (2) h --> benzcoa + fdxo-4:2 + h2o	0	Inf	1	0	Gmet_2136_OR_Gmet_2134_OR_Gmet_2135	1	1	HbaBCD	Aromatic Compound degradation
+arabinose-5-phosphate isomerase	A5PISO	[c] : ru5p-D <==> ara5p	-Inf	Inf	1	0	Gmet_1278	1	1	ArpI	Cell Envelope Biosynthesis
+Acetyl-CoA:[acyl-carrier-protein] S-acetyltransferase	AACPAT	[c] : ACP + accoa --> acACP + coa	0	Inf	1	0	Gmet_1599, Gmet_3272	1	1	FabH1, FabH	Fatty Acid Synthesis
+acyl-[acyl-carrier-protein] synthetase (n-C14:0)	AACPS1	[c] : ACP + atp + ttdca --> amp + myrsACP + ppi	0	Inf	1	0	Gmet_0086	1	1	Aas	Cell Envelope Biosynthesis
+acyl-[acyl-carrier-protein] synthetase  (n-C14:1)	AACPS2	[c] : ACP + atp + ttdcea --> amp + ppi + tdeACP	0	Inf	1	0	Gmet_0086	1	1	Aas	Cell Envelope Biosynthesis
+acyl-[acyl-carrier-protein] synthetase  (n-C16:0)	AACPS3	[c] : ACP + atp + hdca --> amp + palmACP + ppi	0	Inf	1	0	Gmet_0086	1	1	Aas	Cell Envelope Biosynthesis
+acyl-[acyl-carrier-protein] synthetase  (n-C16:1)	AACPS4	[c] : ACP + atp + hdcea --> amp + hdeACP + ppi	0	Inf	1	0	Gmet_0086	1	1	Aas	Cell Envelope Biosynthesis
+acyl-[acyl-carrier-protein] synthetase  (n-C18:1)	AACPS5	[c] : ACP + atp + ocdcea --> amp + octeACP + ppi	0	Inf	1	0	Gmet_0086	1	1	Aas	Cell Envelope Biosynthesis
+acetyl-CoA C-acetyltransferase	ACACT1r	[c] : (2) accoa <==> aacoa + coa	-Inf	Inf	1	0	Gmet_2074, Gmet_2213, Gmet_3302, Gmet_1719	1	1	AtoBec4, AtoBec6, AtoBec, AtoBec1	Membrane Lipid Metabolism
+acetyl-CoA C-acyltransferase (3-Oxoadipyl-CoA)	ACACT8r	[c] : coa + oxadpcoa <==> accoa + succoa	-Inf	Inf	1	0	Gmet_2268, Gmet_2058, Gmet_2197	1	1	PcaF2, PcaF, PcaF3	Lipid & Cell Wall Metabolism
+Adenosyl cobainamide GTP transferase	ACBIPGT	[c] : adcobap + gtp + h --> adgcoba + ppi	0	Inf	1	0	Gmet_0466	1	1	CobU	Vitamins & Cofactor Biosynthesis
+acetyl-CoA carboxylase	ACCOAC	[c] : accoa + atp + hco3 --> adp + h + malcoa + pi	0	Inf	1	0	Gmet_2476_OR_Gmet_1216_AND_ Gmet_0984_AND_ Gmet_0983	1	1	AccAD+AccB+AccC	Lipid & Cell Wall Metabolism
+UDP-N-acetylglucosamine:undecaprenylphosphate N-acetylglucosamine -1-phosphate transferase	ACGAMT	[c] : uacgam + udcpp --> ump + unaga	0	Inf	1	0	Gmet_1505	1	1	WecA	Lipid & Cell Wall Metabolism
+acetylglutamate kinase	ACGK	[c] : acglu + atp --> acg5p + adp	0	Inf	1	0	Gmet_0203	1	1	ArgB	Amino Acid Metabolism
+N-acetylglutamate synthase	ACGS	[c] : accoa + glu-L --> acglu + coa + h	0	Inf	1	0	Gmet_0946	1	1	ArgA	Amino Acid Metabolism
+2-aceto-2-hydroxybutanoate synthase	ACHBS	[c] : 2obut + h + pyr --> 2ahbut + co2	0	Inf	1	0	Gmet_1261, Gmet_1260	1	1	IlvN1+IlvB	Amino Acid Metabolism
+acetate kinase	ACKr	[c] : ac + atp <==> actp + adp	-Inf	Inf	1	0	Gmet_0149, Gmet_1034	1	1	AckA , AckA2	Central Metabolism
+acetolactate synthase (Also catalyzes ACHBS)	ACLS	[c] : h + (2) pyr --> alac-S + co2	0	Inf	1	0	Gmet_1261, Gmet_1260	1	1	IlvB+IlvN1	Amino Acid Metabolism
+Acyl-[acyl-carrier-protein]:malonyl-[acyl-carrier-protein] C-acyltransferase (decarboxylating)	ACMAT1	[c] : acACP + h + malACP --> ACP + actACP + co2	0	Inf	1	0	Gmet_1599, Gmet_1603, Gmet_3272, Gmet_1695, Gmet_1696	1	1	FabH1, FabF, FabF3, FabH, FabF2	Fatty Acid Synthesis
+N-Acetylneuraminate pyruvate-lyase	ACNPLYS	[c] : acmana + h2o + pep --> acnam + pi	0	Inf	1	0	Gmet_0455	1	1	Anpl	Lipid & Cell Wall Metabolism
+acyl-CoA dehydrogenase (butanoyl-CoA)	ACOAD1	[c] : b2coa + h + nadh <==> btcoa + nad	-Inf	Inf	1	0	Gmet_2075, Gmet_2270, Gmet_3307, Gmet_3306, Gmet_2211, Gmet_2198, Gmet_1715, Gmet_1710, Gmet_3289, Gmet_2199	1	1	AcdA, AcdA9, AcdA8, AcdA7, AcdA1, AcdA5, AcdA4, AcdA10, AcdA2, AcdA3	Lipids
+acyl-CoA dehydrogenase (hexanoyl-CoA)	ACOAD2	[c] : h + hx2coa + nadh <==> hxcoa + nad	-Inf	Inf	1	0	Gmet_2075, Gmet_2270, Gmet_3307, Gmet_3306, Gmet_2211, Gmet_2198, Gmet_1715, Gmet_1710, Gmet_3289, Gmet_2199	1	1	AcdA5, AcdA10, AcdA7, AcdA2, AcdA3, AcdA1, AcdA9, AcdA8, AcdA4, AcdA	Lipids
+acyl-CoA dehydrogenase (octanoyl-CoA)	ACOAD3	[c] : nad + occoa <==> h + nadh + oc2coa	-Inf	Inf	1	0	Gmet_2075, Gmet_2270, Gmet_3307, Gmet_3306, Gmet_2211, Gmet_2198, Gmet_1715, Gmet_1710, Gmet_3289, Gmet_2199	1	1	AcdA2, AcdA8, AcdA5, AcdA1, AcdA, AcdA10, AcdA7, AcdA3, AcdA4, AcdA9	Lipids
+acyl-CoA dehydrogenase (decanoyl-CoA)	ACOAD4	[c] : dccoa + nad <==> dc2coa + h + nadh	-Inf	Inf	1	0	Gmet_2075, Gmet_2270, Gmet_3307, Gmet_3306, Gmet_2211, Gmet_2198, Gmet_1715, Gmet_1710, Gmet_3289, Gmet_2199	1	1	AcdA10, AcdA9, AcdA5, AcdA2, AcdA, AcdA7, AcdA3, AcdA8, AcdA1, AcdA4	Lipids
+acyl-CoA dehydrogenase (dodecanoyl-CoA)	ACOAD5	[c] : ddcoa + nad <==> h + nadh + trans-dd2coa	-Inf	Inf	1	0	Gmet_2075, Gmet_2270, Gmet_3307, Gmet_3306, Gmet_2211, Gmet_2198, Gmet_1715, Gmet_1710, Gmet_3289, Gmet_2199	1	1	AcdA4, AcdA, AcdA10, AcdA9, AcdA7, AcdA5, AcdA2, AcdA3, AcdA8, AcdA1	Lipids
+acyl-CoA dehydrogenase (tetradecanoyl-CoA)	ACOAD6	[c] : nad + tdcoa <==> h + nadh + td2coa	-Inf	Inf	1	0	Gmet_2075, Gmet_2270, Gmet_3307, Gmet_3306, Gmet_2211, Gmet_2198, Gmet_1715, Gmet_1710, Gmet_3289, Gmet_2199	1	1	AcdA, AcdA4, AcdA10, AcdA8, AcdA7, AcdA1, AcdA3, AcdA2, AcdA5, AcdA9	Lipids
+acyl-CoA dehydrogenase (hexadecanoyl-CoA)	ACOAD7	[c] : nad + pmtcoa <==> h + hdd2coa + nadh	-Inf	Inf	1	0	Gmet_2075, Gmet_2270, Gmet_3307, Gmet_3306, Gmet_2211, Gmet_2198, Gmet_1715, Gmet_1710, Gmet_3289, Gmet_2199	1	1	AcdA7, AcdA1, AcdA10, AcdA3, AcdA2, AcdA5, AcdA9, AcdA4, AcdA, AcdA8	Lipids
+acetyl-CoA hydrolase	ACOAH	[c] : accoa + h2o --> ac + coa + h	0	Inf	1	0	Gmet_3304, Gmet_2054, Gmet_3294	1	1	Ach3, Ach, Ach2	Central Metabolism
+aconitase	ACONT	[c] : cit <==> icit	-Inf	Inf	1	0	Gmet_2763, Gmet_1016, Gmet_1912	1	1	Aco3, Aco2, Aco1	Central Metabolism
+acetylornithine transaminase	ACOTA	[c] : acorn + akg <==> acg5sa + glu-L	-Inf	Inf	1	0	Gmet_0204	1	1	ArgD	Amino Acid Metabolism
+acyl-carrier protein synthase	ACPS1	[c] : apoACP + coa --> ACP + h + pap	0	Inf	1	0	Gmet_1884	1	1	AcpS	Cofactor and Prosthetic Group Biosynthesis
+acetyl-CoA synthetase	ACS	[c] : ac + atp + coa --> accoa + amp + ppi	0	Inf	1	0	Gmet_2340	1	1	AcsA	Carbohydrates and related molecules
+acetyl-CoA synthase (propionate)	ACS2	[c] : atp + coa + ppa --> amp + ppcoa + ppi	0	Inf	1	0	Gmet_2340	1	1	AcsA	Carbohydrates and related molecules
+acetate transport in via proton symport	ACt2	ac[e] + h[e] --> ac[c] + h[c]	0	Inf	1	0	Gmet_3288, Gmet_0739	1	1	ActP3, ActP2	Transport
+4-aminobenzoate synthase	ADCL	[c] : 4adcho --> 4abz + h + pyr	0	Inf	1	0	Gmet_3010	1	1	PabABC	Amino Acid Metabolism
+Adenosyl cobinamide kinase	ADCOBAK	[c] : adcoba + atp --> adcobap + adp + h	0	Inf	1	0	Gmet_0466	1	1	CobU	Vitamins & Cofactor Biosynthesis
+adenosylcobinamide-phosphate synthase	ADCOBAS	[c] : 1ap2ol + adcobhex --> adcoba + h2o	0	Inf	1	0	Gmet_0486	1	1	CbiB	Vitamins & Cofactor Biosynthesis
+adenosylcobyric acid synthase	ADCOBHEXS	[c] : adcobdam + (4) atp + (4) gln-L + (4) h2o --> adcobhex + (4) adp + (4) glu-L + (4) h + (4) pi	0	Inf	1	0	Gmet_0485	1	1	CbiP-CbiH	Vitamins & Cofactor Biosynthesis
+adenosylcobinamide-phosphate synthase	ADCPS2	[c] : 1ap2olp + adcobhex + atp --> adcobap + adp + h + pi	0	Inf	1	0	Gmet_0486	1	1	CbiB	Vitamins & Cofactor Biosynthesis
+4-amino-4-deoxychorismate synthase	ADCS	[c] : chor + gln-L --> 4adcho + glu-L	0	Inf	1	0	Gmet_3010	1	1	PabABC	Amino Acid Metabolism
+adenine deaminase	ADD	[c] : ade + h + h2o --> hxan + nh4	0	Inf	1	0	Gmet_2201	1	1	AdeC	Nucleotides and nucleic acids
+adenylate kinase	ADK1	[c] : amp + atp <==> (2) adp	-Inf	Inf	1	0	Gmet_0647	1	1	Adk	Nucleotide Metabolism
+adenylate kinase (Inorganic triphosphate)	ADK2	[c] : amp + pppi <==> adp + ppi	-Inf	Inf	1	0	Gmet_0647	1	1	Adk	Nucleotide Metabolism
+guanylate kinase (aMP:gTP)	ADK3	[c] : amp + gtp <==> adp + gdp	-Inf	Inf	1	0	Gmet_0647	1	1	Adk	Nucleotide Metabolism
+adentylate kinase (ITP)	ADK4	[c] : amp + itp <==> adp + idp	-Inf	Inf	1	0	Gmet_0647	1	1	Adk	Nucleotide Metabolism
+adenosine kinase	ADNK1	[c] : adn + atp --> adp + amp + h	0	Inf	1	0	Gmet_0647	1	1	Adk	Nucleotide Metabolism
+ADPribose diphosphatase	ADPRDP	[c] : adprib + h2o --> amp + (2) h + r5p	0	Inf	1	0	Gmet_0048	1	1	NudF	Nucleotide Metabolism
+adenine phosphoribosyltransferase	ADPT	[c] : ade + prpp --> amp + ppi	0	Inf	1	0	Gmet_1422	1	1	Apt	Nucleotide Metabolism
+adenylosuccinate lyase	ADSL1	[c] : dcamp --> amp + fum	0	Inf	1	0	Gmet_1943	1	1	PurB	Nucleotide Metabolism
+adenylosuccinate lyase	ADSL2	[c] : 25aics --> aicar + fum	0	Inf	1	0	Gmet_1943	1	1	PurB	Nucleotide Metabolism
+adenylosuccinate synthetase	ADSS	[c] : asp-L + gtp + imp --> dcamp + gdp + (2) h + pi	0	Inf	1	0	Gmet_3260	1	1	PurA	Nucleotide Metabolism
+1-acylglycerol-3-phosphate O-acyltransferase	AGPAT	[c] : 12dag3p + coa --> 1ag3p + acoa	0	Inf	1	0	Gmet_0363, Gmet_0934	1	1	PlsC1, PlsC2	Lipid & Cell Wall Metabolism
+N-acetyl-g-glutamyl-phosphate reductase	AGPR	[c] : acg5sa + nadp + pi <==> acg5p + h + nadph	-Inf	Inf	1	0	Gmet_0608	1	1	ArgC	Amino Acid Metabolism
+adenosylhomocysteinase	AHC	[c] : ahcys + h2o <==> adn + hcys-L	-Inf	Inf	1	0	Gmet_1294	1	1	AhcY	Amino Acid Metabolism
+adenosylhomocysteine nucleosidase	AHCYSNS	[c] : ahcys + h2o --> ade + rhcys	0	Inf	1	0	Gmet_1274, Gmet_3381	1	1	Pfs1, Pfs2	Nucleotide Metabolism
+4-amino-5-hydroxymethyl-2-methylpyrimidine synthetase	AHMMPS	[c] : air + h2o --> 4ahmmp + gcald + (0.5) o2 + pi	0	Inf	1	0	Gmet_2910, Gmet_0471	1	1	ThiC , ThiC2	Vitamins & Cofactor Biosynthesis
+phosphoribosylaminoimidazolecarboxamide formyltransferase	AICART	[c] : 10fthf + aicar <==> fprica + thf	-Inf	Inf	1	0	Gmet_2905	1	1	PurH	Nucleotide Metabolism
+phosphoribosylaminoimidazole carboxylase	AIRC	[c] : air + co2 --> 5aizc + h	0	Inf	1	0	Gmet_2903	1	1	PurK	Nucleotide Metabolism
+2-oxoglutarate dehydrogenase	AKGD	[c] : akg + coa + nad --> co2 + nadh + succoa	0	Inf	1	0	Gmet_2766, Gmet_2764, Gmet_2769, Gmet_1896	1	1	SucA+SucB+Lpd2, SucA+Lpd+SucB	Central Metabolism
+D-alanine-D-alanine ligase (reversible)	ALAALA	[c] : (2) ala-D + atp <==> adp + alaala + h + pi	-Inf	Inf	1	0	Gmet_0415	1	1	Ddl	Lipid & Cell Wall Metabolism
+L-alanine dehydrogenase	ALAD_L	[c] : ala-L + h2o + nad --> h + nadh + nh4 + pyr	0	Inf	1	0	Gmet_1099	1	1	Ald	Amino Acid Metabolism
+alanine racemase	ALAR	[c] : ala-L <==> ala-D	-Inf	Inf	1	0	Gmet_2908	1	1	Alr	Lipid & Cell Wall Metabolism
+L-alanine transaminase	ALATA_L	[c] : akg + ala-L <==> glu-L + pyr	-Inf	Inf	1	0	Gmet_3325	1	1	AlaT	Alanine Metabolism
+Alanyl-tRNA synthetase	ALATRS	[c] : ala-L + atp + trnaala --> alatrna + amp + ppi	0	Inf	1	0	Gmet_0201	1	1	AlaS	Amino Acid Metabolism
+alcohol dehydrogenase (ethanol: NAD)	ALCD2x	[c] : etoh + nad <==> acald + h + nadh	-Inf	Inf	1	0	Gmet_1046	1	1	Adh4	Alternate Carbon Metabolism
+alcohol dehydrogenase (propanol: NAD)	ALCD3	[c] : nad + ppoh <==> h + nadh + ppal	-Inf	Inf	1	0	Gmet_1053	1	1	DhaT	Central Metabolism
+aldehyde dehydrogenase (acetaldehyde, NAD)	ALDD2x	[c] : acald + h2o + nad --> ac + (2) h + nadh	0	Inf	1	0	Gmet_0789	1	1	AldH	Amino Acid Metabolism
+N-acetylmuramoyl-L-alanine amidase	AMAA	[c] : acmama + h2o --> acmam + ala-L	0	Inf	1	0	Gmet_1425	1	1	AmiA1	Lipid & Cell Wall Metabolism
+Amylomaltase (maltotriose)	AMALT1	[c] : malt + malttr --> glc-D + maltttr	0	Inf	1	0	Gmet_2391	1	1	MalQ	Alternate Carbon Metabolism
+Amylomaltase (maltotetraose)	AMALT2	[c] : malt + maltttr --> glc-D + maltpt	0	Inf	1	0	Gmet_2391	1	1	MalQ	Alternate Carbon Metabolism
+Amylomaltase (maltopentaose)	AMALT3	[c] : malt + maltpt --> glc-D + malthx	0	Inf	1	0	Gmet_2391	1	1	MalQ	Alternate Carbon Metabolism
+Amylomaltase (maltohexaose)	AMALT4	[c] : malt + malthx --> glc-D + malthp	0	Inf	1	0	Gmet_2391	1	1	MalQ	Alternate Carbon Metabolism
+adenosylmethionine-8-amino-7-oxononanoate transaminase	AMAOT	[c] : 8aonn + amet <==> amob + dann	-Inf	Inf	1	0	Gmet_1580	1	1	BioA	Vitamins & Cofactor Biosynthesis
+S-adenosylmethione:2-demethylmenaquinone methyltransferase	AMMQT8_2	[c] : 2dmmq8 + amet --> ahcys + h + mqn8	0	Inf	1	0	Gmet_1167	1	1	UbiE	Cofactor and Prosthetic Group Biosynthesis
+anthranilate phosphoribosyltransferase	ANPRT	[c] : anth + prpp --> ppi + pran	0	Inf	1	0	Gmet_2495	1	1	TrpD	Amino Acid Metabolism
+anthranilate synthase	ANS1	[c] : chor + gln-L --> anth + glu-L + h + pyr	0	Inf	1	0	Gmet_2496, Gmet_2497	1	1	TrpE+TrpG	Amino Acid Metabolism
+antimonite  transporter via uniport	ANTIMt1	antim[c] --> antim[e]	0	Inf	1	0	Gmet_0520, Gmet_1382	1	1	ArsB, ArsB2	Transport
+8-amino-7-oxononanoate synthase	AOXS	[c] : ala-L + h + pmcoa <==> 8aonn + co2 + coa	-Inf	Inf	1	0	Gmet_0842	1	1	BioF	Vitamins & Cofactor Biosynthesis
+apolipoprotein N-acyl transferase	APAT	[c] : accoa + h2o + thdp <==> acamoxm + coa	-Inf	Inf	1	0	Gmet_2367	1	1	CutE	Amino Acid Metabolism
+5-amino-6-(5-phosphoribosylamino)uracil reductase	APRAUR	[c] : 5apru + h + nadph --> 5aprbu + nadp	0	Inf	1	0	Gmet_1624	1	1	RibD	Vitamins & Cofactor Biosynthesis
+adenosine 5'-phosphosulfate reductase;	APSPT	[c] : aps + trdrd <==> amp + (2) h + so3 + trdox	-Inf	Inf	1	0	Gmet_2858	1	1	CysH	Other
+3-Fumarylpyruvate acylhydrolase	APYRH	[c] : 3fpyr + h2o --> fum + h + pyr	0	Inf	1	0	Gmet_2937	1	1	P_3.7.1.5	Benzoate Degradation
+4-amino-4-deoxy-L-arabinose transferase	ARA4NT	[c] : (2) ara4n-L + (2) h + lipa --> ara4n-lipa + (2) h2o	0	Inf	1	0	Gmet_0887	1	1	ArnT	Lipid & Cell Wall Metabolism
+arginine decarboxylase	ARGDC	[c] : arg-L + h --> agm + co2	0	Inf	1	0	Gmet_0904	1	1	SpeA	Amino Acid Metabolism
+argininosuccinate lyase	ARGSL	[c] : argsuc <==> arg-L + fum	-Inf	Inf	1	0	Gmet_0209	1	1	ArgH	Amino Acid Metabolism
+argininosuccinate synthase	ARGSS	[c] : asp-L + atp + citr-L --> amp + argsuc + h + ppi	0	Inf	1	0	Gmet_0206	1	1	ArgG	Amino Acid Metabolism
+Arginyl-tRNA synthetase	ARGTRS	[c] : arg-L + atp + trnaarg --> amp + argtrna + ppi	0	Inf	1	0	Gmet_1434	1	1	ArgS	Amino Acid Metabolism
+Arsenate transporter	ARSNAt1	arsna[c] --> arsna[e]	0	Inf	1	0	Gmet_0520, Gmet_1382	1	1	ArsB2, ArsB	Transport
+arsenite transporter via uniport	ARSt1	arsni2[c] --> arsni2[e]	0	Inf	1	0	Gmet_0520, Gmet_1382	1	1	ArsB2, ArsB	Transport
+aspartate-semialdehyde dehydrogenase	ASAD	[c] : aspsa + nadp + pi <==> 4pasp + h + nadph	-Inf	Inf	1	0	Gmet_0603, Gmet_0604	1	1	Asd, Asd1	Amino Acid Metabolism
+asparagine synthase (glutamine-hydrolysing)	ASNS1	[c] : asp-L + atp + gln-L + h2o --> amp + asn-L + glu-L + h + ppi	0	Inf	1	0	Gmet_2172, Gmet_2024	1	1	AsnB1, AsnB	Amino acids and related molecules
+Asparaginyl-tRNA synthetase	ASNTRS	[c] : asn-L + atp + trnaasn --> amp + asntrna + ppi	0	Inf	1	0	Gmet_2412	1	1	AsnS	Amino Acid Metabolism
+aspartate 1-decarboxylase	ASP1DC	[c] : asp-L + h --> ala-B + co2	0	Inf	1	0	Gmet_1644	1	1	Gad	Amino Acid Metabolism
+aspartate carbamoyltransferase	ASPCT	[c] : asp-L + cbp --> cbasp + h + pi	0	Inf	1	0	Gmet_1769	1	1	PyrB	Nucleotide Metabolism
+aspartate kinase	ASPK	[c] : asp-L + atp <==> 4pasp + adp	-Inf	Inf	1	0	Gmet_1880	1	1	AspK	Amino Acid Metabolism
+L-aspartate oxidase	ASPO1	[c] : asp-L + nad --> (2) h + iasp + nadh	0	Inf	1	0	Gmet_1954	1	1	NadB	Amino Acid Metabolism
+L-aspartase	ASPT	[c] : asp-L --> fum + nh4	0	Inf	1	0	Gmet_3082	1	1	AspA	Amino Acid Metabolism
+aspartate transaminase	ASPTA1	[c] : akg + asp-L <==> glu-L + oaa	-Inf	Inf	1	0	Gmet_0213, Gmet_3433, Gmet_0732	1	1	AspB4, AspB3, AspB	Amino Acid Metabolism
+Aspartyl-tRNA synthetase	ASPTRS	[c] : asp-L + atp + trnaasp --> amp + asptrna + ppi	0	Inf	1	0	Gmet_1357	1	1	AspS	Amino Acid Metabolism
+acetate CoA-transferase	ATO	[c] : ac + succoa --> accoa + succ	0	Inf	1	0	Gmet_3044, Gmet_1125, Gmet_1730	1	1	AtoA2, AtoA3, AtoA1	Central Metabolism
+ATP maintenance requirment	ATPM	[c] : atp + h2o --> adp + h + pi	0.45	0.45	1	0		1	1		Energy Metabolism
+ATP phosphoribosyltransferase	ATPPRT	[c] : atp + prpp --> ppi + prbatp	0	Inf	1	0	Gmet_0383, Gmet_1898	1	1	HisG2, HisG 	Amino Acid Metabolism
+ATP synthase (four protons for one ATP)	ATPS4	adp[c] + (4) h[e] + pi[c] --> atp[c] + (3) h[c] + h2o[c]	0	Inf	1	0	Gmet_3406_OR_Gmet_3359_OR_Gmet_3410_OR_Gmet_3409_OR_Gmet_3360_OR_Gmet_3408_OR_Gmet_3411_OR_Gmet_3407_OR_Gmet_3405	1	1	AtpABCDEFGHI	Transport
+biotin-[acetyl-CoA-carboxylase] ligase	BACCL	[c] : atp + btn + h --> btamp + ppi	0	Inf	1	0	Gmet_1987	1	1	BirA	Cofactor and Prosthetic Group Biosynthesis
+benzoate CoA ligase	BCOALIG	[c] : atp + bz + coa <==> amp + benzcoa + ppi	-Inf	Inf	1	0	Gmet_2146, Gmet_2143	1	1	BclA1, BclA	Aromatic Compound degradation
+benzoylCoA reductase	BCR	[c] : (2) atp + benzcoa + (2) h2o + nadh <==> (2) adp + ch15deccoa + h + nad + (2) pi	-Inf	Inf	1	0	Gmet_2087	1	1	BamB	Aromatic Compound degradation
+Benzaldehyde dehydrogenase	BEALD	[c] : bzal + h2o + nad <==> bz + (2) h + nadh	-Inf	Inf	1	0	Gmet_2131	1	1	Bdh	Aromatic Compound degradation
+Benzyl alcohol dehydrogenase	BENAD	[c] : bzalc + nad <==> bzal + h + nadh	-Inf	Inf	1	0	Gmet_2235	1	1	Bad	Aromatic Compound degradation
+benzoylsuccinyl-CoA thiolase	BSCT	[c] : bsuccoa + coa <==> benzcoa + succoa	-Inf	Inf	1	0	Gmet_1528_OR_Gmet_1529	1	1	BbsAB	Aromatic Compound degradation
+Butyryl-[acyl-carrier protein]:malonyl-CoA C-acyltransferase	BTMAT1	[c] : 2beACP + h + nadh --> butACP + nad	0	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+Biotin synthase	BTS	[c] : dtbt + (2) s --> btn + h + h2s	0	Inf	1	0	Gmet_1582	1	1	BioB	Vitamins & Cofactor Biosynthesis
+butyrate kinase	BUTKr	[c] : atp + but <==> adp + butpi	-Inf	Inf	1	0	Gmet_2106, Gmet_2128	1	1	Buk, Buk1	Carbohydrates and related molecules
+butanesulfonate transport via ABC system	BUTSabc	atp[c] + buts[e] + h2o[c] --> adp[c] + buts[c] + h[c] + pi[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuA+SsuC+SsuB, SsuC1+SsuA1+SsuB1	Transport
+Butyrate transport via proton symport, reversible	BUTt2	but[e] + h[e] <==> but[c] + h[c]	-Inf	Inf	1	0		1	1		Transport
+benzyl alcohol transport via diffusion	BZALCt	bzalc[e] <==> bzalc[c]	-Inf	Inf	1	0	Gmet_1535	1	1	TodX	Transport
+Benzaldehyde transport via diffusion	BZALt	bzal[e] <==> bzal[c]	-Inf	Inf	1	0	Gmet_1535	1	1	TodX	Transport
+benzylsuccinyl-CoA dehydrogenase	BZSCD	[c] : bzsuccoa + fad <==> fadh2 + phitcoa	-Inf	Inf	1	0	Gmet_1523	1	1	BbsG	Aromatic Compound degradation
+benzylsuccinate CoA-transferase	BZSCT	[c] : bzsucc + succoa <==> bzsuccoa + succ	-Inf	Inf	1	0	Gmet_1522_OR_Gmet_1521	1	1	BbsEF	Aromatic Compound degradation
+benzylsuccinate synthase	BZSS	[c] : fum + tol <==> bzsucc	-Inf	Inf	1	0	Gmet_1539_OR_Gmet_1540_OR_Gmet_1538_OR_Gmet_1541	1	1	BssABCD	Aromatic Compound degradation
+benzoate transport in/out via proton symport	BZt6	bz[e] + h[e] <==> bz[c] + h[c]	-Inf	Inf	1	0		1	1		Transport
+calcium transport via ABC system	CA2abc	atp[c] + ca2[e] + h2o[c] --> adp[c] + ca2[c] + h[c] + pi[c]	0	Inf	1	0	Gmet_3497	1	1	Cadp	Transport
+calcium efflux  via ABC system	CA2abc1	atp[c] + ca2[c] + h2o[c] --> adp[c] + ca2[e] + h[c] + pi[c]	0	Inf	1	0	Gmet_1614	1	1	Cat	Transport
+Cobinamide adenyltransferase	CBIAT	[c] : atp + cbi + h2o <==> adcoba + pi + ppi	-Inf	Inf	1	0	Gmet_1573	1	1	BtuR	Vitamins & Cofactor Biosynthesis
+cob(I)alamin adenosyltransferase	CBLAT	[c] : atp + cbl1 + h2o <==> cobamcoa + pi + ppi	-Inf	Inf	1	0	Gmet_1573	1	1	BtuR	Vitamins & Cofactor Biosynthesis
+carbamate kinase	CBMK	[c] : atp + cbm --> adp + cbp	0	Inf	1	0	Gmet_2786	1	1	ArcC	Central Metabolism
+carbamoyl-phosphate synthase (glutamine-hydrolysing)	CBPS	[c] : (2) atp + gln-L + h2o + hco3 --> (2) adp + cbp + glu-L + (2) h + pi	0	Inf	1	0	Gmet_1774_OR_Gmet_1771_AND_ Gmet_0661_OR_Gmet_1771	1	1	CarAB, CarAB1	Nucleotide Metabolism
+Carboxynorspermidine decarboxylase	CBSDC	[c] : 2cddin + nad --> 56dhin + co2 + nadh	0	Inf	1	0	Gmet_0903	1	1	NspC	Other
+cadminum transport out via antiport	CD2t4	cd2[c] + h[e] + k[e] --> cd2[e] + h[c] + k[c]	0	Inf	1	0	Gmet_3508_OR_Gmet_3509_OR_Gmet_3507	1	1	CzcA	Transport
+CDPdiacylglycerol:sn-glycerol-3-phosphate 3-phosphatidyltransferase	CDGPT	[c] : cdpdag + glyc3p --> cmp + h + pglyp	0	Inf	1	0	Gmet_1952, Gmet_0822	1	1	Pgs1A, PgsA	Lipid & Cell Wall Metabolism
+CDPdiacylglycerol-serine O-phosphatidyltransferase	CDPDSP	[c] : cdpdag + ser-L --> cmp + h + ps	0	Inf	1	0	Gmet_1264	1	1	PssA1	Lipid & Cell Wall Metabolism
+4-(cytidine 5'-diphospho)-2-C-methyl-D-erythritol kinase	CDPMEK	[c] : 4c2me + atp --> 2p4c2me + adp + h	0	Inf	1	0	Gmet_2849	1	1	IspE	Vitamins & Cofactor Biosynthesis
+Cyclohexa-1,5-dienecarbonyl-CoA hydro-lyase	CHDCCH	[c] : ch15deccoa + h2o <==> 6hch1eccoa	-Inf	Inf	1	0	Gmet_2150	1	1	Dch	Aromatic Compound degradation
+chorismate mutase	CHORM	[c] : chor --> pphn	0	Inf	1	0	Gmet_0346, Gmet_0862, Gmet_1955	1	1	PheA2, AroA , PheA	Amino Acid Metabolism
+chorismate synthase	CHORS	[c] : 3psme --> chor + pi	0	Inf	1	0	Gmet_0976	1	1	AroF	Amino Acid Metabolism
+cardiolipin synthetase	CLPNS	[c] : cdpdag + pgly --> cdlp + cmp + h	0	Inf	1	0	Gmet_0065, Gmet_3078, Gmet_0078	1	1	Cls2, Cls3, Cls	Other
+chlorideion transport out via diffusion	Clt	cl[e] <==> cl[c]	-Inf	Inf	1	0	Gmet_3470	1	1	ClC	Transport
+cob(II)yrinic acid a,c-diamide reductase	CO2DAMR	[c] : (2) co2dam + nadh --> (2) co1dam + h + nad	0	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+CO2 transport out via diffusion	CO2t	co2[e] <==> co2[c]	-Inf	Inf	1	0		1	1		Transport
+Cobalt transport via ABC system	Coabc	atp[c] + cobalt2[e] + h2o[c] --> adp[c] + cobalt2[c] + h[c] + pi[c]	0	Inf	1	0	Gmet_2441_OR_Gmet_2440_OR_Gmet_2439_AND_ Gmet_0475_OR_Gmet_0474_OR_Gmet_0472_OR_Gmet_0473	1	1	CbiMNQO2, CbiMNQO	Transport
+cobalt transport out via proton antiporter	COBALTt4	cobalt2[c] + h[e] + k[e] --> cobalt2[e] + h[c] + k[c]	0	Inf	1	0	Gmet_3508_OR_Gmet_3509_OR_Gmet_3507	1	1	CzcA	Transport
+cobalt transport in/out via permease (no H+)	COBALTt5	cobalt2[c] <==> cobalt2[e]	-Inf	Inf	1	0	Gmet_0134, Gmet_1189	1	1	CorA2, CorA1	Transport
+cobalamin-5'-phosphate synthase	COBPS	[c] : adgcoba + rdmbzi --> cobamcoa + gmp + h	0	Inf	1	0	Gmet_0468	1	1	CobS	Vitamins & Cofactor Biosynthesis
+carbon-monoxide dehydrogenase	CODH	[c] : co + fdxo-4:2 + h2o --> co2 + fdxr-4:2 + (2) h	0	Inf	1	0	Gmet_1902	1	1	CooS	Other
+precorrin-2 C20-methyltransferase	CPC2MT	[c] : amet + copre2 --> ahcys + copre3 + h	0	Inf	1	0	Gmet_0482	1	1	CbiL	Vitamins & Cofactor Biosynthesis
+precorrin-3B C17-methyltransferase	CPC3MT	[c] : amet + copre3 + h --> ahcys + copre4	0	Inf	1	0	Gmet_0485, Gmet_0484	1	1	CbiG, CbiP-CbiH	Vitamins & Cofactor Biosynthesis
+precorrin-4 C11-methyltransferase	CPC4MT	[c] : amet + copre4 --> ahcys + copre5 + h	0	Inf	1	0	Gmet_0483	1	1	CbiF	Vitamins & Cofactor Biosynthesis
+precorrin-5 C1-methyltransferase	CPC5MT	[c] : amet + copre5 + h2o + (0.5) nadh --> acald + ahcys + copre6 + (1.5) h + (0.5) nad	0	Inf	1	0	Gmet_0478	1	1	CbiD	Vitamins & Cofactor Biosynthesis
+precorrin-6Y C5,15-methyltransferase (decarboxylating)	CPC6MT	[c] : (2) amet + codhpre6 --> (2) ahcys + co2 + copre8 + h	0	Inf	1	0	Gmet_0481	1	1	CbiE	Vitamins & Cofactor Biosynthesis
+precorrin-6A reductase	CPC6R	[c] : copre6 + h + nadph --> codhpre6 + nadp	0	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+precorrin-8X methylmutase	CPC8MM	[c] : copre8 <==> cobrnt	-Inf	Inf	1	0	Gmet_0477	1	1	CbiC	Vitamins & Cofactor Biosynthesis
+Oxygen Independent coproporphyrinogen-III oxidase	CPPPGOAN	[c] : (2) amet + cpppg3 + (2) fdxo-4:2 + (2) nadph --> (2) co2 + (2) dad-5 + (2) fdxr-4:2 + (2) h + (2) met-L + (2) nadp + pppg9	0	Inf	1	0	Gmet_3535	1	1	HemN	Vitamins & Cofactor Biosynthesis
+p-cresol transport vis diffusion	CRESt	4crsol[e] <==> 4crsol[c]	-Inf	Inf	1	0		1	1		Transport
+creatininase	CRET	[c] : crtn + h2o --> creat	0	Inf	1	0	Gmet_1659	1	1	CreT	Amino Acid Metabolism
+chromate transport out via proton antiport	CRO4t3	cro4[c] + h[e] --> cro4[e] + h[c]	0	Inf	1	0	Gmet_2731, Gmet_2732	1	1	YwrB, YwrA	Transport
+citrate synthase	CS	[c] : accoa + h2o + oaa --> cit + coa + h	0	Inf	1	0	Gmet_1124, Gmet_2689	1	1	Cit, Cit1	Central Metabolism
+Cytosine deaminase	CSND	[c] : csn + h + h2o --> nh4 + ura	0	Inf	1	0	Gmet_3524	1	1	YaaJ	Nucleotide Metabolism
+CTP synthase (NH3)	CTPS1	[c] : atp + nh4 + utp --> adp + ctp + (2) h + pi	0	Inf	1	0	Gmet_1276	1	1	PyrG	Nucleotide Metabolism
+CTP synthase (glutamine)	CTPS2	[c] : atp + gln-L + h2o + utp --> adp + ctp + glu-L + (2) h + pi	0	Inf	1	0	Gmet_1276	1	1	PyrG	Nucleotide Metabolism
+Copper transport via ABC system	Cuabc	atp[c] + cu2[e] + h2o[c] --> adp[c] + cu2[c] + h[c] + pi[c]	0	Inf	1	0	Gmet_2772	1	1	Cudp	Transport
+cytochrome-c peroxidase	CYCPO	[c] : (2) focytcc + (2) h + h2o2 --> (2) ficytcc + (2) h2o	0	Inf	1	0	Gmet_3091	1	1	CcpA2	Other
+cytochrome-c oxidase (2 protons translocated)	CYOO2	(2) focytcc[c] + (4) h[c] + (0.5) o2[c] --> (2) ficytcc[c] + (2) h[e] + h2o[c]	0	Inf	1	0	Gmet_0249_OR_Gmet_0251_OR_Gmet_0250_OR_Gmet_0252	1	1	CtaBCDEF	Energy Metabolism
+cytochrome-c reductase (menaquinol 7: 1 protons)	CYOR1m	(2) ficytcc[c] + mql7[c] --> (2) focytcc[c] + h[e] + h[c] + mqn7[c]	0	Inf	1	0		1	1		Other
+cob(I)yrinic acid a,c-diamide adenosyltransferase	CYRDAAT	[c] : atp + co1dam + h --> adcobdam + pppi	0	Inf	1	0	Gmet_1573	1	1	BtuR	Vitamins & Cofactor Biosynthesis
+Cob(II)yrinate a,c-diamide synthase (glutamine-hydrolysing)	CYRDAS	[c] : (4) atp + (2) cobrnt + (4) gln-L + (2) h2o --> (4) adp + (2) co2dam + (4) glu-L + (2) h + (2) ppi	0	Inf	1	0	Gmet_0470	1	1	CbiA	Vitamins & Cofactor Biosynthesis
+cysteine synthase	CYSS	[c] : acser + h2s --> ac + cys-L	0	Inf	1	0	Gmet_1558, Gmet_2988, Gmet_0264	1	1	CysK2, CysK1, CysK	Amino Acid Metabolism
+cystathionine b-lyase	CYSTL	[c] : cysth-L + h2o --> hcys-L + nh4 + pyr	0	Inf	1	0	Gmet_0698, Gmet_0699	1	1	Cylb2, Cylb	Amino Acid Metabolism
+Cysteinyl-tRNA synthetase	CYSTRS	[c] : atp + cys-L + trnacys --> amp + cystrna + ppi	0	Inf	1	0	Gmet_0057	1	1	CysS	Amino Acid Metabolism
+cytochrome oxidase bd (ubiquinol-8: 2 protons)	CYTBD	(2) h[c] + (0.5) o2[c] + ubq8h2[c] --> (2) h[e] + h2o[c] + ubq8[c]	0	Inf	1	0	Gmet_2633_OR_Gmet_1930_OR_Gmet_2634_OR_Gmet_1929	1	1	CydABCD	Other
+cytidylate kinase (CMP)	CYTK1	[c] : atp + cmp <==> adp + cdp	-Inf	Inf	1	0	Gmet_0865	1	1	Cmk	Nucleotide Metabolism
+cytidylate kinase (dCMP)	CYTK2	[c] : atp + dcmp <==> adp + dcdp	-Inf	Inf	1	0	Gmet_0865	1	1	Cmk	Nucleotide Metabolism
+deoxyadenylate kinase	DADK	[c] : atp + damp <==> adp + dadp	-Inf	Inf	1	0	Gmet_0647	1	1	Adk	Nucleotide Metabolism
+diacylglycerol kinase	DAGK	[c] : 12dgr + atp --> 12dag3p + adp + h	0	Inf	1	0	Gmet_2369	1	1	DgkA	Lipid & Cell Wall Metabolism
+3-deoxy-D-arabino-heptulosonate 7-phosphate synthetase	DAHPS	[c] : e4p + h2o + pep --> 2dda7p + pi	0	Inf	1	0	Gmet_0346, Gmet_0024, Gmet_2375	1	1	AroA , AroG, AroA2	Amino Acid Metabolism
+diaminopimelate decarboxylase	DAPDC	[c] : 26dap-M + h --> co2 + lys-L	0	Inf	1	0	Gmet_2019, Gmet_0219	1	1	LysA, LysA1	Threonine and Lysine Metabolism
+diaminopimelate epimerase	DAPE	[c] : 26dap-LL <==> 26dap-M	-Inf	Inf	1	0	Gmet_2992	1	1	DapF	Amino Acid Metabolism
+3,4-Dihydroxy-2-butanone-4-phosphate synthase	DB4PS	[c] : ru5p-D --> db4p + for + h	0	Inf	1	0	Gmet_1626	1	1	RibA	Vitamins & Cofactor Biosynthesis
+dethiobiotin synthase	DBTS	[c] : atp + co2 + dann --> adp + dtbt + (3) h + pi	0	Inf	1	0	Gmet_1581	1	1	BioD	Vitamins & Cofactor Biosynthesis
+dCMP deaminase	DCMPDA2ir	[c] : dcmp + h + h2o --> dump + nh4	0	Inf	1	0	Gmet_1622	1	1	ComEB	Nucleotide Metabolism
+dCMP deaminase (CMP)	DCMPDA3ir	[c] : cmp + h + h2o --> nh4 + ump	0	Inf	1	0	Gmet_1622	1	1	ComEB	Nucleotide Metabolism
+Dodecanoyl-[acyl-carrier protein]: malonyl-CoA  C-acyltransferase	DDMAT5	[c] : 2tddACP + h + nadh --> ddcaACP + nad	0	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+Decanoyl-[acyl-carrier protein]:malonyl-CoA  C-acyltransferase	DEMAT4	[c] : 2tdeACP + h + nadh --> decACP + nad	0	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+deoxyguanylate kinase (dGMP:ATP)	DGK1	[c] : atp + dgmp <==> adp + dgdp	-Inf	Inf	1	0	Gmet_2327	1	1	Gmk	Nucleotide Metabolism
+dGTPase	DGTPH	[c] : dgtp + h2o --> dgsn + pppi	0	Inf	1	0	Gmet_1762	1	1	Dgt	Nucleotide Metabolism
+dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylbutanoate)	DHAD1	[c] : 23dhmb --> 3mob + h2o	0	Inf	1	0	Gmet_1259	1	1	IlvD	Amino Acid Metabolism
+Dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylpentanoate)	DHAD2	[c] : 23dhmp --> 3mop + h2o	0	Inf	1	0	Gmet_1259	1	1	IlvD	Amino Acid Metabolism
+dihydrodipicolinate reductase (NADPH)	DHDPRy	[c] : 23dhdp + h + nadph --> nadp + thdp	0	Inf	1	0	Gmet_0212	1	1	DapB	Amino Acid Metabolism
+dihydrodipicolinate synthase	DHDPS	[c] : aspsa + pyr --> 23dhdp + h + (2) h2o	0	Inf	1	0	Gmet_0211	1	1	DapA	Amino Acid Metabolism
+dihydrofolate reductase	DHFOR2	[c] : dhf + nadp <==> fol + nadph	-Inf	Inf	1	0	Gmet_2947	1	1	DfrA	Vitamins & Cofactor Biosynthesis
+dihydrofolate reductase	DHFOR3	[c] : fol + h + (2) nadph <==> (2) nadp + thf	-Inf	Inf	1	0	Gmet_2947	1	1	DfrA	Vitamins & Cofactor Biosynthesis
+dihydrofolate reductase	DHFR	[c] : dhf + h + nadph <==> nadp + thf	-Inf	Inf	1	0	Gmet_2947	1	1	DfrA	Vitamins & Cofactor Biosynthesis
+dihydrofolate synthase	DHFS	[c] : atp + dhpt + glu-L --> adp + dhf + h + pi	0	Inf	1	0	Gmet_2475	1	1	FolC	Vitamins & Cofactor Biosynthesis
+dihydroorotate dehydrogenase	DHORD4	[c] : dhor-S + mqn7 <==> mql7 + orot	-Inf	Inf	1	0	Gmet_1842_OR_Gmet_1841	1	1	PyrDK	Purine and Pyrimidine Biosynthesis
+dihydroorotase	DHORTS	[c] : dhor-S + h2o <==> cbasp + h	-Inf	Inf	1	0	Gmet_1770	1	1	PyrC	Nucleotide Metabolism
+diaminohydroxyphosphoribosylaminopyrimidine deaminase	DHPPDA2	[c] : 25dhpp + h + h2o --> 5apru + nh4	0	Inf	1	0	Gmet_1624	1	1	RibD	Vitamins & Cofactor Biosynthesis
+dihydropteroate synthase	DHPS1	[c] : 2ahhmp + 4abz --> dhpt + h2o	0	Inf	1	0	Gmet_1889	1	1	FolP	Cofactor and Prosthetic Group Biosynthesis
+dihydropteroate synthase	DHPS3	[c] : 2ahhmd + 4abz --> dhpt + ppi	0	Inf	1	0	Gmet_1889	1	1	FolP	Cofactor and Prosthetic Group Biosynthesis
+3-dehydroquinate dehydratase	DHQD1	[c] : 3dhq <==> 3dhsk + h2o	-Inf	Inf	1	0	Gmet_0981	1	1	AroC	Amino Acid Metabolism
+3-dehydroquinate synthase	DHQS	[c] : 2dda7p --> 3dhq + pi	0	Inf	1	0	Gmet_0978	1	1	AroB	Amino Acid Metabolism
+dimethylallyltranstransferase	DMATT	[c] : dmpp + ipdp --> grdp + ppi	0	Inf	1	0	Gmet_1935	1	1	IspA	Other
+3-deoxy-manno-octulosonate cytidylyltransferase	DMOCT	[c] : ctp + kdo --> ckdo + ppi	0	Inf	1	0	Gmet_1275	1	1	KdsB	Other
+1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate reductase (dmpp)	DMPPS	[c] : h + h2mb4p + nadh --> dmpp + h2o + nad	0	Inf	1	0	Gmet_0866	1	1	LytB	Cofactor and Prosthetic Group Biosynthesis
+3-demethylubiquinone-8 3-O-methyltransferase (ubiquinone 8)	DMUQ8M	[c] : 2omhmb + amet --> ahcys + ubq8	0	Inf	1	0	Gmet_2483	1	1	UbiG	Vitamins & Cofactor Biosynthesis
+Dolichyl-phosphate D-mannosyltransferase	DOLPMT	[c] : dolp + gdpman --> dolmanp + gdp	0	Inf	1	0	Gmet_2892	1	1	Dpm1	Cell Envelope Biosynthesis
+dephospho-CoA kinase	DPCOAK	[c] : atp + dpcoa --> adp + coa + h	0	Inf	1	0	Gmet_3026	1	1	CoaE	Vitamins & Cofactor Biosynthesis
+2-dehydropantoate 2-reductase	DPR	[c] : 2dhp + h + nadph --> nadp + pant-R	0	Inf	1	0	Gmet_2643	1	1	YlbQ	Vitamins & Cofactor Biosynthesis
+dTMP kinase	DTMPK	[c] : atp + dtmp <==> adp + dtdp	-Inf	Inf	1	0	Gmet_2318, Gmet_3250	1	1	Tmk2, Tmk1	Nucleotide Metabolism
+dUTP diphosphatase	DUTPDP	[c] : dutp + h2o --> dump + h + ppi	0	Inf	1	0	Gmet_1593	1	1	YncF	Nucleotide Metabolism
+1-deoxy-D-xylulose-5-phosphate reductoisomerase	DXPRI	[c] : dxyl5p + h + nadph <==> 2me4p + nadp	-Inf	Inf	1	0	Gmet_1256	1	1	Dxr	Lipid & Cell Wall Metabolism
+1-deoxy-D-xylulose 5-phosphate synthase	DXPS	[c] : g3p + h + pyr --> co2 + dxyl5p	0	Inf	1	0	Gmet_1934, Gmet_2822	1	1	Dxs1, Dxs2	Vitamins & Cofactor Biosynthesis
+3-hydroxyacyl-CoA dehydratase (3-hydroxybutanoyl-CoA)	ECOAH1	[c] : 3hbycoa <==> b2coa + h2o	-Inf	Inf	1	0	Gmet_2057, Gmet_2212, Gmet_2195, Gmet_2071, Gmet_2204, Gmet_1572, Gmet_2196, Gmet_3284, Gmet_2224, Gmet_1716, Gmet_2207, Gmet_1575, Gmet_3291	1	1	YngF1, YngF2, YngF10, YngF9, YngF8, YngF5, YngF11, YsiB1, YngF3, YngF7, YngF, YsiB, YngF6	Lipids
+3-hydroxyacyl-CoA dehydratase (3-hydroxyhexanoyl-CoA)	ECOAH2	[c] : 3hhcoa <==> h2o + hx2coa	-Inf	Inf	1	0	Gmet_2057, Gmet_2212, Gmet_2195, Gmet_2204, Gmet_2071, Gmet_1572, Gmet_2196, Gmet_3284, Gmet_2224, Gmet_1716, Gmet_2207, Gmet_1575, Gmet_3291	1	1	YngF5, YngF6, YsiB, YngF10, YngF, YngF2, YngF7, YngF9, YngF8, YngF3, YsiB1, YngF1, YngF11	Lipids
+enoyl-CoA hydratase, bacterial	ECOAH2c	[c] : 2mp2coa + h + h2o <==> hibcoa	-Inf	Inf	1	0	Gmet_2196, Gmet_3284, Gmet_2224, Gmet_2212, Gmet_2057, Gmet_2195, Gmet_1716, Gmet_2207, Gmet_2071, Gmet_2204, Gmet_1572, Gmet_1575	1	1	YngF11, YngF10, YngF3, YngF, YngF2, YngF1, YngF6, YngF9, YsiB, YngF5, YsiB1, YngF7	Lipids
+3-hydroxyacyl-CoA dehydratase (3-hydroxyoctanoyl-CoA)	ECOAH3	[c] : 3hocoa <==> h2o + oc2coa	-Inf	Inf	1	0	Gmet_2057, Gmet_2212, Gmet_2195, Gmet_2204, Gmet_2071, Gmet_1572, Gmet_2196, Gmet_3284, Gmet_2224, Gmet_1716, Gmet_2207, Gmet_1575, Gmet_3291	1	1	YngF10, YngF2, YngF5, YsiB, YngF7, YngF, YngF11, YngF8, YngF9, YngF6, YsiB1, YngF3, YngF1	Lipids
+3-hydroxyacyl-CoA dehydratase (3-hydroxydecanoyl-CoA)	ECOAH4	[c] : 3hdcoa <==> dc2coa + h2o	-Inf	Inf	1	0	Gmet_2057, Gmet_2212, Gmet_2195, Gmet_2204, Gmet_2071, Gmet_1572, Gmet_2196, Gmet_3284, Gmet_2224, Gmet_1716, Gmet_2207, Gmet_1575, Gmet_3291	1	1	YngF9, YngF, YngF6, YsiB1, YsiB, YngF10, YngF11, YngF5, YngF3, YngF7, YngF8, YngF2, YngF1	Lipids
+3-hydroxyacyl-CoA dehydratase (3-hydroxydodecanoyl-CoA)	ECOAH5	[c] : 3hddcoa <==> h2o + trans-dd2coa	-Inf	Inf	1	0	Gmet_2057, Gmet_2212, Gmet_2195, Gmet_2071, Gmet_2204, Gmet_1572, Gmet_2196, Gmet_3284, Gmet_2224, Gmet_1716, Gmet_2207, Gmet_1575, Gmet_3291	1	1	YngF2, YngF7, YngF10, YsiB1, YngF3, YngF1, YngF, YsiB, YngF11, YngF8, YngF6, YngF9, YngF5	Lipids
+3-hydroxyacyl-CoA dehydratase (3-hydroxytetradecanoyl-CoA)	ECOAH6	[c] : 3htdcoa <==> h2o + td2coa	-Inf	Inf	1	0	Gmet_2057, Gmet_2212, Gmet_2195, Gmet_2204, Gmet_2071, Gmet_1572, Gmet_2196, Gmet_3284, Gmet_2224, Gmet_1716, Gmet_2207, Gmet_1575, Gmet_3291	1	1	YngF11, YsiB1, YngF9, YngF, YngF5, YngF10, YngF3, YngF7, YngF8, YngF6, YsiB, YngF2, YngF1	Lipids
+3-hydroxyacyl-CoA dehydratase (3-hydroxyhexadecanoyl-CoA)	ECOAH7	[c] : 3hhdcoa <==> h2o + hdd2coa	-Inf	Inf	1	0	Gmet_2057, Gmet_2212, Gmet_2195, Gmet_2204, Gmet_2071, Gmet_1572, Gmet_2196, Gmet_3284, Gmet_2224, Gmet_1716, Gmet_2207, Gmet_1575, Gmet_3291	1	1	YngF, YsiB1, YngF9, YngF2, YngF5, YsiB, YngF3, YngF7, YngF6, YngF8, YngF10, YngF1, YngF11	Lipids
+Endotoxin Synthesis (myristoyl transferase)	EDTXS2	[c] : kdo2lipid4L + myrsACP --> ACP + lipa	0	Inf	1	0	Gmet_0091	1	1	MsbB	Cell Envelope Biosynthesis
+Endotoxin Synthesis (myristoyl transferase)	EDTXS4	[c] : kdo2lipid4p + myrsACP --> ACP + lipa_cold	0	Inf	1	0	Gmet_0091	1	1	MsbB	Cell Envelope Biosynthesis
+enolase	ENO	[c] : 2pg <==> h2o + pep	-Inf	Inf	1	0	Gmet_2372	1	1	Eno	Central Metabolism
+exopolyphosphatase	EPPP	[c] : h2o + polypi --> h + pi	0	Inf	1	0	Gmet_1828, Gmet_0880	1	1	Ppx1, Ppx	Other
+ethanesulfonate transport via ABC system	ETHSabc	atp[c] + eths[e] + h2o[c] --> adp[c] + eths[c] + h[c] + pi[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuC1+SsuA1+SsuB1, SsuA+SsuC+SsuB	Transport
+ethanol transporter	ETOHt4	etoh[e] + h[e] <==> etoh[c] + h[c]	-Inf	Inf	1	0		1	1		Transport
+fatty-acyl-ACP hydrolase	FA120ACPH	[c] : ddcaACP + h2o <==> ACP + ddca + h	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid Synthesis
+fatty-acyl-ACP hydrolase	FA140ACPH	[c] : h2o + myrsACP <==> ACP + h + ttdca	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid  Biosynthesis
+fatty-acyl-ACP hydrolase	FA141ACPH	[c] : h2o + tdeACP <==> ACP + h + ttdcea	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid Synthesis
+fatty-acyl-ACP hydrolase	FA160ACPH	[c] : h2o + palmACP <==> ACP + h + hdca	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid  Biosynthesis
+fatty-acyl-ACP hydrolase	FA161ACPH	[c] : h2o + hdeACP <==> ACP + h + hdcea	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid  Biosynthesis
+fatty-acyl-ACP hydrolase	FA180ACPH	[c] : h2o + ocdACP <==> ACP + h + ocdca	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid Synthesis
+fatty-acyl-ACP hydrolase	FA181ACPH	[c] : h2o + octeACP <==> ACP + h + ocdcea	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid Synthesis
+fatty-acyl-ACP hydrolase	FA182ACPH	[c] : h2o + ocdcyaACP <==> ACP + h + ocdcya	-Inf	Inf	1	0	Gmet_1732	1	1	FatB	Fatty Acid Synthesis
+fatty-acid--CoA ligase (Iso-C14:0)	FACOAL140(ISO)	[c] : atp + coa + fa1 <==> amp + fa1coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL, YhfL2, YhfL3, YhfL1, YhfL4, YhfL5, YhfL6	Lipids
+fatty-acid--CoA ligase (anteiso-C15:0)	FACOAL150(anteiso)	[c] : atp + coa + fa4 <==> amp + fa4coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL1, YhfL5, YhfL6, YhfL3, YhfL4, YhfL, YhfL2	Lipids
+fatty-acid--CoA ligase (Iso-C15:0)	FACOAL150(ISO)	[c] : atp + coa + fa3 <==> amp + fa3coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL, YhfL1, YhfL2, YhfL5, YhfL4, YhfL3, YhfL6	Lipids
+fatty-acid--CoA ligase (hexadecanoate)	FACOAL160	[c] : atp + coa + hdca <==> amp + pmtcoa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL6, YhfL4, YhfL5, YhfL2, YhfL, YhfL3, YhfL1	Lipids
+fatty-acid--CoA ligase (Iso-C16:0)	FACOAL160(ISO)	[c] : atp + coa + fa6 <==> amp + fa6coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL4, YhfL1, YhfL2, YhfL5, YhfL3, YhfL, YhfL6	Lipids
+fatty-acid--CoA ligase (Iso-C16:1)	FACOAL161(ISO)	[c] : atp + coa + fa5 <==> amp + fa5coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL4, YhfL5, YhfL, YhfL6, YhfL1, YhfL2, YhfL3	Lipids
+fatty-acid--CoA ligase (anteiso-C17:0)	FACOAL170(anteiso)	[c] : atp + coa + fa12 <==> amp + fa12coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL6, YhfL5, YhfL3, YhfL1, YhfL, YhfL2, YhfL4	Lipids
+fatty-acid--CoA ligase (Iso-C17:0)	FACOAL170(ISO)	[c] : atp + coa + fa11 <==> amp + fa11coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL5, YhfL3, YhfL1, YhfL, YhfL6, YhfL2, YhfL4	Lipids
+fatty-acid--CoA ligase (anteiso-C17:1)	FACOAL171(anteiso)	[c] : atp + coa + fa10 <==> amp + fa10coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_2692	1	1	YhfL3, YhfL6, YhfL4, YhfL5, YhfL, YhfL2	Lipids
+fatty-acid--CoA ligase (Iso-C17:1)	FACOAL171(ISO)	[c] : atp + coa + fa9 <==> amp + fa9coa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL3, YhfL4, YhfL5, YhfL1, YhfL, YhfL2, YhfL6	Lipids
+fatty-acid--CoA ligase (octadecanoate)	FACOAL180	[c] : atp + coa + ocdca <==> amp + ppi + strcoa	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL, YhfL2, YhfL5, YhfL3, YhfL1, YhfL6, YhfL4	Lipids
+fatty-acid--CoA ligase (octadecenoate)	FACOAL181	[c] : atp + coa + ocdcea <==> amp + odecoa + ppi	-Inf	Inf	1	0	Gmet_0256, Gmet_1613, Gmet_2246, Gmet_2229, Gmet_2020, Gmet_1469, Gmet_2692	1	1	YhfL2, YhfL3, YhfL4, YhfL1, YhfL5, YhfL, YhfL6	Lipids
+fructose-bisphosphate aldolase	FBA	[c] : fdp <==> dhap + g3p	-Inf	Inf	1	0	Gmet_1761	1	1	Fba	Central Metabolism
+fructose-bisphosphatase	FBP	[c] : fdp + h2o --> f6p + pi	0	Inf	1	0	Gmet_1921	1	1	Fbp	Central Metabolism
+Heme B synthesis reaction	FCLT	[c] : fe2 + ppp9 --> h + pheme	0	Inf	1	0	Gmet_0019	1	1	HemH	Vitamins & Cofactor Biosynthesis
+formate dehydrogenase	FDH	[c] : for + nad --> co2 + nadh	0	Inf	1	0	Gmet_2227, Gmet_2076	1	1	YoaE+FdhD	Central Metabolism
+Formate Dehydrogenase (menaquinone-7: 2 protons)	FDH5	for[c] + (3) h[c] + mqn7[c] --> co2[c] + (2) h[e] + mql7[c]	0	Inf	1	0	Gmet_1060_OR_Gmet_1062_OR_Gmet_2738_OR_Gmet_1061_OR_Gmet_1059	1	1	Fdh1	Transport
+iron (II) transport via ABC system	FE2abc	atp[c] + fe2[e] + h2o[c] --> adp[c] + fe2[c] + h[c] + pi[c]	0	Inf	1	0	Gmet_2444	1	1	FeoB2	Transport
+Fe (III) Reductase: G sulfurreducens	FERCYT	fe3[e] + focytcc[c] --> fe2[e] + ficytcc[c]	0	Inf	1	0		1	1		Energy Metabolism
+Methionyl-tRNA formyltransferase	FMETTRS	[c] : 10fthf + mettrna --> fmettrna + thf	0	Inf	1	0	Gmet_3339	1	1	Fmt	Other
+FMN adenylyltransferase	FMNAT	[c] : atp + fmn + h --> fad + ppi	0	Inf	1	0	Gmet_1388	1	1	RibC	Vitamins & Cofactor Biosynthesis
+ferredoxin-NADP reductase	FNOR	[c] : fdxr-4:2 + h + nadp <==> fdxo-4:2 + nadph	-Inf	Inf	1	0	Gmet_3023_OR_Gmet_3022	1	1	Sfr	Energy Metabolism
+fumarate reductase	FRD	[c] : fadh2 + fum --> fad + succ	0	Inf	1	0	Gmet_2395_OR_Gmet_2396_OR_Gmet_2397	1	1	Frd	Central Metabolism
+succinate dehydrogenase (menaquinone 7)	FRD5	[c] : mqn7 + succ <==> fum + mql7	-Inf	Inf	1	0	Gmet_2395_OR_Gmet_2396_OR_Gmet_2397	1	1	Frd	Central Metabolism
+farnesyltranstransferase	FRTT	[c] : frdp + ipdp --> ggdp + ppi	0	Inf	1	0	Gmet_2455	1	1	IspB	Lipid & Cell Wall Metabolism
+5-formyltetrahydrofolate cyclo-ligase	FTHFCL	[c] : 5fothf + atp --> adp + methf + pi	0	Inf	1	0	Gmet_1179	1	1	Ftcl	Vitamins & Cofactor Biosynthesis
+fumarase	FUM	[c] : fum + h2o <==> mal-L	-Inf	Inf	1	0	Gmet_2570	1	1	Fum1	Central Metabolism
+glucosamine-1-phosphate N-acetyltransferase	G1PACT	[c] : accoa + gam1p --> acgam1p + coa + h	0	Inf	1	0	Gmet_0103	1	1	GlmU	Carbohydrate Metabolism
+glucose-1-phosphate thymidylyltransferase	G1PTMT	[c] : dttp + g1p + h --> dtdpglc + ppi	0	Inf	1	0	Gmet_0924	1	1	RfbA	Nucleotide Metabolism
+glutamate-1-semialdehyde aminotransferase	G1SAT	[c] : glu1sa <==> 5aop	-Inf	Inf	1	0	Gmet_3356	1	1	HemL	Vitamins & Cofactor Biosynthesis
+glycerol-3-phosphate dehydrogenase (NAD)	G3PD1	[c] : glyc3p + nad <==> dhap + h + nadh	-Inf	Inf	1	0	Gmet_0008	1	1	GpsA	Central Metabolism
+glycerol-3-phosphate dehydrogenase (NADP)	G3PD2	[c] : glyc3p + nadp <==> dhap + h + nadph	-Inf	Inf	1	0	Gmet_0008	1	1	GpsA	Central Metabolism
+glycerol-3-phosphate dehydrogenase (menaquinone 7)	G3PD4	[c] : glyc3p + mqn7 --> dhap + mql7	0	Inf	1	0	Gmet_1677	1	1	GlpA	Central Metabolism
+L-glutamate 5-semialdehyde dehydratase (spontaneous)	G5SADs	[c] : glu5sa <==> 1pyr5c + h + h2o	-Inf	Inf	1	0		1	1		Carbohydrate Metabolism
+glutamate-5-semialdehyde dehydrogenase	G5SD	[c] : glu5p + h + nadph --> glu5sa + nadp + pi	0	Inf	1	0	Gmet_3199	1	1	ProA	Amino Acid Metabolism
+glucose 6-phosphate dehydrogenase	G6PDHy	[c] : g6p + nadp <==> 6pgl + h + nadph	-Inf	Inf	1	0	Gmet_2619	1	1	Zwf	Pentose Phosphate Pathway
+galactose-1-phosphate uridylyltransferase	GALT	[c] : gal1p + h + utp <==> ppi + udpgal	-Inf	Inf	1	0	Gmet_3176	1	1	GalT	Carbohydrate Metabolism
+UTP-glucose-1-phosphate uridylyltransferase	GALU	[c] : g1p + h + utp <==> ppi + udpg	-Inf	Inf	1	0	Gmet_1159	1	1	GalU	Lipid & Cell Wall Metabolism
+galacturonate transport in via proton symport	GALURt2	galur[e] + h[e] --> galur[c] + h[c]	0	Inf	1	0	Gmet_3221	1	1	ExuT	Transport
+glyceraldehyde-3-phosphate dehydrogenase (NAD)	GAPD	[c] : g3p + nad + pi <==> 13dpg + h + nadh	-Inf	Inf	1	0	Gmet_1211, Gmet_1946	1	1	Gap2, Gap	Central Metabolism
+phosphoribosylglycinamide formyltransferase	GARFT	[c] : 10fthf + gar <==> fgam + h + thf	-Inf	Inf	1	0	Gmet_1845	1	1	PurN	Nucleotide Metabolism
+Phosphoribosylglycinamide formyltransferase 2	GART	[c] : atp + for + gar --> adp + fgam + h + pi	0	Inf	1	0	Gmet_3193	1	1	PurT	Purine and Pyrimidine Biosynthesis
+part of glycine-cleavage complex	GCCa	[c] : gly + h + lpro --> alpro + co2	0	Inf	1	0	Gmet_3154_AND_ Gmet_3152_OR_Gmet_3153_AND_ Gmet_0985	1	1	GcvH1+GcvP1, GcvH2+GcvP1	Folate Metabolism
+part of glycine cleavage complex	GCCb	[c] : alpro + thf --> dhlpro + mlthf + nh4	0	Inf	1	0	Gmet_3155	1	1	GcvT	Amino Acid Metabolism
+part of glycine-cleavage complex	GCCc	[c] : dhlpro + nad --> h + lpro + nadh	0	Inf	1	0	Gmet_2764, Gmet_1896	1	1	Lpd2, Lpd	Amino Acid Metabolism
+glutaryl-CoA dehydrogenase	GCOAD	[c] : glutcoa + nadp --> b2coa + co2 + nadph	0	Inf	1	0	Gmet_2075	1	1	BamM	Aromatic Compound degradation
+GDP-4-dehydro-6-deoxy-D-mannose epimerase	GDMANE	[c] : gdpddm <==> gdpofuc	-Inf	Inf	1	0	Gmet_1312	1	1	Fcl	Lipid & Cell Wall Metabolism
+GDPmannose 4,6-dehydratase	GDPMD	[c] : gdpman --> gdpddm + h2o	0	Inf	1	0	Gmet_1311, Gmet_1488	1	1	Gmd1, Gmd	Lipid & Cell Wall Metabolism
+glutamine-fructose-6-phosphate transaminase	GF6PTA	[c] : f6p + gln-L --> gam6p + glu-L	0	Inf	1	0	Gmet_0104, Gmet_1487	1	1	GlmS1, GlmS	Lipid & Cell Wall Metabolism
+geranylgeranyltranstransferase	GGTT	[c] : ggdp + ipdp --> pendp + ppi	0	Inf	1	0	Gmet_2455	1	1	IspB	Other
+glycine hydroxymethyltransferase	GHMT	[c] : ser-L + thf <==> gly + h2o + mlthf	-Inf	Inf	1	0	Gmet_1605	1	1	GlyA	Amino Acid Metabolism
+guanylate kinase (GMP:ATP)	GK1	[c] : atp + gmp <==> adp + gdp	-Inf	Inf	1	0	Gmet_2327	1	1	Gmk	Nucleotide Metabolism
+glycogen phosphorylase	GLCP	[c] : glycogen + pi --> g1p	0	Inf	1	0	Gmet_3159, Gmet_0940	1	1	GlgP2, GlgP	Carbohydrate Metabolism
+glycogen synthase (ADPGlc)	GLCS1	[c] : adpglc --> adp + glycogen + h	0	Inf	1	0	Gmet_0707, Gmet_3175	1	1	GlgA2, GlgA1	Carbohydrate Metabolism
+glucuronate transport in via proton symport	GLCURt2	glcur[e] + h[e] --> glcur[c] + h[c]	0	Inf	1	0	Gmet_3221	1	1	ExuT	Transport
+glucose-1-phosphate adenylyltransferase	GLGC	[c] : atp + g1p + h --> adpglc + ppi	0	Inf	1	0	Gmet_2768	1	1	GlgC	Glycolysis/Gluconeogenesis
+glutamine synthetase	GLNS	[c] : atp + glu-L + nh4 --> adp + gln-L + h + pi	0	Inf	1	0	Gmet_1352	1	1	GlnA	Amino Acid Metabolism
+glutamine synthetase (uaagmda)	GLNSP3i	[c] : atp + nh4 + uaagmda --> adp + h + pi + uaagtmda	0	Inf	1	0	Gmet_1352	1	1	GlnA	Lipid & Cell Wall Metabolism
+Glutaminyl-tRNA synthetase	GLNTRS	[c] : atp + gln-L + trnagln --> amp + glntrna + ppi	0	Inf	1	0	Gmet_0058	1	1	GlnS	Amino Acid Metabolism
+glutamate 5-kinase	GLU5K	[c] : atp + glu-L --> adp + glu5p	0	Inf	1	0	Gmet_3198	1	1	ProB	Amino Acid Metabolism
+glutaminyl-tRNA synthase (glutamine-hydrolysing)	GLUADT	[c] : atp + gln-L + glutrna + h2o --> adp + glntrna + glu-L + h + pi	0	Inf	1	0	Gmet_0075_OR_Gmet_0076_OR_Gmet_0073	1	1	GatABC	Amino Acid Metabolism
+glutamate dehydrogenase (NAD)	GLUDx	[c] : glu-L + h2o + nad <==> akg + h + nadh + nh4	-Inf	Inf	1	0	Gmet_1728	1	1	GudA	Amino Acid Metabolism
+glutamate dehydrogenase (NADP)	GLUDy	[c] : glu-L + h2o + nadp <==> akg + h + nadph + nh4	-Inf	Inf	1	0	Gmet_1186	1	1	GudB	Amino Acid Metabolism
+glutamine phosphoribosyldiphosphate amidotransferase	GLUPRT	[c] : gln-L + h2o + prpp --> glu-L + ppi + pram	0	Inf	1	0	Gmet_1939	1	1	PurF	Nucleotide Metabolism
+glutamate racemase	GLUR	[c] : glu-D <==> glu-L	-Inf	Inf	1	0	Gmet_0547	1	1	MurI	Amino Acid Metabolism
+glutamate synthase (NADH2)	GLUSx	[c] : akg + gln-L + h + nadh --> (2) glu-L + nad	0	Inf	1	0	Gmet_1754_OR_Gmet_1755_OR_Gmet_1756_OR_Gmet_1753	1	1	GltAB	Amino Acid Metabolism
+glutamate synthase (Ferredoxin)	GLUSz	[c] : akg + fdxr-4:2 + gln-L + (2) h <==> fdxo-4:2 + (2) glu-L	-Inf	Inf	1	0	Gmet_0147	1	1	GltF	Amino Acid Metabolism
+glutamyl-tRNA reductase	GLUTRR	[c] : glutrna + h + nadph --> glu1sa + nadp + trnaglu	0	Inf	1	0	Gmet_3233	1	1	HemA	Vitamins & Cofactor Biosynthesis
+Glutamyl-tRNA synthetase	GLUTRS	[c] : atp + glu-L + trnaglu --> amp + glutrna + ppi	0	Inf	1	0	Gmet_1780, Gmet_1736	1	1	GltX1, GltX2	Vitamins & Cofactor Biosynthesis
+Glycolate dehydrogenase (NAD)	GLYCLTDx	[c] : glx + h + nadh --> glyclt + nad	0	Inf	1	0	Gmet_0106	1	1	YcdW	Glyoxylate Metabolism
+Glycolate dehydrogenase (NADP)	GLYCLTDy	[c] : glx + h + nadph --> glyclt + nadp	0	Inf	1	0	Gmet_0106	1	1	YcdW	Glyoxylate Metabolism
+Glycolate oxidase	GLYCTO2	[c] : glyclt + ubq8 --> glx + ubq8h2	0	Inf	1	0	Gmet_3245_OR_Gmet_3246	1	1	GlcDF	Alternate Carbon Metabolism
+Glycolate oxidase	GLYCTO3	[c] : glyclt + mqn8 --> glx + mql8	0	Inf	1	0	Gmet_3245_OR_Gmet_3246	1	1	GlcDF	Alternate Carbon Metabolism
+glycerate dehydrogenase	GLYD	[c] : h + hpyr + nadh <==> glyc-R + nad	-Inf	Inf	1	0	Gmet_2695	1	1	HprA	Central Metabolism
+glycerol kinase	GLYK	[c] : atp + glyc --> adp + glyc3p + h	0	Inf	1	0	Gmet_1676	1	1	GlpK	Central Metabolism
+Glycyl-tRNA synthetase	GLYTRS	[c] : atp + gly + trnagly --> amp + glytrna + ppi	0	Inf	1	0	Gmet_2942_OR_Gmet_2941	1	1	GlyQS	Amino Acid Metabolism
+D-glycero-D-manno-hepose 1-phosphate adenyltransferase	GMHEPAT	[c] : atp + gmh1p + h --> adphep-D,D + ppi	0	Inf	1	0	Gmet_0922	1	1	RfaEec	Cell Envelope Biosynthesis
+D-glycero-D-manno-heptose 7-phosphate kinase	GMHEPK	[c] : atp + gmh7p --> adp + gmh17bp + h	0	Inf	1	0	Gmet_0922	1	1	RfaEec	Cell Envelope Biosynthesis
+GMP synthase (glutamine-hydrolysing)	GMPS2	[c] : atp + gln-L + h2o + xmp --> amp + glu-L + gmp + (2) h + ppi	0	Inf	1	0	Gmet_2292	1	1	GuaA	Nucleotide Metabolism
+GDP-4-oxo-L-fucose reductase	GOFUCR	[c] : gdpofuc + h + nadph --> gdpfuc + nadp	0	Inf	1	0	Gmet_1312	1	1	Fcl	Lipid & Cell Wall Metabolism
+geranyltranstransferase	GRTT	[c] : grdp + ipdp --> frdp + ppi	0	Inf	1	0	Gmet_1935	1	1	IspA	Other
+L-glutamate 5-semialdehyde dehydrogenase	GSADH	[c] : glu5sa + h2o + nad --> glu-L + (2) h + nadh	0	Inf	1	0	Gmet_3512	1	1	PyrcPrd	Amino Acid Metabolism
+GTP cyclohydrolase II	GTPCII	[c] : gtp + (3) h2o --> 25dhpp + for + (2) h + ppi	0	Inf	1	0	Gmet_1626	1	1	RibA	Vitamins & Cofactor Biosynthesis
+GTP diphosphokinase	GTPDPK	[c] : atp + gtp --> amp + gdptp + h	0	Inf	1	0	Gmet_2325	1	1	RelA	Nucleotide Metabolism
+guanine phosphoribosyltransferase	GUAPRTr	[c] : gua + prpp <==> gmp + ppi	-Inf	Inf	1	0	Gmet_2716	1	1	Hpt	Nucleotide Metabolism
+glucuronate isomerase (D-glucuronate)	GUI1	[c] : glcur <==> fruur	-Inf	Inf	1	0	Gmet_0451	1	1	UxaC	Alternate Carbon Metabolism
+glucuronate isomerase (D-galacturonate)	GUI2	[c] : galur <==> tagur	-Inf	Inf	1	0	Gmet_0451	1	1	UxaC	Alternate Carbon Metabolism
+H2O transport via diffusion	H2Ot5	h2o[e] <==> h2o[c]	-Inf	Inf	1	0		1	1		Transport, Extracellular
+hydrogen transport	H2td	h2[c] <==> h2[e]	-Inf	Inf	1	0		1	1		Transport
+3-hydroxyacyl-CoA dehydrogenase (acetoacetyl-CoA)	HACD1	[c] : aacoa + h + nadh <==> 3hbycoa + nad	-Inf	Inf	1	0	Gmet_2269, Gmet_1717, Gmet_2203	1	1	MmgB2, YusL, MmgB1	Lipids
+3-hydroxyacyl-CoA dehydrogenase (3-oxohexanoyl-CoA)	HACD2	[c] : 3ohcoa + h + nadh <==> 3hhcoa + nad	-Inf	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+3-hydroxyacyl-CoA dehydrogenase (3-oxooctanoyl-CoA)	HACD3	[c] : 3oocoa + h + nadh <==> 3hocoa + nad	-Inf	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+3-hydroxyacyl-CoA dehydrogenase (3-oxodecanoyl-CoA)	HACD4	[c] : 3odcoa + h + nadh <==> 3hdcoa + nad	-Inf	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+3-hydroxyacyl-CoA dehydrogenase (3-oxododecanoyl-CoA)	HACD5	[c] : 3oddcoa + h + nadh <==> 3hddcoa + nad	-Inf	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+3-hydroxyacyl-CoA dehydrogenase (3-oxotetradecanoyl-CoA)	HACD6	[c] : 3otdcoa + h + nadh <==> 3htdcoa + nad	-Inf	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+3-hydroxyacyl-CoA dehydrogenase (3-oxohexadecanoyl-CoA)	HACD7	[c] : 3ohdcoa + h + nadh <==> 3hhdcoa + nad	-Inf	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+3-hydroxyacyl-CoA dehydrogenase (2-Methylacetoacetyl-CoA)	HACD8	[c] : 3hmbcoa + nad <==> 2maacoa + h + nadh	-Inf	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+3-hydroxyacyl-CoA dehydrogenase	HACOADr	[c] : 3hmp + nad --> h + mmalsa-S + nadh	0	Inf	1	0	Gmet_2269	1	1	YusL	Lipids
+(3R)-3-Hydroxybutanoyl-[acyl-carrier-protein] hydro-lyase	HBUHL1	[c] : 3hbACP --> 2beACP + h2o	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ, FabAZ1	Fatty Acid Synthesis
+(3R)-3-Hydroxybutanoyl-[acyl-carrier protein]:NADP+ oxidoreductase	HBUR1	[c] : actACP + h + nadph --> 3hbACP + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG1, FabG2	Fatty Acid Synthesis
+4-hydroxybenzoate octaprenyltransferase	HBZOPT	[c] : 4hbz + octdp --> 3ophb + ppi	0	Inf	1	0	Gmet_3393	1	1	UbiA	Other
+homocitrate synthase	HCITS	[c] : accoa + akg + h2o --> coa + h + hcit	0	Inf	1	0	Gmet_0692	1	1	NifV	Amino Acid Metabolism
+carbonate dehydratase (HCO3 equilibration reaction)	HCO3E	[c] : co2 + h2o <==> h + hco3	-Inf	Inf	1	0	Gmet_3517, Gmet_1242, Gmet_0774	1	1	CynT1, CynT2, CynT	Nonenzymatic Chemical Reactions
+(3R)-3-Hydroxybutanoyl-[acyl-carrier-protein] hydro-lyase	HDDHL5	[c] : 3hddACP --> 2tddACP + h2o	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ1, FabAZ	Fatty Acid Synthesis
+3R)-3-Hydroxydodecanoyl-[acyl-carrier-protein]:NADP+ oxidoreductase	HDDR5	[c] : 3oxddACP + h + nadph --> 3hddACP + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG2, FabG1	Fatty Acid Synthesis
+(3R)-3-Hydroxybutanoyl-[acyl-carrier-protein] hydro-lyase	HDEHL4	[c] : 3hdeACP --> 2tdeACP + h2o	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ1, FabAZ	Fatty Acid Synthesis
+(3R)-3-Hydroxydecanoyl-[acyl-carrier-protein]:NADP+ oxidoreductase	HDER4	[c] : 3oxdeACP + h + nadph --> 3hdeACP + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG1, FabG2	Fatty Acid Synthesis
+hydrogen dehydrogenase	HDH	[c] : h2 + nad <==> h + nadh	-Inf	Inf	1	0	Gmet_1111_OR_Gmet_1109_OR_Gmet_1110_OR_Gmet_1113_OR_Gmet_1112	1	1	Hox	Energy Metabolism
+Hexadecanoyl-[acyl-carrier protein]:malonyl-CoA  C-acyltransferase	HDMAT7	[c] : nad + palmACP <==> h + hdeACP + nadh	-Inf	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+Hexanoyl-[acyl-carrier protein]:malonyl-CoA C-acyltransferase	HEMAT2	[c] : 2theACP + h + nadh --> hexACP + nad	0	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+Heme O synthase	HEMEOS	[c] : frdp + h2o + pheme --> h + hemeO + ppi	0	Inf	1	0	Gmet_0253	1	1	CyoE	Cofactor and Prosthetic Group Biosynthesis
+trans-heptaprenyltranstransferase	HEPTT	[c] : hepdp + ipdp --> octdp + ppi	0	Inf	1	0	Gmet_2455	1	1	IspB	Lipid & Cell Wall Metabolism
+hexanesulfonate transport via ABC system	HEXSabc	atp[c] + h2o[c] + hexs[e] --> adp[c] + h[c] + hexs[c] + pi[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuC1+SsuA1+SsuB1, SsuA+SsuC+SsuB	Transport
+trans-hexaprenyltranstransferase	HEXTT	[c] : hexdp + ipdp --> hepdp + ppi	0	Inf	1	0	Gmet_2455	1	1	IspB	Lipid & Cell Wall Metabolism
+mercury(II) reductase	HGR	[c] : hg2 + nadph <==> h + hg0 + nadp	-Inf	Inf	1	0	Gmet_0177	1	1	MerA	Central Metabolism
+(3R)-3-Hydroxypalmitoyl-[acyl-carrier-protein] hydro-lyase	HHDHL7	[c] : 3hpaACP --> h2o + hdeACP	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ, FabAZ1	Fatty Acid Synthesis
+(3R)-3-Hydroxypalmitoyl-[acyl-carrier-protein]:NADP+ oxidoreductase	HHDR7	[c] : 3oxhdACP + h + nadph --> 3hpaACP + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG1, FabG2	Fatty Acid Synthesis
+(3R)-3-Hydroxybutanoyl-[acyl-carrier-protein] hydro-lyase	HHYHL2	[c] : 3hhACP --> 2theACP + h2o	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ, FabAZ1	Fatty Acid Synthesis
+(3R)-3-Hydroxyhexanoyl-[acyl-carrier-protein]:NADP+ oxidoreductase	HHYR2	[c] : 3oxhACP + h + nadph --> 3hhACP + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG1, FabG2	Fatty Acid Synthesis
+histidinol dehydrogenase	HISTD	[c] : h2o + histd + (2) nad --> (3) h + his-L + (2) nadh	0	Inf	1	0	Gmet_0384	1	1	HisD	Amino Acid Metabolism
+histidinol-phosphatase	HISTP	[c] : h2o + hisp --> histd + pi	0	Inf	1	0	Gmet_0923	1	1	HisJ	Amino Acid Metabolism
+Histidyl-tRNA synthetase	HISTRS	[c] : atp + his-L + trnahis --> amp + histrna + ppi	0	Inf	1	0	Gmet_3259, Gmet_1913	1	1	HisS, HisS2	Amino Acid Metabolism
+hydroxymethylbilane synthase	HMBS	[c] : h2o + (4) ppbng --> hmbil + (4) nh4	0	Inf	1	0	Gmet_3234	1	1	HemC	Cofactor and Prosthetic Group Biosynthesis
+hydroxymethylglutaryl-CoA lyase	HMGL	[c] : hmgcoa --> acac + accoa	0	Inf	1	0	Gmet_3293	1	1	YngG	Lipids
+hydroxymethylpyrimidine kinase (ATP)	HMPK1	[c] : 4ahmmp + atp --> 4ampm + adp + h	0	Inf	1	0	Gmet_2909	1	1	ThiD	Vitamins & Cofactor Biosynthesis
+hydroxymethylpyrimidine kinase (CTP)	HMPK2	[c] : 4ahmmp + ctp --> 4ampm + cdp + h	0	Inf	1	0	Gmet_2909	1	1	ThiD	Vitamins & Cofactor Biosynthesis
+hydroxymethylpyrimidine kinase (UTP)	HMPK3	[c] : 4ahmmp + utp --> 4ampm + h + udp	0	Inf	1	0	Gmet_2909	1	1	ThiD	Vitamins & Cofactor Biosynthesis
+hydroxymethylpyrimidine kinase (GTP)	HMPK4	[c] : 4ahmmp + gtp --> 4ampm + gdp + h	0	Inf	1	0	Gmet_2909	1	1	ThiD	Vitamins & Cofactor Biosynthesis
+2-[hydroxy(phenyl)methyl]-succinyl-CoA dehydrogenase	HMPSCD	[c] : hmpscoa + nad <==> bsuccoa + h + nadh	-Inf	Inf	1	0	Gmet_1530_OR_Gmet_1531	1	1	BbsCD	Aromatic Compound degradation
+6-hydroxycyclohex-1-ene-1-carbonyl CoA dehydrogenase	HOCCD	[c] : 6hch1eccoa + nad <==> 6occhcoa + h + nadh	-Inf	Inf	1	0	Gmet_2151	1	1	Had	Aromatic Compound degradation
+((3R)-3-Hydroxybutanoyl-[acyl-carrier-protein] hydro-lyase	HOCHL3	[c] : 3hocACP --> 2toceACP + h2o	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ, FabAZ1	Fatty Acid Synthesis
+(3R)-3-Hydroxyoctanoyl-[acyl-carrier-protein]:NADP+ oxidoreductase	HOCR3	[c] : 3oxocACP + h + nadph --> 3hocACP + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG2, FabG1	Fatty Acid Synthesis
+(3R)-3-Hydroxyoctadecanoyl-[acyl-carrier-protein] hydro-lyase	HODHL8	[c] : 3hocdacp --> 2tocdACP + h2o	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ1, FabAZ	Fatty Acid Synthesis
+(3R)-3-Hydroxyoctadecanoyl-[acyl-carrier-protein]:NADP+ oxidoreductase	HODR8	[c] : 3oxocdacp + h + nadph --> 3hocdacp + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG2, FabG1	Fatty Acid Synthesis
+3-hydroxy-1-pyrroline-5-carboxylate dehydrogenase	HP5CD	[c] : 1p3h5c + (2) h2o + nad --> 4hglu + h + nadh	0	Inf	1	0	Gmet_3512	1	1	PyrcPrd	Amino Acid Metabolism
+2-amino-4-hydroxy-6-hydroxymethyldihydropteridine diphosphokinase	HPPK	[c] : 2ahhmp + atp --> 2ahhmd + amp + h	0	Inf	1	0	Gmet_0495	1	1	FolK	Vitamins & Cofactor Biosynthesis
+hydroxypyruvate reductase	HPYRRx	[c] : h + hpyr + nadh --> glyc-R + nad	0	Inf	1	0	Gmet_0106	1	1	YcdW	Alternate Carbon Metabolism
+hydroxypyruvate reductase	HPYRRy	[c] : h + hpyr + nadph --> glyc-R + nadp	0	Inf	1	0	Gmet_0106	1	1	YcdW	Alternate Carbon Metabolism
+Acetyl-CoA:L-homoserine O-acetyltransferase	HSAT	[c] : accoa + hom-L <==> achms + coa	-Inf	Inf	1	0	Gmet_2783	1	1	MetA1	Amino Acid Metabolism
+homoserine dehydrogenase (NADPH)	HSDy	[c] : hom-L + nadp <==> aspsa + h + nadph	-Inf	Inf	1	0	Gmet_1629	1	1	Hom	Amino Acid Metabolism
+homoserine kinase	HSK	[c] : atp + hom-L --> adp + h + phom	0	Inf	1	0		1	1		Amino Acid Metabolism
+histidinol-phosphate transaminase	HSTPT	[c] : glu-L + imacp --> akg + h + hisp	0	Inf	1	0	Gmet_0385	1	1	HisC	Amino Acid Metabolism
+(3R)-3-Hydroxypalmitoyl-[acyl-carrier-protein] hydro-lyase	HTDHL6	[c] : 3htdACP --> h2o + tdeACP	0	Inf	1	0	Gmet_1697, Gmet_2354	1	1	FabAZ, FabAZ1	Fatty Acid Synthesis
+3R)-3-Hydroxytetradecanoyl-[acyl-carrier-protein]:NADP+ oxidoreductase	HTDR6	[c] : 3oxtdACP + h + nadph --> 3htdACP + nadp	0	Inf	1	0	Gmet_1694, Gmet_1601	1	1	FabG2, FabG1	Fatty Acid Synthesis
+hypoxanthine phosphoribosyltransferase (Hypoxanthine)	HXPRT	[c] : hxan + prpp --> imp + ppi	0	Inf	1	0	Gmet_2716	1	1	Hpt	Nucleotide Metabolism
+isocitrate dehydrogenase (NADP)	ICDHy	[c] : icit + nadp <==> akg + co2 + nadph	-Inf	Inf	1	0	Gmet_1359	1	1	Icd	Central Metabolism
+Isochorismate Synthase	ICHORSi	[c] : chor --> ichor	0	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+isochorismatase	ICHORT	[c] : h2o + ichor --> 23ddhb + pyr	0	Inf	1	0	Gmet_2952, Gmet_2564	1	1	EntB1, EntB	Vitamins & Cofactor Biosynthesis
+Imidazole-glycerol-3-phosphate synthase	IG3PS	[c] : gln-L + prlp --> aicar + eig3p + glu-L + (2) h	0	Inf	1	0	Gmet_0387_OR_Gmet_0389	1	1	HisF	Amino Acid Metabolism
+imidazoleglycerol-phosphate dehydratase	IGPDH	[c] : eig3p + h --> h2o + imacp	0	Inf	1	0	Gmet_0386	1	1	HisB	Amino Acid Metabolism
+indole-3-glycerol-phosphate synthase	IGPS	[c] : 2cpr5p + h --> 3ig3p + co2 + h2o	0	Inf	1	0	Gmet_2494	1	1	TrpC	Amino Acid Metabolism
+L-isoleucine transport via ABC system	ILEabc	atp[c] + h2o[c] + ile-L[e] --> adp[c] + h[c] + ile-L[c] + pi[c]	0	Inf	1	0	Gmet_1823_OR_Gmet_1822_OR_Gmet_1819_OR_Gmet_1821_OR_Gmet_1820	1	1	AzlCD	Transport
+isoleucine transaminase	ILETA	[c] : akg + ile-L <==> 3mop + glu-L	-Inf	Inf	1	0	Gmet_2853	1	1	IlvE	Amino Acid Metabolism
+Isoleucyl-tRNA synthetase	ILETRS	[c] : atp + ile-L + trnaile --> amp + iletrna + ppi	0	Inf	1	0	Gmet_0351	1	1	IleS	Amino Acid Metabolism
+IMP cyclohydrolase	IMPC	[c] : h2o + imp <==> fprica	-Inf	Inf	1	0	Gmet_2905	1	1	PurH	Nucleotide Metabolism
+IMP dehydrogenase	IMPD	[c] : h2o + imp + nad --> h + nadh + xmp	0	Inf	1	0	Gmet_2293	1	1	GuaB	Nucleotide Metabolism
+indolepyruvate ferredoxin oxidoreductase	IOR	[c] : coa + (2) fdox + indpyr <==> co2 + (2) fdred + h + indaccoa	-Inf	Inf	1	0	Gmet_0949_OR_Gmet_0948_AND_ Gmet_1827_OR_Gmet_1826	1	1	IorAB1, IorAB2	Tyrosine, Tryptophan, and Phenylalanine Metabolism
+indolepyruvate ferredoxin oxidoreductase (phenylpyvurate)	IOR2	[c] : coa + (2) fdox + phpyr <==> co2 + (2) fdred + h + phaccoa	-Inf	Inf	1	0	Gmet_0949_OR_Gmet_0948_AND_ Gmet_1827_OR_Gmet_1826	1	1	IorAB1, IorAB2	Tyrosine, Tryptophan, and Phenylalanine Metabolism
+indolepyruvate ferredoxin oxidoreductase (hydroxyphenylpyvurate)	IOR3	[c] : 34hpp + coa + (2) fdox <==> 4hphaccoa + co2 + (2) fdred + h	-Inf	Inf	1	0	Gmet_0949_OR_Gmet_0948_AND_ Gmet_1827_OR_Gmet_1826	1	1	IorAB1, IorAB2	Tyrosine, Tryptophan, and Phenylalanine Metabolism
+1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate reductase (ipdp)	IPDPS	[c] : h + h2mb4p + nadh --> h2o + ipdp + nad	0	Inf	1	0	Gmet_0866	1	1	LytB	Cofactor and Prosthetic Group Biosynthesis
+3-isopropylmalate dehydrogenase	IPMD	[c] : 3c2hmp + nad --> 3c4mop + h + nadh	0	Inf	1	0	Gmet_0602	1	1	LeuB	Amino Acid Metabolism
+3-isopropylmalate dehydratase	IPPMIa	[c] : 3c2hmp <==> 2ippm + h2o	-Inf	Inf	1	0	Gmet_1269_OR_Gmet_1268	1	1	LeuCD	Amino Acid Metabolism
+2-isopropylmalate hydratase	IPPMIb	[c] : 2ippm + h2o <==> 3c3hmp	-Inf	Inf	1	0	Gmet_1269_OR_Gmet_1268	1	1	LeuCD	Amino Acid Metabolism
+2-isopropylmalate synthase	IPPS	[c] : 3mob + accoa + h2o --> 3c3hmp + coa + h	0	Inf	1	0	Gmet_1265, Gmet_1879	1	1	LeuA3, LeuA	Amino Acid Metabolism
+isoquinoline 1-oxidoreductase	IQNLOR	[c] : (2) ficytcc + h2o + iqnl <==> (2) focytcc + (2) h + iqnln	-Inf	Inf	1	0	Gmet_0838_OR_Gmet_0837	1	1	IorAB	Energy Metabolism
+Isethionate transport via ABC system	ISTNTabc	atp[c] + h2o[c] + istnt[e] --> adp[c] + h[c] + istnt[c] + pi[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuA+SsuB+SsuC, SsuC1+SsuA1+SsuB1	Transport
+dITP pyrophosphatase	ITPASE	[c] : ditp + h2o --> dimp + ppi	0	Inf	1	0	Gmet_1875	1	1	IxpP	Nucleotide Metabolism
+ketol-acid reductoisomerase (2,3-dihydroxy-3-methylbutanoate)	KARA1	[c] : 23dhmb + nadp <==> alac-S + h + nadph	-Inf	Inf	1	0	Gmet_1262	1	1	IlvC	Amino Acid Metabolism
+ketol-acid reductoisomerase (2-Acetolactate)	KARA2	[c] : 2ahbut + h + nadph <==> 23dhmp + nadp	-Inf	Inf	1	0	Gmet_1262	1	1	IlvC	Amino Acid Metabolism
+b-ketoacyl synthetase (Iso-C14:0)	KAS1	[c] : (14) h + ibcoa + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa1 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		Fatty Acid Metabolism
+b-ketoacyl synthetase (n-C18:1)	KAS17	[c] : accoa + (22) h + (8) malcoa + (15) nadph --> (8) co2 + (9) coa + (7) h2o + (15) nadp + ocdcea	0	Inf	1	0		1	1		Fatty Acid Metabolism
+b-ketoacyl synthetase (Iso-C15:0)	KAS3	[c] : (14) h + ivcoa + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa3 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		Fatty Acid Metabolism
+b-ketoacyl synthetase (Anteiso-C15:0)	KAS4	[c] : 2mbcoa + (14) h + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa4 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		Fatty Acid Metabolism
+b-ketoacyl synthetase (Iso-C17:1)	KAS9	[c] : (16) h + ivcoa + (6) malcoa + (11) nadph --> (6) co2 + (7) coa + fa9 + (5) h2o + (11) nadp	0	Inf	1	0		1	1		Fatty Acid Metabolism
+3-deoxy-manno-octulosonate-8-phosphatase	KDOPP	[c] : h2o + kdo8p --> kdo + pi	0	Inf	1	0	Gmet_1279	1	1	KdoP	Cell Envelope Biosynthesis
+2-dehydro-3-deoxy-phosphooctonate aldolase	KDOPS	[c] : ara5p + h2o + pep --> kdo8p + pi	0	Inf	1	0	Gmet_1277	1	1	KdsA	Lipid & Cell Wall Metabolism
+potassium transport in/out via proton symport	Kt6	h[e] + k[e] <==> h[c] + k[c]	-Inf	Inf	1	0	Gmet_2550_AND_ Gmet_0038_AND_ Gmet_0039_AND_ Gmet_1105_OR_Gmet_3488	1	1	KefC, Kup, TrkA, Kup2	Transport
+H+/K+-exchanging ATPase	Ktabc	atp[c] + h2o[c] + k[e] --> adp[c] + h[e] + k[c] + pi[c]	0	Inf	1	0	Gmet_2433_OR_Gmet_2435_OR_Gmet_2434	1	1	KdpABC	Transport
+cysteate transport via ABC system	LCYSTabc	Lcyst[e] + atp[c] + h2o[c] --> Lcyst[c] + adp[c] + h[c] + pi[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuC1+SsuA1+SsuB1, SsuA+SsuC+SsuB	Transport
+L-leucine transport via ABC system	LEUabc	atp[c] + h2o[c] + leu-L[e] --> adp[c] + h[c] + leu-L[c] + pi[c]	0	Inf	1	0	Gmet_1823_OR_Gmet_1822_OR_Gmet_1819_OR_Gmet_1821_OR_Gmet_1820	1	1	AzlCD	Transport
+D-leucine dehydrogenase	LEUD	[c] : h2o + leu-D + nad --> 4mop + h + nadh + nh4	0	Inf	1	0	Gmet_1186	1	1	Bcd	Valine, Leucine, and Isoleucine Metabolism
+leucine transaminase	LEUTA	[c] : akg + leu-L <==> 4mop + glu-L	-Inf	Inf	1	0	Gmet_2853	1	1	IlvE	Amino Acid Metabolism
+Leucyl-tRNA synthetase	LEUTRS	[c] : atp + leu-L + trnaleu --> amp + leutrna + ppi	0	Inf	1	0	Gmet_2300	1	1	LeuS	Amino Acid Metabolism
+lactoylglutathione lyase	LGTHL	[c] : gthrd + mthgxl --> lgt-S	0	Inf	1	0	Gmet_2237	1	1	GloA	Other
+Lipid A disaccaride synthase	LPADSS	[c] : lipidX + u23ga --> h + lipidAds + udp	0	Inf	1	0	Gmet_2350	1	1	LpxB	Lipid & Cell Wall Metabolism
+L-lysine transport out via proton antiport	LYSt3	h[e] + lys-L[c] --> h[c] + lys-L[e]	0	Inf	1	0	Gmet_0798	1	1	LysE1	Transport
+Lysyl-tRNA synthetase	LYSTRS	[c] : atp + lys-L + trnalys --> amp + lystrna + ppi	0	Inf	1	0	Gmet_2360	1	1	LysS	Amino Acid Metabolism
+Malonyl-CoA:[acyl-carrier-protein] S-malonyltransferase	MACPMT	[c] : ACP + malcoa --> coa + malACP	0	Inf	1	0	Gmet_1691, Gmet_1600	1	1	FabD, FabD2	Fatty Acid Synthesis
+mannose-1-phosphate guanylyltransferase	MAN1PT1	[c] : gtp + h + man1p --> gdpman + ppi	0	Inf	1	0	Gmet_3178	1	1	Mpg	Cell Envelope Biosynthesis
+mannose-1-phosphate guanylyltransferase (GDP)	MAN1PT2	[c] : gdp + h + man1p --> gdpman + pi	0	Inf	1	0	Gmet_1104	1	1	ManC	Cell Envelope Biosynthesis
+mannose-6-phosphate isomerase	MAN6PI	[c] : man6p <==> f6p	-Inf	Inf	1	0	Gmet_2471	1	1	RfbAGs	Carbohydrate Metabolism
+2-methylcitrate dehydratase	MCITD	[c] : 2mcit --> 2mcacn + h2o	0	Inf	1	0	Gmet_1123	1	1	PrpD	Alternate Carbon Metabolism
+Butyryl-[acyl-carrier protein]:malonyl-[acyl-carrier-protein]C-acyltransferase (decarboxylating)	MCMAT2	[c] : butACP + h + malACP --> 3oxhACP + ACP + co2	0	Inf	1	0	Gmet_1599, Gmet_1603, Gmet_3272, Gmet_1695, Gmet_1696	1	1	FabF2, FabF, FabF3, FabH1, FabH	Fatty Acid Synthesis
+Hexanoyl-[acyl-carrier protein]:malonyl-[acyl-carrier-protein] C-acyltransferase	MCMAT3	[c] : h + hexACP + malACP --> 3oxocACP + ACP + co2	0	Inf	1	0	Gmet_1603, Gmet_1695, Gmet_1696	1	1	FabF, FabF3, FabF2	Fatty Acid Synthesis
+Octanoyl-[acyl-carrier protein]:malonyl-[acyl-carrier-protein]   C-acyltransferase (decarboxylating)	MCMAT4	[c] : h + malACP + octACP --> 3oxdeACP + ACP + co2	0	Inf	1	0	Gmet_1603, Gmet_1695, Gmet_1696	1	1	FabF3, FabF, FabF2	Fatty Acid Synthesis
+Decanoyl-[acyl-carrier protein]:malonyl-[acyl-carrier-protein] C-acyltransferase	MCMAT5	[c] : decACP + h + malACP --> 3oxddACP + ACP + co2	0	Inf	1	0	Gmet_1603, Gmet_1695, Gmet_1696	1	1	FabF2, FabF3, FabF	Fatty Acid Synthesis
+Dodecanoyl-[acyl-carrier-protein]:malonyl-[acyl-carrier-protein]  C-acyltransferase	MCMAT6	[c] : ddcaACP + h + malACP --> 3oxtdACP + ACP + co2	0	Inf	1	0	Gmet_1603, Gmet_1695, Gmet_1696	1	1	FabF3, FabF2, FabF	Fatty Acid Synthesis
+Tetradecanoyl-[acyl-carrier-protein]:malonyl-[acyl-carrier-protein]  C-acyltransferase	MCMAT7	[c] : h + malACP + myrsACP --> 3oxhdACP + ACP + co2	0	Inf	1	0	Gmet_1603, Gmet_1695, Gmet_1696	1	1	FabF3, FabF2, FabF	Fatty Acid Synthesis
+Hexadecanoyl-[acyl-carrier-protein]:malonyl-[acyl-carrier-protein]  C-acyltransferase	MCMAT8	[c] : h + malACP + palmACP --> 3oxocdacp + ACP + co2	0	Inf	1	0	Gmet_1603, Gmet_1695, Gmet_1696	1	1	FabF2, FabF3, FabF	Fatty Acid Synthesis
+5-Methylcytosine aminohydrolase	MCSNAH1r	[c] : 5mcsn + h + h2o <==> nh4 + thym	-Inf	Inf	1	0	Gmet_3524	1	1	YaaJ	Nucleotide Metabolism
+malate dehydrogenase	MDH	[c] : mal-L + nad <==> h + nadh + oaa	-Inf	Inf	1	0	Gmet_1360	1	1	MLdh	Central Metabolism
+malic enzyme (NADP)	ME2	[c] : mal-L + nadp --> co2 + nadph + pyr	0	Inf	1	0	Gmet_1637	1	1	Mae	Central Metabolism
+2C-methyl-D-erythritol 2,4 cyclodiphosphate dehydratase	MECDPDH	[c] : 2mecdp + nadh --> h2mb4p + h2o + nad	0	Inf	1	0	Gmet_1353	1	1	IspG	Cofactor and Prosthetic Group Biosynthesis
+2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase	MECDPS	[c] : 2p4c2me --> 2mecdp + cmp	0	Inf	1	0	Gmet_0059	1	1	IspF	Vitamins & Cofactor Biosynthesis
+2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase	MEPCT	[c] : 2me4p + ctp + h --> 4c2me + ppi	0	Inf	1	0	Gmet_0060	1	1	IspD	Other
+O-Acetyl-L-homoserine acetate-lyase (adding methanethiol)	METACH	[c] : achms + h2s <==> ac + hcys-L	-Inf	Inf	1	0	Gmet_0819, Gmet_1566, Gmet_2390	1	1	MetAC2, MetAC1, MetAC	Amino Acid Metabolism
+methionine adenosyltransferase	METAT	[c] : atp + h2o + met-L --> amet + pi + ppi	0	Inf	1	0	Gmet_1290, Gmet_2549	1	1	MetK, MetK2	Amino Acid Metabolism
+methionine synthase	METS	[c] : 5mthf + hcys-L --> h + met-L + thf	0	Inf	1	0	Gmet_0549	1	1	MetH	Amino Acid Metabolism
+L-methionine-S-oxide reductase (trdrd)	METSR-S1	[c] : metox + trdrd --> h2o + met-L + trdox	0	Inf	1	0	Gmet_0222	1	1	MsrA	Amino Acid Metabolism
+L-methionine S-oxide reductase (H2O2)	METSR-S2	[c] : h2o2 + met-L --> h2o + metox	0	Inf	1	0	Gmet_0222	1	1	MsrA	Amino Acid Metabolism
+Methionyl-tRNA synthetase	METTRS	[c] : atp + met-L + trnamet --> amp + mettrna + ppi	0	Inf	1	0	Gmet_2321	1	1	MetS	Amino Acid Metabolism
+magnesium transport in/out via permease (no H+)	MGt5	mg2[c] <==> mg2[e]	-Inf	Inf	1	0	Gmet_0134, Gmet_1189	1	1	CorA2, CorA1	Transport
+myo-inositol 1-phosphatase	MI1PP	[c] : h2o + mi1p-D --> inost + pi	0	Inf	1	0	Gmet_0697	1	1	SuhB	Cell Envelope Biosynthesis
+2-methylisocitrate hydratase	MICITH	[c] : 2mcacn + h2o --> micit	0	Inf	1	0	Gmet_2763, Gmet_1016, Gmet_1912	1	1	Aco2, Aco1, Aco3	Alternate Carbon Metabolism
+methylisocitrate lyase	MICITL	[c] : micit <==> pyr + succ	-Inf	Inf	1	0	Gmet_1122	1	1	PrpB	Alternate Carbon Metabolism
+methylmalonyl-CoA epimerase	MME	[c] : mmcoa-R <==> mmcoa-S	-Inf	Inf	1	0	Gmet_3253	1	1	Mce	Amino Acid Metabolism
+methylmalonyl-CoA mutase	MMM	[c] : mmcoa-R --> succoa	0	Inf	1	0	Gmet_2209_OR_Gmet_2208_AND_ Gmet_3251_OR_Gmet_1574	1	1	MutAB	Other
+manganese transport via ABC system	MNabc	atp[c] + h2o[c] + mn2[e] --> adp[c] + h[c] + mn2[c] + pi[c]	0	Inf	1	0	Gmet_0491, Gmet_0493, Gmet_0492	1	1	ZnuB+ZnuC+ZnuA	Transport
+3-deoxy-D-manno-octulosonic acid transferase	MOAT	[c] : ckdo + lipidA --> cmp + h + kdolipid4	0	Inf	1	0	Gmet_2348	1	1	KdtA	Cell Envelope Biosynthesis
+3-deoxy-D-manno-octulosonic acid transferase	MOAT2	[c] : ckdo + kdolipid4 --> cmp + h + kdo2lipid4	0	Inf	1	0	Gmet_2348	1	1	KdtA	Cell Envelope Biosynthesis
+molybdate transport via ABC system	MOBDabc	atp[c] + h2o[c] + mobd[e] --> adp[c] + h[c] + mobd[c] + pi[c]	0	Inf	1	0	Gmet_0511_OR_Gmet_0513_OR_Gmet_0512_OR_Gmet_0514	1	1	ModABCE	Transport
+3-methyl-2-oxobutanoate hydroxymethyltransferase	MOHMT	[c] : 3mob + h2o + mlthf --> 2dhp + thf	0	Inf	1	0	Gmet_1642	1	1	PanB	Vitamins & Cofactor Biosynthesis
+MOPS transport via ABC system	MOPSabc	atp[c] + h2o[c] + mops[e] --> adp[c] + h[c] + mops[c] + pi[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuA+SsuB+SsuC, SsuC1+SsuA1+SsuB1	Transport
+methanesulfonate transport via ABC system	MSO3abc	atp[c] + h2o[c] + mso3[e] --> adp[c] + h[c] + mso3[c] + pi[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuC1+SsuA1+SsuB1, SsuA+SsuC+SsuB	Transport
+methylthioadenosine nucleosidase	MTAN	[c] : 5mta + h2o --> 5mtr + ade	0	Inf	1	0	Gmet_1274, Gmet_3381	1	1	Pfs1, Pfs2	Nucleotide Metabolism
+5'-methylthioadenosine phosphorylase	MTAP	[c] : 5mta + pi --> 5mdr1p + ade	0	Inf	1	0	Gmet_2684	1	1	MtaP	Nucleotide Metabolism
+methenyltetrahydrofolate cyclohydrolase	MTHFC	[c] : h2o + methf <==> 10fthf + h	-Inf	Inf	1	0	Gmet_0247, Gmet_1162	1	1	FolD2, FolD 	Vitamins & Cofactor Biosynthesis
+methylenetetrahydrofolate dehydrogenase (NADP)	MTHFD	[c] : mlthf + nadp <==> methf + nadph	-Inf	Inf	1	0	Gmet_0247, Gmet_1162	1	1	FolD2, FolD 	Vitamins & Cofactor Biosynthesis
+5,10-methylenetetrahydrofolate reductase (FADH2)	MTHFR	[c] : fadh2 + h + mlthf --> 5mthf + fad	0	Inf	1	0	Gmet_0504, Gmet_1160	1	1	MetF2, MetF	Vitamins & Cofactor Biosynthesis
+5,10-methylenetetrahydrofolate reductase (NADP)	MTHFR1	[c] : (2) h + mlthf + nadph --> 5mthf + nadp	0	Inf	1	0	Gmet_0504, Gmet_1160	1	1	MetF2, MetF	Vitamins & Cofactor Biosynthesis
+nitrogen transport diffusion	N2t	n2[c] <==> n2[e]	-Inf	Inf	1	0		1	1		Transport
+NADH dehydrogenase (Menaquinone 7 & 2 protons)	NADH5	(3) h[c] + mqn7[c] + nadh[c] --> (2) h[e] + mql7[c] + nad[c]	0	Inf	1	0	Gmet_0153_OR_Gmet_0172_OR_Gmet_0168_OR_Gmet_0161_OR_Gmet_0157_OR_Gmet_0165_OR_Gmet_0167_OR_Gmet_0152_OR_Gmet_0154_OR_Gmet_0159_OR_Gmet_0163_OR_Gmet_0171_AND_ Gmet_3350_OR_Gmet_3351_OR_Gmet_3347_OR_Gmet_3342_OR_Gmet_3346_OR_Gmet_3353_OR_Gmet_3345_OR_Gmet_3355_OR_Gmet_3354_OR_Gmet_3343_OR_Gmet_3344_OR_Gmet_3352_OR_Gmet_3349_OR_Gmet_3348	1	1	Nadhd3, Nadhd5	Energy Metabolism
+NAD kinase	NADK	[c] : atp + nad --> adp + h + nadp	0	Inf	1	0	Gmet_0941	1	1	NadK	Vitamins & Cofactor Biosynthesis
+NADPH dehydrogenase (Menaquinone 7 & 2 protons)	NADPH5	(3) h[c] + mqn7[c] + nadph[c] --> (2) h[e] + mql7[c] + nadp[c]	0	Inf	1	0	Gmet_3023_OR_Gmet_3022	1	1	Sfr	Energy Metabolism
+NAD synthase (nh4)	NADS1	[c] : atp + dnad + nh4 --> amp + h + nad + ppi	0	Inf	1	0	Gmet_2863_OR_Gmet_2862	1	1	NadE	Vitamins & Cofactor Biosynthesis
+nicotinic acid mononucleotide pyrophosphorylase	NAMNPP	[c] : atp + h2o + nac + prpp --> adp + nicrnt + pi + ppi	0	Inf	1	0	Gmet_2373	1	1	PncB	Cofactor and Prosthetic Group Biosynthesis
+sodium proton antiporter (H:NA is 2)	NAt3_2	(2) h[e] + na1[c] --> (2) h[c] + na1[e]	0	Inf	1	0	Gmet_1089	1	1	NhaA	Transport
+nucleoside-diphosphate kinase (ATP:GDP)	NDPK1	[c] : atp + gdp <==> adp + gtp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+nucleoside-diphosphate kinase (ATP:UDP)	NDPK2	[c] : atp + udp <==> adp + utp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+nucleoside-diphosphate kinase (ATP:CDP)	NDPK3	[c] : atp + cdp <==> adp + ctp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+nucleoside-diphosphate kinase (ATP:dTDP)	NDPK4	[c] : atp + dtdp <==> adp + dttp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+nucleoside-diphosphate kinase (ATP:dGDP)	NDPK5	[c] : atp + dgdp <==> adp + dgtp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+nucleoside-diphosphate kinase (ATP:dUDP)	NDPK6	[c] : atp + dudp <==> adp + dutp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+nucleoside-diphosphate kinase (ATP:dCDP)	NDPK7	[c] : atp + dcdp <==> adp + dctp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+nucleoside-diphosphate kinase (ATP:dADP)	NDPK8	[c] : atp + dadp <==> adp + datp	-Inf	Inf	1	0	Gmet_2686	1	1	Ndk	Nucleotide Metabolism
+ammonium transport out via K+ antiport	NH4t3	k[c] + nh4[e] --> k[e] + nh4[c]	0	Inf	1	0	Gmet_1738, Gmet_0695	1	1	AmtB2, AmtB	Transport
+nickel transport via ABC system	NIabc	atp[c] + h2o[c] + ni2[e] --> adp[c] + h[c] + ni2[c] + pi[c]	0	Inf	1	0	Gmet_1234, Gmet_1236, Gmet_0848, Gmet_0847, Gmet_1235	1	1	NikE+NikB+NikC+NikD+NikA	Transport
+nitrogenase	NIT2	[c] : (16) atp + (4) fdxr-4:2 + (16) h2o + n2 --> (16) adp + (4) fdxo-4:2 + (6) h + h2 + (2) nh4 + (16) pi	0	Inf	1	0	Gmet_0671_OR_Gmet_0672_OR_Gmet_0669_OR_Gmet_0673_AND_ Gmet_0664_OR_Gmet_0662_OR_Gmet_0663	1	1	Nif2, Nif1	Nitrogen Metabolism
+nicotinamidase	NNAM	[c] : h2o + ncam --> nac + nh4	0	Inf	1	0	Gmet_2374	1	1	PncA	Vitamins & Cofactor Biosynthesis
+nicotinate-nucleotide adenylyltransferase	NNAT	[c] : atp + h + nicrnt --> dnad + ppi	0	Inf	1	0	Gmet_3200	1	1	NadD	Vitamins & Cofactor Biosynthesis
+nicotinate-nucleotide-dimethylbenzimidazole phosphoribosyltransferase	NNDMBRT	[c] : dmbzid + nicrnt --> 5prdmbz + h + nac	0	Inf	1	0	Gmet_0467	1	1	CobT	Vitamins & Cofactor Biosynthesis
+nicotinate-nucleotide-dimethylbenzimidazole phosphoribosyltransferase	NNDMBRT2	[c] : ribflv --> dmbzid + unknown1	0	Inf	1	0	Gmet_0467	1	1	CobT	Vitamins & Cofactor Biosynthesis
+nicotinate-nucleotide diphosphorylase (carboxylating)	NNDPR	[c] : (2) h + prpp + quln --> co2 + nicrnt + ppi	0	Inf	1	0	Gmet_1988	1	1	NadC1	Vitamins & Cofactor Biosynthesis
+nitrite transport out via proton antiport	NO2t3	h[e] + no2[c] --> h[c] + no2[e]	0	Inf	1	0	Gmet_0333	1	1	NarK	Transport
+Nitrate reductase (Cytochrome c)	NO3R3	(2) focytcc[c] + (4) h[c] + no3[c] --> (2) ficytcc[c] + (2) h[e] + h2o[c] + no2[c]	0	Inf	1	0	Gmet_0330, Gmet_1022, Gmet_1021, Gmet_0332, Gmet_0329, Gmet_0331, Gmet_1020	1	1	NarZ1+NarY1+NarW+NarV1, NarV+NarW+NarY+NarZ	Nitrogen Metabolism
+nitrate transport in via nitrite antiport	NO3t7	no2[c] + no3[e] --> no2[e] + no3[c]	0	Inf	1	0	Gmet_0334	1	1	NarKec	Transport, Extracellular
+2-nitropropane dioxygenase	NPPDO	[c] : (2) n2ppn + o2 --> (2) acetone + (2) h + (2) no2	0	Inf	1	0	Gmet_1293	1	1	Ncd	Other
+Nucleoside triphosphate pyrophosphorylase (dgtp)	NTPP1	[c] : dgtp + h2o --> dgmp + h + ppi	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+Nucleoside triphosphate pyrophosphorylase (gtp)	NTPP2	[c] : gtp + h2o --> gmp + h + ppi	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+dCTP diphosphatase	NTPP3	[c] : dctp + h2o --> dcmp + h + ppi	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+Nucleoside triphosphate pyrophosphorylase (ctp)	NTPP4	[c] : ctp + h2o --> cmp + h + ppi	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+Nucleoside triphosphate pyrophosphorylase (datp)	NTPP5	[c] : datp + h2o --> damp + h + ppi	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+Nucleoside triphosphate pyrophosphorylase (atp)	NTPP6	[c] : atp + h2o --> amp + h + ppi	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+Nucleoside triphosphate pyrophosphorylase (dttp)	NTPP7	[c] : dttp + h2o --> dtmp + h + ppi	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+Nucleoside triphosphate pyrophosphorylase (utp)	NTPP8	[c] : h2o + utp --> h + ppi + ump	0	Inf	1	0	Gmet_2399	1	1	MazG	Nucleotide Salvage Pathways
+nitrite reductase	NTRIRfc	[c] : (6) focytcc + (8) h + no2 --> (6) ficytcc + (2) h2o + nh4	0	Inf	1	0	Gmet_0295_OR_Gmet_0296_AND_ Gmet_0295_OR_Gmet_0294	1	1	NrfH, NrfH1	Amino Acid Metabolism
+Nitrite Reductase	NTRIRmq	(2) h[c] + (3) mql7[c] + no2[e] --> (2) h2o[e] + (3) mqn7[c] + nh4[e]	0	Inf	1	0	Gmet_0295_OR_Gmet_0296_AND_ Gmet_0295_OR_Gmet_0294	1	1	NrfH, NrfH1	Amino Acid Metabolism
+nitrite reductase (NADPH)	NTRIRy	[c] : (4) h + (3) nadph + no2 --> h2o + (3) nadp + nh4oh	0	Inf	1	0	Gmet_1754_OR_Gmet_3222	1	1	NasDE	Energy Metabolism
+ornithine carbamoyltransferase	OCBT	[c] : cbp + orn-L <==> citr-L + h + pi	-Inf	Inf	1	0	Gmet_0205	1	1	ArgF	Amino Acid Metabolism
+Octadecanoyl-[acyl-carrier protein]:malonyl-CoA  C-acyltransferase	OCDMAT8	[c] : 2tocdACP + h + nadh --> nad + ocdACP	0	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+6-oxo-cyclohex-1-ene-carbonyl-CoA hydrolase	OCHCCH	[c] : 6occhcoa + (2) h2o <==> 3hpimcoa + h	-Inf	Inf	1	0	Gmet_3305, Gmet_2088	1	1	Oah, Oah1	Aromatic Compound degradation
+Octanoyl-[acyl-carrier protein]:malonyl-CoA C-acyltransferase	OCMAT3	[c] : 2toceACP + h + nadh --> nad + octACP	0	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+3-oxoacid CoA-transferase (Succinyl-CoA: acetoacetate)	OCOAT1r	[c] : acac + succoa <==> aacoa + succ	-Inf	Inf	1	0	Gmet_3296_OR_Gmet_3297	1	1	ScoAB	Carbohydrates and related molecules
+trans-octaprenyltranstransferase	OCTT	[c] : ipdp + octdp --> nondp + ppi	0	Inf	1	0	Gmet_2455	1	1	IspB	Lipid & Cell Wall Metabolism
+oxopimelylcoa:glutarylcoa acyltransferase	OGCOAAT	[c] : 3opimcoa + coa <==> accoa + glutcoa	-Inf	Inf	1	0		1	1		Aromatic Compound degradation
+2-oxoisovalerate dehydrogenase (acylating; 4-methyl-2-oxopentaoate)	OIVD1	[c] : 4mop + coa + nad <==> co2 + ivcoa + nadh	-Inf	Inf	1	0		1	1		Valine, Leucine, and Isoleucine Metabolism
+2-oxoisovalerate dehydrogenase (acylating; 3-methyl-2-oxobutanoate)	OIVD2	[c] : 3mob + coa + nad --> co2 + ibcoa + nadh	0	Inf	1	0		1	1		Valine, Leucine, and Isoleucine Metabolism
+2-oxoisovalerate dehydrogenase (acylating; 3-methyl-2-oxopentanoate)	OIVD3	[c] : 3mop + coa + nad --> 2mbcoa + co2 + nadh	0	Inf	1	0		1	1		Valine, Leucine, and Isoleucine Metabolism
+2-Oxo-4-methyl-3-carboxypentanoate decarboxylation	OMCDC	[c] : 3c4mop + h --> 4mop + co2	0	Inf	1	0		1	1		Amino Acid Metabolism
+orotidine-5'-phosphate decarboxylase	OMPDC	[c] : h + orot5p --> co2 + ump	0	Inf	1	0	Gmet_1355	1	1	PyrF	Nucleotide Metabolism
+2-oxoglutarate synthase	OOR	[c] : akg + coa + fdxo-4:2 --> co2 + fdxr-4:2 + h + succoa	0	Inf	1	0	Gmet_1363_OR_Gmet_1364_OR_Gmet_1361_OR_Gmet_1362	1	1	Ofo	Central Metabolism
+3-octaprenyl-4-hydroxybenzoate carboxy-lyase	OPHBDC	[c] : 3ophb + h --> 2oph + co2	0	Inf	1	0	Gmet_3392	1	1	UbiX	Other
+2-Octaprenylphenol hydroxylase	OPHHX	[c] : 2oph + (0.5) o2 --> 2ohph	0	Inf	1	0	Gmet_0760	1	1	UbiB	Cofactor and Prosthetic Group Biosynthesis
+ornithine transacetylase	ORNTAC	[c] : acorn + glu-L <==> acglu + orn-L	-Inf	Inf	1	0	Gmet_0952	1	1	ArgJ	Amino Acid Metabolism
+orotate phosphoribosyltransferase	ORPT	[c] : orot5p + ppi <==> orot + prpp	-Inf	Inf	1	0	Gmet_1938	1	1	PyrE	Nucleotide Metabolism
+Oxalate:Formate antiporter	OXFOt4	for[c] + oxa[e] <==> for[e] + oxa[c]	-Inf	Inf	1	0	Gmet_2465	1	1	OfA	Transport
+1-pyrroline-5-carboxylate dehydrogenase	P5CD	[c] : 1pyr5c + (2) h2o + nad --> glu-L + h + nadh	0	Inf	1	0	Gmet_3512	1	1	PyrcPrd	Amino Acid Metabolism
+pyrroline-5-carboxylate reductase	P5CRy	[c] : 1pyr5c + (2) h + nadph --> nadp + pro-L	0	Inf	1	0	Gmet_0899	1	1	ProG	Amino Acid Metabolism
+phenylacetate-CoA ligase	PACCOAL	[c] : atp + coa + pheac --> amp + phaccoa + ppi	0	Inf	1	0	Gmet_1818, Gmet_1825, Gmet_0950	1	1	PaaK1, PaaK2, PaaK	Aromatic Compound degradation
+pantothenate synthase	PANTS	[c] : ala-B + atp + pant-R --> amp + h + pnto-R + ppi	0	Inf	1	0	Gmet_1643	1	1	PanC	Vitamins & Cofactor Biosynthesis
+phospho-N-acetylmuramoyl-pentapeptide-transferase (meso-2,6-diaminopimelate)	PAPPT3	[c] : udcpp + ugmda --> uagmda + ump	0	Inf	1	0	Gmet_0409	1	1	MraY	Lipid & Cell Wall Metabolism
+phosphoadenylyl-sulfate reductase (thioredoxin)	PAPSR	[c] : paps + trdrd --> (2) h + pap + so3 + trdox	0	Inf	1	0	Gmet_2858	1	1	CysH	Amino Acid Metabolism
+phosphate butyryltransferase	PBUTT	[c] : btcoa + pi <==> butpi + coa	-Inf	Inf	1	0	Gmet_2098, Gmet_1035	1	1	Ptb, Pta	Carbohydrates and related molecules
+pyruvate carboxylase	PC	[c] : atp + hco3 + pyr --> adp + h + oaa + pi	0	Inf	1	0	Gmet_0816	1	1	Pyc	Central Metabolism
+p-cresol methylhydroxylase	PCMEH	[c] : 4crsol + h2o + (2) nad <==> 4hbald + (2) h + (2) nadh	-Inf	Inf	1	0	Gmet_2126_OR_Gmet_2125	1	1	PcmH	Aromatic Compound degradation
+pyruvate dehydrogenase	PDH	[c] : coa + nad + pyr --> accoa + co2 + nadh	0	Inf	1	0	Gmet_2764_AND_ Gmet_2511_AND_ Gmet_2752_AND_ Gmet_1896_AND_ Gmet_2760_OR_Gmet_2753_AND_ Gmet_2510_OR_Gmet_2509	1	1	Lpd+PdhC2+PdhAB2, PdhC+PdhAB+Lpd2, Lpd+PdhAB+PdhC2, PdhC+Lpd2+PdhAB2, PdhC+Lpd+PdhAB, PdhC+Lpd+PdhAB2, PdhAB+PdhC2+Lpd2, PdhC2+PdhAB2+Lpd2	Central Metabolism
+Pyridoxine 5'-phosphate synthase	PDX5PS	[c] : dxyl5p + nad + phthr --> co2 + h + (2) h2o + nadh + pdx5p + pi	0	Inf	1	0	Gmet_1885	1	1	PdxJ	Cofactor and Prosthetic Group Biosynthesis
+phosphofructokinase	PFK	[c] : atp + f6p --> adp + fdp + h	0	Inf	1	0	Gmet_1640, Gmet_0938	1	1	Pfk4, Pfk3	Central Metabolism
+phosphoglucosamine mutase	PGAMT	[c] : gam1p <==> gam6p	-Inf	Inf	1	0	Gmet_1886	1	1	GlmM	Lipid & Cell Wall Metabolism
+phosphoglycerate dehydrogenase	PGCD	[c] : 3pg + nad --> 3php + h + nadh	0	Inf	1	0	Gmet_2378	1	1	SerA	Amino Acid Metabolism
+phosphogluconate dehydrogenase	PGDH	[c] : 6pgc + nadp --> co2 + nadph + ru5p-D	0	Inf	1	0	Gmet_2620	1	1	Gnd	Pentose Phosphate Pathway
+glucose-6-phosphate isomerase	PGI	[c] : g6p <==> f6p	-Inf	Inf	1	0	Gmet_2458	1	1	Pgi	Central Metabolism
+phosphoglycerate kinase	PGK	[c] : 13dpg + adp <==> 3pg + atp	-Inf	Inf	1	0	Gmet_1947	1	1	Pgk	Central Metabolism
+6-phosphogluconolactonase	PGL	[c] : 6pgl + h2o --> 6pgc + h	0	Inf	1	0	Gmet_2618	1	1	Pgl	Pentose Phosphate Pathway
+Poly glutamate synthesis Reaction	PGLUSYN	[c] : atp + glu-D --> adp + h + pi + polglu	0	Inf	1	0	Gmet_3529	1	1	PgsA1	Cell Envelope Biosynthesis
+phosphoglycolate phosphatase	PGLYCP	[c] : 2pglyc + h2o --> glyclt + pi	0	Inf	1	0	Gmet_0937, Gmet_2290	1	1	Gph2, Gph1P	Other
+phosphoglycerate mutase	PGM	[c] : 3pg <==> 2pg	-Inf	Inf	1	0	Gmet_3203, Gmet_1653, Gmet_1428	1	1	Gpm1, Pgml, Gpm2	Central Metabolism
+phosphoglucomutase	PGMT	[c] : g1p <==> g6p	-Inf	Inf	1	0	Gmet_0990, Gmet_0135	1	1	Pmgm1, Pmgm2	Central Metabolism
+Phosphatidylglycerophosphate phosphohydrolase	PGPPH	[c] : h2o + pglyp --> pgly + pi	0	Inf	1	0	Gmet_0195	1	1	PgpA	Vitamins & Cofactor Biosynthesis
+phenylacetate transport in/out via proton symport	PHACt6	h[e] + pheac[e] <==> h[c] + pheac[c]	-Inf	Inf	1	0	Gmet_3288, Gmet_3031, Gmet_0739	1	1	PpaP	Transport
+4-hydroxybenzaldehyde dehydrogenase	PHBEALD	[c] : 4hbald + h2o + nad <==> 4hbz + (2) h + nadh	-Inf	Inf	1	0	Gmet_2131	1	1	HbdH	Aromatic Compound degradation
+phosphatidate cytidylyltransferase	PHCYT	[c] : 12dag3p + ctp + h --> cdpdag + ppi	0	Inf	1	0	Gmet_1255	1	1	CdsA	Lipid & Cell Wall Metabolism
+phenol transport via diffusion	PHENOLt	phenol[e] <==> phenol[c]	-Inf	Inf	1	0		1	1		Transport
+phenylphosphate carboxylase	PHEPC	[c] : co2 + h2o + pphos <==> 4hbz + h + pi	-Inf	Inf	1	0	Gmet_2102	1	1	PhpC	Aromatic Compound degradation
+Phenylphosphate synthase	PHEPS	[c] : atp + h2o + phenol <==> amp + (2) h + pi + pphos	-Inf	Inf	1	0	Gmet_2101_OR_Gmet_2100	1	1	PhpS	Aromatic Compound degradation
+phenylalanine transaminase	PHETA1	[c] : akg + phe-L <==> glu-L + phpyr	-Inf	Inf	1	0	Gmet_0213, Gmet_3433, Gmet_0732, Gmet_0385	1	1	AspB3, AspB, HisC, AspB4	Amino Acid Metabolism
+Phenylalanyl-tRNA synthetase	PHETRS	[c] : atp + phe-L + trnaphe --> amp + phetrna + ppi	0	Inf	1	0	Gmet_1415_OR_Gmet_1416	1	1	PheRS	Amino Acid Metabolism
+phosphate transport via ABC system	PIabc	atp[c] + h2o[c] + pi[e] --> adp[c] + h[c] + (2) pi[c]	0	Inf	1	0	Gmet_2703, Gmet_2702, Gmet_2701, Gmet_2704	1	1	PstA+PstB+PstC+PstD	Transport
+phenylitaconyl-CoA hydratase	PICH	[c] : h2o + phitcoa <==> hmpscoa	-Inf	Inf	1	0	Gmet_1524	1	1	BbsH	Aromatic Compound degradation
+phosphate transport in/out via proton symporter	PIt6	h[e] + pi[e] <==> h[c] + pi[c]	-Inf	Inf	1	0	Gmet_3131	1	1	PitA	Transport
+phosphate transport in/out via three Na+ symporter	PIt7	(3) na1[e] + pi[e] <==> (3) na1[c] + pi[c]	-Inf	Inf	1	0	Gmet_1829	1	1	YjbB	Transport
+phosphomannomutase	PMANM	[c] : man1p <==> man6p	-Inf	Inf	1	0	Gmet_0990, Gmet_0135	1	1	Pmgm2, Pmgm1	Central Metabolism
+phosphomethylpyrimidine kinase	PMPK	[c] : 4ampm + atp --> 2mahmp + adp	0	Inf	1	0	Gmet_2909	1	1	ThiD	Vitamins & Cofactor Biosynthesis
+pantothenate kinase	PNTK	[c] : atp + pnto-R --> 4ppan + adp + h	0	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+pyruvate synthase	POR	[c] : coa + fdxo-4:2 + pyr <==> accoa + co2 + fdxr-4:2 + h	-Inf	Inf	1	0	Gmet_1306_OR_Gmet_1308_OR_Gmet_1307_OR_Gmet_1309	1	1	Pfer	Central Metabolism
+inorganic diphosphatase	PPA	[c] : h2o + ppi --> h + (2) pi	0	Inf	1	0	Gmet_0503	1	1	Ppa	Other
+inorganic diphosphatase (one proton translocation)	PPA_1	h2o[c] + ppi[c] --> h[e] + (2) pi[c]	0	Inf	1	0	Gmet_3239	1	1	Ppa1	Transport
+Propionate kinase	PPAK	[c] : adp + ppap <==> atp + ppa	-Inf	Inf	1	0	Gmet_0149, Gmet_1034	1	1	AckA2, AckA 	Central Metabolism
+porphobilinogen synthase	PPBNGS	[c] : (2) 5aop --> h + (2) h2o + ppbng	0	Inf	1	0	Gmet_0189	1	1	HemB	Vitamins & Cofactor Biosynthesis
+phosphoenolpyruvate carboxylase	PPC	[c] : co2 + h2o + pep --> h + oaa + pi	0	Inf	1	0	Gmet_0304	1	1	Ppc	Anaplerotic reactions
+phosphopantothenoylcysteine decarboxylase	PPCDC	[c] : 4ppcys + h --> co2 + pan4p	0	Inf	1	0	Gmet_2673	1	1	Dfp	Vitamins & Cofactor Biosynthesis
+phosphoenolpyruvate carboxykinase	PPCK	[c] : atp + oaa --> adp + co2 + pep	0	Inf	1	0	Gmet_3169, Gmet_2638	1	1	PckA, PckA2	Carbohydrates and related molecules
+phosphoenolpyruvate carboxykinase (GTP)	PPCKG	[c] : gtp + oaa --> co2 + gdp + pep	0	Inf	1	0	Gmet_3169, Gmet_2638	1	1	PckA, PckA2	Central Metabolism
+Propionyl-CoA carboxylase	PPCOAC	[c] : atp + hco3 + ppcoa --> adp + h + mmcoa-S + pi	0	Inf	1	0	Gmet_3290, Gmet_3248	1	1	MmdA, YngE	Carbohydrates and related molecules
+pyruvate phosphate dikinase	PPDK	[c] : atp + pi + pyr --> amp + h + pep + ppi	0	Inf	1	0	Gmet_2940	1	1	PpdK	Central Metabolism
+polyphosphate kinase	PPIK	[c] : atp + ppi --> adp + pppi	0	Inf	1	0	Gmet_0133	1	1	Ppk	Other
+1,3-propanediol dehydrogenase	PPN13D	[c] : 13ppd + nad <==> 3hppnl + h + nadh	-Inf	Inf	1	0	Gmet_1053	1	1	DhaT	Central Metabolism
+phosphopantothenate-cysteine ligase	PPNCL	[c] : 4ppan + ctp + cys-L --> 4ppcys + cdp + h + pi	0	Inf	1	0	Gmet_2673	1	1	Dfp	Vitamins & Cofactor Biosynthesis
+prephenate dehydrogenase	PPND	[c] : nad + pphn --> 34hpp + co2 + nadh	0	Inf	1	0	Gmet_0863	1	1	TyrA	Amino Acid Metabolism
+prephenate dehydratase	PPNDH	[c] : h + pphn --> co2 + h2o + phpyr	0	Inf	1	0	Gmet_0862, Gmet_1955	1	1	PheA2, PheA	Amino Acid Metabolism
+protoporphyrinogen oxidase	PPPGO	[c] : (1.5) o2 + pppg9 --> (3) h2o + ppp9	0	Inf	1	0	Gmet_2953, Gmet_3551	1	1	HemY1, HemY	Vitamins & Cofactor Biosynthesis
+phosphoenolpyruvate synthase	PPS	[c] : atp + h2o + pyr --> amp + (2) h + pep + pi	0	Inf	1	0	Gmet_0770	1	1	Pps	Central Metabolism
+trans-pentaprenyltranstransferase	PPTT	[c] : ipdp + pendp --> hexdp + ppi	0	Inf	1	0	Gmet_2455	1	1	IspB	Lipid & Cell Wall Metabolism
+phosphoribosylglycinamide synthetase	PRAGS	[c] : atp + gly + pram --> adp + gar + h + pi	0	Inf	1	0	Gmet_2904	1	1	PurD	Nucleotide Metabolism
+phosphoribosylanthranilate isomerase	PRAI	[c] : pran <==> 2cpr5p	-Inf	Inf	1	0	Gmet_2492	1	1	TrpF	Amino Acid Metabolism
+phosphoribosylaminoimidazole synthetase	PRAIS	[c] : atp + fpram --> adp + air + h + pi	0	Inf	1	0	Gmet_1844	1	1	PurM	Nucleotide Metabolism
+phosphoribosyl-AMP cyclohydrolase	PRAMPC	[c] : h + h2o + prbamp --> prfp	0	Inf	1	0	Gmet_1897	1	1	HisI	Amino Acid Metabolism
+phosphoribosylaminoimidazolesuccinocarboxamide synthase	PRASCS	[c] : 5aizc + asp-L + atp <==> 25aics + adp + h + pi	-Inf	Inf	1	0	Gmet_0916	1	1	PurC	Nucleotide Metabolism
+phosphoribosyl-ATP pyrophosphatase	PRATPP	[c] : h2o + prbatp --> h + ppi + prbamp	0	Inf	1	0	Gmet_1897, Gmet_0390	1	1	HisI, HisE	Amino Acid Metabolism
+phosphoribosylformylglycinamidine synthase	PRFGS	[c] : atp + fgam + gln-L + h2o --> adp + fpram + glu-L + (2) h + pi	0	Inf	1	0	Gmet_1940_OR_Gmet_1941	1	1	PurLQS	Nucleotide Metabolism
+1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino)imidazole-4-carboxamide isomerase	PRMICI	[c] : prfp <==> prlp	-Inf	Inf	1	0	Gmet_0388	1	1	HisA	Amino Acid Metabolism
+proline dehydrogenase	PRODH	[c] : nadp + pro-L --> 1pyr5c + (2) h + nadph	0	Inf	1	0	Gmet_3512	1	1	PyrcPrd	Amino Acid Metabolism
+L-proline:Na+ symporter	PROt5	na1[e] + pro-L[e] <==> na1[c] + pro-L[c]	-Inf	Inf	1	0	Gmet_3031	1	1	NaPt	Transport
+Prolyl-tRNA synthetase	PROTRS	[c] : atp + pro-L + trnapro --> amp + ppi + protrna	0	Inf	1	0	Gmet_1354	1	1	ProS	Amino Acid Metabolism
+phosphoribosylpyrophosphate synthetase	PRPPS	[c] : atp + r5p <==> amp + h + prpp	-Inf	Inf	1	0	Gmet_2848	1	1	Prs	Amino Acid Metabolism
+3-phosphoshikimate 1-carboxyvinyltransferase	PSCVT	[c] : pep + skm5p <==> 3psme + pi	-Inf	Inf	1	0	Gmet_0864	1	1	AroE	Amino Acid Metabolism
+phosphatidylserine decarboxylase	PSDC	[c] : h + ps --> co2 + psetha	0	Inf	1	0	Gmet_1483, Gmet_1263	1	1	Psd, Psd1	Lipid & Cell Wall Metabolism
+phosphoserine transaminase	PSERT	[c] : 3php + glu-L --> akg + pser-L	0	Inf	1	0	Gmet_3173	1	1	SerC	Amino Acid Metabolism
+Polysulfide reductase (2 proton)	PSRED3	mql7[c] + ss[e] --> h[c] + (2) h2s[e] + mqn7[c]	0	Inf	1	0	Gmet_3431_OR_Gmet_3428_OR_Gmet_3427_OR_Gmet_3426_OR_Gmet_3425_OR_Gmet_3424_OR_Gmet_3430	1	1	Psr	Other
+pseudouridylate synthase	PSUDS	[c] : r5p + ura --> h2o + psd5p	0	Inf	1	0	Gmet_2838	1	1	RluD	Others
+Phosphate acetyltransferase	PTA2	[c] : pi + ppcoa --> coa + ppap	0	Inf	1	0	Gmet_1035	1	1	Pta	Central Metabolism
+phosphotransacetylase	PTAr	[c] : accoa + pi <==> actp + coa	-Inf	Inf	1	0	Gmet_1035	1	1	Pta	Central Metabolism
+6-pyruvoyltetrahydropterin synthase	PTHPS	[c] : ahdt --> 6pthp + pppi	0	Inf	1	0	Gmet_1657	1	1	Ptps	Vitamins & Cofactor Biosynthesis
+pantetheine-phosphate adenylyltransferase	PTPAT	[c] : atp + h + pan4p <==> dpcoa + ppi	-Inf	Inf	1	0	Gmet_1759	1	1	CoaD	Vitamins & Cofactor Biosynthesis
+pyruvate kinase	PYK	[c] : adp + h + pep --> atp + pyr	0	Inf	1	0	Gmet_0122	1	1	Pyk	Central Metabolism
+pyruvate reversible transport via proton symport	PYRt2	h[e] + pyr[e] <==> h[c] + pyr[c]	-Inf	Inf	1	0	Gmet_3288, Gmet_0739	1	1	ActP3, ActP2	Transport
+Pyrazinamidase	PYRZAM	[c] : h2o + malm --> male + nh4	0	Inf	1	0	Gmet_2374	1	1	PncA	Other
+quinolinate synthase	QULNS	[c] : dhap + iasp --> (2) h2o + pi + quln	0	Inf	1	0	Gmet_3544	1	1	NadA	Vitamins & Cofactor Biosynthesis
+riboflavin kinase	RBFK	[c] : atp + ribflv --> adp + fmn + h	0	Inf	1	0	Gmet_1388	1	1	RibC	Vitamins & Cofactor Biosynthesis
+riboflavin synthase	RBFSa	[c] : 4r5au + db4p --> dmlz + (2) h2o + pi	0	Inf	1	0	Gmet_1625_OR_Gmet_1627	1	1	RibEH	Vitamins & Cofactor Biosynthesis
+riboflavin synthase	RBFSb	[c] : (2) dmlz --> 4r5au + ribflv	0	Inf	1	0	Gmet_1625_OR_Gmet_1627	1	1	RibEH	Vitamins & Cofactor Biosynthesis
+ribokinase	RBK	[c] : atp + rib-D --> adp + h + r5p	0	Inf	1	0	Gmet_2812	1	1	RbsK	Central Metabolism
+alpha-ribazole-5-phosphatase	RBZP	[c] : 5prdmbz + h2o --> pi + rdmbzi	0	Inf	1	0	Gmet_0469	1	1	CobC	Vitamins & Cofactor Biosynthesis
+ribonucleoside-diphosphate reductase (ADP)	RNDR1	[c] : adp + trdrd --> dadp + h2o + trdox	0	Inf	1	0	Gmet_1297	1	1	NrdJ	Nucleotide Metabolism
+ribonucleoside-diphosphate reductase (GDP)	RNDR2	[c] : gdp + trdrd --> dgdp + h2o + trdox	0	Inf	1	0	Gmet_1297	1	1	NrdJ	Nucleotide Metabolism
+ribonucleoside-diphosphate reductase (CDP)	RNDR3	[c] : cdp + trdrd --> dcdp + h2o + trdox	0	Inf	1	0	Gmet_1297	1	1	NrdJ	Nucleotide Metabolism
+ribonucleoside-diphosphate reductase (UDP)	RNDR4	[c] : trdrd + udp --> dudp + h2o + trdox	0	Inf	1	0	Gmet_1297	1	1	NrdJ	Nucleotide Metabolism
+ribulose 5-phosphate 3-epimerase	RPE	[c] : ru5p-D <==> xu5p-D	-Inf	Inf	1	0	Gmet_0067	1	1	Rpe	Central Metabolism
+ribose-5-phosphate isomerase	RPI	[c] : r5p <==> ru5p-D	-Inf	Inf	1	0	Gmet_1604, Gmet_2621	1	1	Rpi, RpiB	Central Metabolism
+sedoheptulose 7-phosphate isomerase	S7PI	[c] : s7p <==> gmh7p	-Inf	Inf	1	0	Gmet_0920	1	1	GmhA	Cell Envelope Biosynthesis
+saccharopine dehydrogenase (NAD, L-lysine forming)	SACCD2	[c] : Lsacchrp + h2o + nad <==> akg + h + lys-L + nadh	-Inf	Inf	1	0	Gmet_0902	1	1	Lys1	Amino Acid Metabolism
+sulfate adenylyltransferase	SADT2	[c] : atp + gtp + h2o + so4 --> aps + gdp + pi + ppi	0	Inf	1	0	Gmet_2860_OR_Gmet_2859	1	1	CysD	Cysteine Metabolism
+succinyl-diaminopimelate desuccinylase	SDPDS	[c] : h2o + sl26da --> 26dap-LL + succ	0	Inf	1	0		1	1		Amino Acid Metabolism
+succinyldiaminopimelate transaminase	SDPTA	[c] : akg + sl26da <==> glu-L + sl2a6o	-Inf	Inf	1	0	Gmet_0204	1	1	ArgD	Amino Acid Metabolism
+selenocysteine lyase	SECYSL	[c] : dtt_rd + scys-L --> H2Se + ala-L + dtt_ox + h	0	Inf	1	0	Gmet_1300	1	1	CsdB	Amino Acid Metabolism
+selenide, water dikinase	SEPPS	[c] : H2Se + atp + h2o --> amp + h + pi + sepi	0	Inf	1	0	Gmet_2907	1	1	SelD	Other
+serine O-acetyltransferase	SERAT	[c] : accoa + ser-L <==> acser + coa	-Inf	Inf	1	0	Gmet_0870	1	1	CysE	Amino Acid Metabolism
+L-serine deaminase	SERD_L	[c] : ser-L --> nh4 + pyr	0	Inf	1	0	Gmet_3072	1	1	IlvA	Amino Acid Metabolism
+Seryl-tRNA synthetase	SERTRS	[c] : atp + ser-L + trnaser --> amp + ppi + sertrna	0	Inf	1	0	Gmet_3528	1	1	SerS	Amino Acid Metabolism
+L-seryl-tRNA selenium transferase	SERTRST	[c] : selnp + sertrna --> h + pi + selcystrna	0	Inf	1	0	Gmet_0061	1	1	SelA	Amino Acid Metabolism
+sirohydrochlorin cobaltochelatase	SHCHCC	[c] : cobalt2 + (0.5) nad + shcl --> copre2 + (2.5) h + (0.5) nadh	0	Inf	1	0	Gmet_0476	1	1	CbiX	Vitamins & Cofactor Biosynthesis
+sirohydrochlorin dehydrogenase	SHCHD	[c] : nadp + shcl --> h + nadph + srch	0	Inf	1	0	Gmet_3231	1	1	CysG_N	Vitamins & Cofactor Biosynthesis
+sirohydrochlorin ferrochetalase	SHCHF	[c] : fe2 + srch --> (2) h + sheme	0	Inf	1	0	Gmet_3231	1	1	CysG_N	Vitamins & Cofactor Biosynthesis
+shikimate dehydrogenase	SHK3D	[c] : 3dhsk + h + nadph <==> nadp + skm	-Inf	Inf	1	0	Gmet_1392	1	1	AroD	Amino Acid Metabolism
+shikimate kinase	SHKK	[c] : atp + skm --> adp + h + skm5p	0	Inf	1	0	Gmet_0977	1	1	AroK	Amino Acid Metabolism
+superoxide dismutase	SOD	[c] : (2) h + (2) o2- --> h2o2 + o2	0	Inf	1	0	Gmet_2410	1	1	SodB	Other
+spermidine synthase	SPMS	[c] : ametam + ptrc --> 5mta + h + spmd	0	Inf	1	0	Gmet_0583	1	1	SpeE	Amino Acid Metabolism
+squalene hopene cyclase	SQHOC1	[c] : sql --> dplpt	0	Inf	1	0	Gmet_0419, Gmet_2820	1	1	Shc, Shc2	Other
+squalene hopene cyclase	SQHOC2	[c] : h2o + sql --> 22hop	0	Inf	1	0	Gmet_0419, Gmet_2820	1	1	Shc, Shc2	Other
+succinate-semialdehyde dehydrogenase (NADP)	SSALy	[c] : h2o + nadp + sucsal --> (2) h + nadph + succ	0	Inf	1	0	Gmet_3395	1	1	GabD	Arginine and Proline Metabolism
+succinyl-CoA synthetase (ADP-forming)	SUCOAS	[c] : atp + coa + succ <==> adp + pi + succoa	-Inf	Inf	1	0	Gmet_2260_OR_Gmet_2261_AND_ Gmet_0730_OR_Gmet_0729_AND_ Gmet_2069_OR_Gmet_2068	1	1	SucCD1, SucCD, SucCD2	Central Metabolism
+sulfoacetate transport via ABC system	SULAabc	atp[c] + h2o[c] + sula[e] --> adp[c] + h[c] + pi[c] + sula[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuC1+SsuA1+SsuB1, SsuA+SsuB+SsuC	Transport
+sulfate transport via ABC system	SULabc	atp[c] + h2o[c] + so4[e] --> adp[c] + h[c] + pi[c] + so4[c]	0	Inf	1	0	Gmet_1903, Gmet_1906, Gmet_1904, Gmet_1905	1	1	CysAP+CysT+CysP+CysW	Transport
+sulfite reductase (NADPH2)	SULR	[c] : (3) h2o + h2s + (3) nadp <==> (4) h + (3) nadph + so3	-Inf	Inf	1	0	Gmet_2520	1	1	YvgQR	Central Metabolism
+ATP:2,3,2',3'-tetrakis(3-hydroxytetradecanoyl)-D-glucosaminyl-beta-D-1,6-glucosaminyl-beta-phosphate 4-O'-phosphotransferase	TADSK	[c] : atp + h2o + lipidA --> adp + h + lipid4 + pi	0	Inf	1	0	Gmet_2347	1	1	LpxK	Lipid & Cell Wall Metabolism
+transaldolase	TAL	[c] : g3p + s7p <==> e4p + f6p	-Inf	Inf	1	0	Gmet_0497	1	1	Tal	Central Metabolism
+taurine transport via ABC system	TAURabc	atp[c] + h2o[c] + taur[e] --> adp[c] + h[c] + pi[c] + taur[c]	0	Inf	1	0	Gmet_1899, Gmet_1901, Gmet_1900, Gmet_0998, Gmet_0997, Gmet_0996	1	1	SsuC1+SsuA1+SsuB1, SsuA+SsuC+SsuB	Transport
+Tetradecanoyl-[acyl-carrier protein]:malonyl-CoA  C-acyltransferase	TDMAT6	[c] : myrsACP + nad <==> h + nadh + tdeACP	-Inf	Inf	1	0	Gmet_2558	1	1	FabI	Fatty Acid Synthesis
+dTDP-4-dehydrorhamnose reductase	TDPDRR	[c] : dtdp6dm + nadp <==> dtdpddm + h + nadph	-Inf	Inf	1	0	Gmet_2472	1	1	RfbD	Carbohydrate Metabolism
+dTDPglucose 4,6-dehydratase	TDPGDH	[c] : dtdpglc --> dtdpddg + h2o	0	Inf	1	0	Gmet_2473	1	1	RfbB1	Other
+tetrahydropicolinate succinylase	THDPS	[c] : h2o + succoa + thdp --> coa + sl2a6o	0	Inf	1	0		1	1		Amino Acid Metabolism
+NAD-dependent threonine 4-phosphate dehydrogenase	THPDH	[c] : nad + phthr --> amopbut-L + h + nadh	0	Inf	1	0	Gmet_3404	1	1	PdxA	Vitamins & Cofactor Biosynthesis
+threonine aldolase	THRA	[c] : thr-L <==> acald + gly	-Inf	Inf	1	0	Gmet_3503	1	1	Tha	Amino Acid Metabolism
+L-threonine deaminase	THRD_L	[c] : thr-L --> 2obut + nh4	0	Inf	1	0	Gmet_3072	1	1	IlvA	Amino Acid Metabolism
+L-allo-threonine aldolase	THRLAD	[c] : thr-LA --> acald + gly	0	Inf	1	0	Gmet_0270	1	1	LtaA	Amino Acid Metabolism
+threonine-phosphate decarboxylase	THRPD	[c] : h + thrp --> 1ap2olp + co2	0	Inf	1	0	Gmet_0487	1	1	CobD	Vitamins & Cofactor Biosynthesis
+threonine synthase	THRS	[c] : h2o + phom --> pi + thr-L	0	Inf	1	0	Gmet_1631	1	1	ThrC	Amino Acid Metabolism
+Threonyl-tRNA synthetase	THRTRS	[c] : atp + thr-L + trnathr --> amp + ppi + thrtrna	0	Inf	1	0	Gmet_1411	1	1	ThrS	Amino Acid Metabolism
+transketolase	TKT1	[c] : r5p + xu5p-D <==> g3p + s7p	-Inf	Inf	1	0	Gmet_0178_AND_ Gmet_0551_OR_Gmet_0552	1	1	Tkt1, Tkt2	Central Metabolism
+transketolase	TKT2	[c] : e4p + xu5p-D <==> f6p + g3p	-Inf	Inf	1	0	Gmet_0178_AND_ Gmet_0551_OR_Gmet_0552	1	1	Tkt1, Tkt2	Central Metabolism
+thymidine kinase (ATP:thymidine)	TMDK1	[c] : atp + thymd --> adp + dtmp + h	0	Inf	1	0	Gmet_2318, Gmet_3250	1	1	Tmk1, Tmk2	Nucleotide Metabolism
+thymidylate synthase	TMDS	[c] : dump + mlthf --> dhf + dtmp	0	Inf	1	0	Gmet_0378	1	1	ThyA	Nucleotide Metabolism
+thiamine-phosphate kinase	TMPK	[c] : atp + thmmp --> adp + thmpp	0	Inf	1	0	Gmet_3213	1	1	ThiL	Vitamins & Cofactor Biosynthesis
+thiamine-phosphate diphosphorylase	TMPPP	[c] : 2mahmp + 4mpetz + h --> ppi + thmmp	0	Inf	1	0	Gmet_2935	1	1	ThiE	Vitamins & Cofactor Biosynthesis
+Toluene transport via diffusion	TOLt	tol[e] <==> tol[c]	-Inf	Inf	1	0	Gmet_1535	1	1	TodX	Transport
+triose-phosphate isomerase	TPI	[c] : dhap <==> g3p	-Inf	Inf	1	0	Gmet_1948	1	1	Tpi	Central Metabolism
+thioredoxin reductase (NADPH)	TRDR	[c] : h + nadph + trdox --> nadp + trdrd	0	Inf	1	0	Gmet_3070	1	1	TrxB	Central Metabolism
+trehalose-phosphatase	TRE6PP	[c] : h2o + tre6p --> pi + tre	0	Inf	1	0	Gmet_1090	1	1	OtsB2	Carbohydrate Metabolism
+tryptophan synthase (indoleglycerol phosphate)	TRPS1	[c] : 3ig3p + ser-L --> g3p + h2o + trp-L	0	Inf	1	0	Gmet_2477_OR_Gmet_2482_AND_ Gmet_2493_OR_Gmet_2477	1	1	TrpAB1, TrpAB	Amino Acid Metabolism
+Tryptophanyl-tRNA synthetase	TRPTRS	[c] : atp + trnatrp + trp-L --> amp + ppi + trptrna	0	Inf	1	0	Gmet_1960	1	1	TrpS	Amino Acid Metabolism
+thiosulfate sulfurtransferase	TSULST	[c] : cyan + tsul --> h + so3 + tcynt	0	Inf	1	0	Gmet_3018	1	1	GlpE	Other
+tyrosine transaminase	TYRTA	[c] : akg + tyr-L <==> 34hpp + glu-L	-Inf	Inf	1	0	Gmet_0213, Gmet_3433, Gmet_0732, Gmet_0385	1	1	HisC, AspB, AspB4, AspB3	Amino Acid Metabolism
+Tyrosyl-tRNA synthetase	TYRTRS	[c] : atp + trnatyr + tyr-L --> amp + ppi + tyrtrna	0	Inf	1	0	Gmet_1182	1	1	TyrS	Amino Acid Metabolism
+UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimelate synthetase	UAAGDS	[c] : 26dap-M + atp + uamag --> adp + h + pi + ugmd	0	Inf	1	0	Gmet_0407	1	1	MurE	Lipid & Cell Wall Metabolism
+acyl-[acyl-carrier-protein]-UDP-N-acetylglucosamine O-acyltransferase	UACAT	[c] : 3htdACP + uacgam --> ACP + u3aga	0	Inf	1	0	Gmet_2353, Gmet_2567	1	1	LpxA2, LpxA	Lipid & Cell Wall Metabolism
+UDP-N-acetyl-D-mannosamine oxidoreductase	UACMAMO	[c] : h2o + (2) nad + uacmam --> (3) h + (2) nadh + uacmamu	0	Inf	1	0	Gmet_1994	1	1	WecC	Cell Envelope Biosynthesis
+UDP-N-acetylglucosamine 2-epimerase	UAG2E	[c] : uacgam <==> uacmam	-Inf	Inf	1	0	Gmet_1504, Gmet_1489	1	1	YvyH1, YvyH2	Lipid & Cell Wall Metabolism
+UDP-N-acetyl-D-glucosamine 2-epimerase (Hydrolysis)	UAG2EMA	[c] : h2o + uacgam <==> acmana + h + udp	-Inf	Inf	1	0	Gmet_1504, Gmet_1489	1	1	YvyH2, YvyH1	Lipid & Cell Wall Metabolism
+UDP-N-acetylglucosamine 1-carboxyvinyltransferase	UAGCVT	[c] : pep + uacgam --> pi + uaccg	0	Inf	1	0	Gmet_0382	1	1	MurAA	Lipid & Cell Wall Metabolism
+UDP-N-acetylglucosamine diphosphorylase	UAGDP	[c] : acgam1p + h + utp --> ppi + uacgam	0	Inf	1	0	Gmet_0103	1	1	GlmU	Lipid & Cell Wall Metabolism
+UDP-N-acetylglucosamine-N-acetylmuramyl-(pentapeptide)pyrophosphoryl-undecaprenol N-acetylglucosamine transferase	UAGPT3	[c] : uacgam + uagmda --> h + uaagmda + udp	0	Inf	1	0	Gmet_0412	1	1	MurG	Lipid & Cell Wall Metabolism
+UDP-N-acetylmuramoyl-L-alanyl-D-glutamate synthetase	UAMAGS	[c] : atp + glu-D + uama --> adp + h + pi + uamag	0	Inf	1	0	Gmet_0410	1	1	MurD	Lipid & Cell Wall Metabolism
+UDP-N-acetylmuramoyl-L-alanine synthetase	UAMAS	[c] : ala-L + atp + uamr --> adp + h + pi + uama	0	Inf	1	0	Gmet_0413	1	1	MurC	Lipid & Cell Wall Metabolism
+UDP-N-acetylenolpyruvoylglucosamine reductase	UAPGR	[c] : h + nadph + uaccg --> nadp + uamr	0	Inf	1	0	Gmet_0414	1	1	MurB	Lipid & Cell Wall Metabolism
+undecaprenyl-diphosphatase	UDCPDP	[c] : h2o + udcpdp --> h + pi + udcpp	0	Inf	1	0	Gmet_3133	1	1	BacA	Nucleotide Metabolism
+undecaprenyl-diphosphate synthase	UDPDPS	[c] : decdp + ipdp --> ppi + udcpdp	0	Inf	1	0	Gmet_1254	1	1	UppS	Lipid & Cell Wall Metabolism
+UDPglucose 4-epimerase	UDPG4E	[c] : udpg <==> udpgal	-Inf	Inf	1	0	Gmet_2329, Gmet_1486	1	1	GalE, GalE1	Lipid & Cell Wall Metabolism
+UDPglucose 6-dehydrogenase	UDPGD	[c] : h2o + (2) nad + udpg <==> (3) h + (2) nadh + udpglcur	-Inf	Inf	1	0	Gmet_1430	1	1	Ugd	Lipid & Cell Wall Metabolism
+UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine synthetase	UGMDDS	[c] : alaala + atp + ugmd --> adp + h + pi + ugmda	0	Inf	1	0	Gmet_0408	1	1	MurFec	Cell Envelope Biosynthesis
+UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine  acyl transferase	UGSAT	[c] : ACP + h + u23ga <==> 3htdACP + u3hga	-Inf	Inf	1	0	Gmet_2355	1	1	LpxD	Lipid & Cell Wall Metabolism
+UDP-3-0-acyl N-acetylglucosamine deacetylase	UHGADA	[c] : h2o + u3aga --> ac + u3hga	0	Inf	1	0	Gmet_2607	1	1	LpxC	Lipid & Cell Wall Metabolism
+uroporphyrinogen methyltransferase	UPP3MT	[c] : (2) amet + uppg3 --> (2) ahcys + (2) h + shcl	0	Inf	1	0	Gmet_3235	1	1	HemD	Vitamins & Cofactor Biosynthesis
+uroporphyrinogen-III synthase	UPP3S	[c] : hmbil --> h2o + uppg3	0	Inf	1	0	Gmet_3235	1	1	HemD	Vitamins & Cofactor Biosynthesis
+uroporphyrinogen decarboxylase (uroporphyrinogen III)	UPPDC1	[c] : (4) h + uppg3 --> (4) co2 + cpppg3	0	Inf	1	0	Gmet_2750, Gmet_0016	1	1	HemE, UroD	Vitamins & Cofactor Biosynthesis
+UDP-L-rhamnose:flavonol-3-O-D-glucoside L-rhamnosyltransferase	URFGTT	[c] : 2ombz + amet --> 2ommb + ahcys + h	0	Inf	1	0	Gmet_1167	1	1	UbiE	Cofactor and Prosthetic Group Biosynthesis
+uridylate kinase (UMP)	URIDK1	[c] : atp + ump --> adp + udp	0	Inf	1	0	Gmet_1252	1	1	PyrH	Nucleotide Metabolism
+uridylate kinase (dUMP)	URIDK2	[c] : atp + dump --> adp + dudp	0	Inf	1	0	Gmet_1252	1	1	PyrH	Nucleotide Metabolism
+L-valine transport via ABC system	VALabc	atp[c] + h2o[c] + val-L[e] --> adp[c] + h[c] + pi[c] + val-L[c]	0	Inf	1	0	Gmet_1823_OR_Gmet_1822_OR_Gmet_1819_OR_Gmet_1821_OR_Gmet_1820	1	1	AzlCD	Transport
+valine transaminase	VALTA	[c] : akg + val-L <==> 3mob + glu-L	-Inf	Inf	1	0	Gmet_2853	1	1	IlvE	Amino Acid Metabolism
+Valyl-tRNA synthetase	VALTRS	[c] : atp + trnaval + val-L --> amp + ppi + valtrna	0	Inf	1	0	Gmet_0956	1	1	ValS	Amino Acid Metabolism
+tungstate transporter	WO4abc	atp[c] + h2o[c] + wo4[e] <==> adp[c] + h[c] + pi[c] + wo4[c]	-Inf	Inf	1	0	Gmet_1041_OR_Gmet_1039_OR_Gmet_1040	1	1	TupABC	Transport
+XTP pyrophosphatase	XTPASE	[c] : h2o + xtp --> h + ppi + xmp	0	Inf	1	0	Gmet_1875	1	1	IxpP	Nucleotide Metabolism
+zinc transport in via ABC system	ZN2abc2	atp[c] + h2o[c] + zn2[e] --> adp[c] + h[c] + pi[c] + zn2[c]	0	Inf	1	0	Gmet_0491, Gmet_0493, Gmet_0492	1	1	ZnuB+ZnuC+ZnuA	Transport
+zinc transport out via antiport	ZN2t4	h[e] + k[e] + zn2[c] --> h[c] + k[c] + zn2[e]	0	Inf	1	0	Gmet_3508_OR_Gmet_3509_OR_Gmet_3507	1	1	CzcA	Transport
+L-Cysteate exchange	EX_Lcyst(e)	[e] : Lcyst <==>	0	Inf	1	0		1	1		Energy Metabolism
+Acetate exchange	EX_ac(e)	[e] : ac <==>	-20	Inf	1	0		1	1		Transport
+Antimonite exchange	EX_antim(e)	[e] : antim <==>	0	Inf	1	0		1	1		Transport
+Arsenate exchange	EX_arsna(e)	[e] : arsna <==>	0	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+arsenite exchange	EX_arsni2(e)	[e] : arsni2 <==>	0	Inf	1	0		1	1		Transport
+Butyrate (n-C4:0) exchange	EX_but(e)	[e] : but <==>	0	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+butanesulfonate exchange	EX_buts(e)	[e] : buts <==>	0	Inf	1	0		1	1		Transport
+Benzoate exchange	EX_bz(e)	[e] : bz <==>	0	Inf	1	0		1	1		Other
+Benzaldehyde exchange	EX_bzal(e)	[e] : bzal <==>	0	Inf	1	0		1	1		Transport
+Benzyl alcohol exchange	EX_bzalc(e)	[e] : bzalc <==>	0	Inf	1	0		1	1		Energy Metabolism
+Calcium exchange	EX_ca2(e)	[e] : ca2 <==>	-Inf	Inf	1	0		1	1		Carbohydrate Metabolism
+Cadmium exchange	EX_cd2(e)	[e] : cd2 <==>	-Inf	Inf	1	0		1	1		Transport, Extracellular
+Chloride exchange	EX_cl(e)	[e] : cl <==>	-Inf	Inf	1	0		1	1		Transport
+CO2 exchange	EX_co2(e)	[e] : co2 <==>	-Inf	Inf	1	0		1	1		Amino Acid Metabolism
+Co2+ exchange	EX_cobalt2(e)	[e] : cobalt2 <==>	-Inf	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+chromate exchange	EX_cro4(e)	[e] : cro4 <==>	0	Inf	1	0		1	1		Fatty Acid Metabolism
+Cresol exchange	EX_crsol(e)	[e] : 4crsol <==>	0	Inf	1	0		1	1		Fatty Acid Metabolism
+Cu2+ exchange	EX_cu2(e)	[e] : cu2 <==>	-Inf	Inf	1	0		1	1		Fatty Acid Metabolism
+ethanesulfonate exchange	EX_eths(e)	[e] : eths <==>	0	Inf	1	0		1	1		Fatty Acid Metabolism
+Ethanol exchange	EX_etoh(e)	[e] : etoh <==>	0	Inf	1	0		1	1		Fatty Acid Metabolism
+Fe2+ exchange	EX_fe2(e)	[e] : fe2 <==>	0	Inf	1	1		1	1		Transport
+Fe3+ exchange	EX_fe3(e)	[e] : fe3 <==>	-Inf	Inf	1	0		1	1		Aromatic Compound degradation
+Formate exchange	EX_for(e)	[e] : for <==>	0	Inf	1	0		1	1		Valine, Leucine, and Isoleucine Metabolism
+D-Galacturonate exchange	EX_galur(e)	[e] : galur <==>	0	Inf	1	0		1	1		Valine, Leucine, and Isoleucine Metabolism
+D-Glucuronate exchange	EX_glcur(e)	[e] : glcur <==>	0	Inf	1	0		1	1		Valine, Leucine, and Isoleucine Metabolism
+H+ exchange	EX_h(e)	[e] : h <==>	-Inf	Inf	1	0		1	1		Amino Acid Metabolism
+H2 exchange	EX_h2(e)	[e] : h2 <==>	0	Inf	1	0		1	1		Transport
+H2O exchange	EX_h2o(e)	[e] : h2o <==>	-Inf	Inf	1	0		1	1		Cofactor and Prosthetic Group Biosynthesis
+Hydrogen sulfide exchange	EX_h2s(e)	[e] : h2s <==>	0	Inf	1	0		1	1		Amino Acid Metabolism
+hexanesulfonate exchange	EX_hexs(e)	[e] : hexs <==>	0	Inf	1	0		1	1		Amino Acid Metabolism
+L-Isoleucine exchange	EX_ile-L(e)	[e] : ile-L <==>	0	Inf	1	0		1	1		
+Isethionate exchange	EX_istnt(e)	[e] : istnt <==>	0	Inf	1	0		1	1		
+K+ exchange	EX_k(e)	[e] : k <==>	-Inf	Inf	1	0		1	1		
+L-Leucine exchange	EX_leu-L(e)	[e] : leu-L <==>	0	Inf	1	0		1	1		
+L-Lysine exchange	EX_lys-L(e)	[e] : lys-L <==>	0	Inf	1	0		1	1		
+Mg exchange	EX_mg2(e)	[e] : mg2 <==>	-Inf	Inf	1	0		1	1		
+Mn2+ exchange	EX_mn2(e)	[e] : mn2 <==>	-Inf	Inf	1	0		1	1		
+Molybdate exchange	EX_mobd(e)	[e] : mobd <==>	-Inf	Inf	1	0		1	1		
+MOPS exchange	EX_mops(e)	[e] : mops <==>	0	Inf	1	0		1	1		
+Methanesulfonate exchange	EX_mso3(e)	[e] : mso3 <==>	0	Inf	1	0		1	1		
+N2 exchange	EX_n2(e)	[e] : n2 <==>	-Inf	Inf	1	0		1	1		
+Sodium exchange	EX_na1(e)	[e] : na1 <==>	-Inf	Inf	1	0		1	1		
+Ammonium exchange	EX_nh4(e)	[e] : nh4 <==>	-Inf	Inf	1	0		1	1		
+Ni2+ exchange	EX_ni2(e)	[e] : ni2 <==>	-Inf	Inf	1	0		1	1		
+Nitrite exchange	EX_no2(e)	[e] : no2 <==>	0	Inf	1	0		1	1		
+Nitrate exchange	EX_no3(e)	[e] : no3 <==>	0	Inf	1	0		1	1		
+Oxalate exchange	EX_oxa(e)	[e] : oxa <==>	0	Inf	1	0		1	1		
+Phenylacetate exchange	EX_pheac(e)	[e] : pheac <==>	0	Inf	1	0		1	1		
+Phenol exchange	EX_phenol(e)	[e] : phenol <==>	0	Inf	1	0		1	1		
+Phosphate exchange	EX_pi(e)	[e] : pi <==>	-Inf	Inf	1	0		1	1		
+L-Proline exchange	EX_pro-L(e)	[e] : pro-L <==>	0	Inf	1	0		1	1		
+Pyruvate exchange	EX_pyr(e)	[e] : pyr <==>	0	Inf	1	0		1	1		
+Sulfate exchange	EX_so4(e)	[e] : so4 <==>	-Inf	Inf	1	0		1	1		
+Disulfide exchange	EX_ss(e)	[e] : ss <==>	0	Inf	1	0		1	1		
+Sulfoacetate exchange	EX_sula(e)	[e] : sula <==>	0	Inf	1	0		1	1		
+Taurine exchange	EX_taur(e)	[e] : taur <==>	0	Inf	1	0		1	1		
+Toluene exchange	EX_tol(e)	[e] : tol <==>	0	Inf	1	0		1	1		
+L-Valine exchange	EX_val-L(e)	[e] : val-L <==>	0	Inf	1	0		1	1		
+tungstate exchange	EX_wo4(e)	[e] : wo4 <==>	0	Inf	1	0		1	1		
+Zinc exchange	EX_zn2(e)	[e] : zn2 <==>	0	Inf	1	0		1	1		
+ATP maintenance requirment	ATPM	[c] : atp + h2o --> adp + h + pi	0.45	Inf	1	0		1	1		
+Butyrate transport via proton symport, reversible	BUTt2	but[e] + h[e] <==> but[c] + h[c]	-Inf	Inf	1	0		1	1		
+benzoate transport in/out via proton symport	BZt6	bz[e] + h[e] <==> bz[c] + h[c]	-Inf	Inf	1	0		1	1		
+cob(II)yrinic acid a,c-diamide reductase	CO2DAMR	[c] : (2) co2dam + nadh --> (2) co1dam + h + nad	0	Inf	1	0		1	1		
+CO2 transport out via diffusion	CO2t	co2[e] <==> co2[c]	-Inf	Inf	1	0		1	1		
+precorrin-6A reductase	CPC6R	[c] : copre6 + h + nadph --> codhpre6 + nadp	0	Inf	1	0		1	1		
+p-cresol transport vis diffusion	CRESt	4crsol[e] <==> 4crsol[c]	-Inf	Inf	1	0		1	1		
+cytochrome-c reductase (menaquinol 7: 1 protons)	CYOR1m	(2) ficytcc[c] + mql7[c] --> (2) focytcc[c] + h[e] + h[c] + mqn7[c]	0	Inf	1	0		1	1		
+ethanol transporter	ETOHt4	etoh[e] + h[e] <==> etoh[c] + h[c]	-Inf	Inf	1	0		1	1		
+Fe (III) Reductase: G sulfurreducens	FERCYT	fe3[e] + focytcc[c] --> fe2[e] + ficytcc[c]	0	Inf	1	0		1	1		
+L-glutamate 5-semialdehyde dehydratase (spontaneous)	G5SADs	[c] : glu5sa <==> 1pyr5c + h + h2o	-Inf	Inf	1	0		1	1		
+H2O transport via diffusion	H2Ot5	h2o[e] <==> h2o[c]	-Inf	Inf	1	0		1	1		
+hydrogen transport	H2td	h2[c] <==> h2[e]	-Inf	Inf	1	0		1	1		
+homoserine kinase	HSK	[c] : atp + hom-L --> adp + h + phom	0	Inf	1	0		1	1		
+Isochorismate Synthase	ICHORSi	[c] : chor --> ichor	0	Inf	1	0		1	1		
+b-ketoacyl synthetase (Iso-C14:0)	KAS1	[c] : (14) h + ibcoa + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa1 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		
+b-ketoacyl synthetase (n-C18:1)	KAS17	[c] : accoa + (22) h + (8) malcoa + (15) nadph --> (8) co2 + (9) coa + (7) h2o + (15) nadp + ocdcea	0	Inf	1	0		1	1		
+b-ketoacyl synthetase (Iso-C15:0)	KAS3	[c] : (14) h + ivcoa + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa3 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		
+b-ketoacyl synthetase (Anteiso-C15:0)	KAS4	[c] : 2mbcoa + (14) h + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa4 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		
+b-ketoacyl synthetase (Iso-C17:1)	KAS9	[c] : (16) h + ivcoa + (6) malcoa + (11) nadph --> (6) co2 + (7) coa + fa9 + (5) h2o + (11) nadp	0	Inf	1	0		1	1		
+nitrogen transport diffusion	N2t	n2[c] <==> n2[e]	-Inf	Inf	1	0		1	1		
+oxopimelylcoa:glutarylcoa acyltransferase	OGCOAAT	[c] : 3opimcoa + coa <==> accoa + glutcoa	-Inf	Inf	1	0		1	1		
+2-oxoisovalerate dehydrogenase (acylating; 4-methyl-2-oxopentaoate)	OIVD1	[c] : 4mop + coa + nad <==> co2 + ivcoa + nadh	-Inf	Inf	1	0		1	1		
+2-oxoisovalerate dehydrogenase (acylating; 3-methyl-2-oxobutanoate)	OIVD2	[c] : 3mob + coa + nad --> co2 + ibcoa + nadh	0	Inf	1	0		1	1		
+2-oxoisovalerate dehydrogenase (acylating; 3-methyl-2-oxopentanoate)	OIVD3	[c] : 3mop + coa + nad --> 2mbcoa + co2 + nadh	0	Inf	1	0		1	1		
+2-Oxo-4-methyl-3-carboxypentanoate decarboxylation	OMCDC	[c] : 3c4mop + h --> 4mop + co2	0	Inf	1	0		1	1		
+phenol transport via diffusion	PHENOLt	phenol[e] <==> phenol[c]	-Inf	Inf	1	0		1	1		
+pantothenate kinase	PNTK	[c] : atp + pnto-R --> 4ppan + adp + h	0	Inf	1	0		1	1		
+succinyl-diaminopimelate desuccinylase	SDPDS	[c] : h2o + sl26da --> 26dap-LL + succ	0	Inf	1	0		1	1		
+tetrahydropicolinate succinylase	THDPS	[c] : h2o + succoa + thdp --> coa + sl2a6o	0	Inf	1	0		1	1		
+Biomass composition	biomass	[c] : (0.022284123) 26dap-M + (0.0177014) 3pg + (0.021845986) akg + (0.022284123) ala-D + (0.372353129) ala-L + (0.20157662) arg-L + (0.164274185) asn-L + (0.164274185) asp-L + (46.718804) atp + (0.000940527) ca2 + (0.040129178) ctp + (0.062409843) cys-L + (0.020714) datp + (0.020714656) dctp + (0.020714656) dgtp + (0.020714656) dttp + (0.001307241) fa1 + (0.062391063) fa3 + (0.002733323) fa4 + (0.011170971) fa9 + (0.191964286) g3p + (0.026552099) g6p + (0.17933863) gln-L + (0.022284123) glu-D + (0.17933863) glu-L + (0.417500331) gly + (0.925925926) glycogen + (0.064652564) gtp + (13.07392627) h2o + (0.225997835) hdca + (0.276897481) hdcea + (0.064561907) his-L + (0.197989848) ile-L + (0.221964448) k + (0.307027735) leu-L + (0.233857574) lys-L + (0.10473376) met-L + (0.031977929) mg2 + (0.0177014) nad + (0.056687258) nadph + (0.061393371) nh4 + (0.003862304) ocdca + (0.023114403) ocdcea + (0.0177014) pep + (0.126254396) phe-L + (0.28381802) ppi + (0.150644449) pro-L + (0.0177014) r5p + (0.471859373) ser-L + (0.17288244) thr-L + (0.038737144) trp-L + (0.021391222) ttdca + (0.093973442) tyr-L + (0.034085056) uacgam + (0.022284123) uamr + (0.011800933) udpg + (0.043314033) utp + (0.288376518) val-L --> (46.666254) adp + (46.70524) h + (0.0177014) nadh + (0.056687) nadp + (46.714415) pi	0.06	Inf	1	0		1	1		
