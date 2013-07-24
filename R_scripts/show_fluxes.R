@@ -21,10 +21,16 @@ setNodeColorRule(met,
 )
 
 t <- GDMO.M.chromosomes[order(GDMO.M.chromosomes$pos),grep(pattern='Gmet_.*',colnames(GDMO.M.chromosomes))]
+changed <- T
 for(i in 1:nrow(t)){
 	chrom<-t[i,]
 	sol <- optimizeProb(object=mod,gene=names(chrom)[chrom==T])
-	setNodeAttributesDirect(met,'flux','numeric',as.character(GDMO.M.reactions[,'abbreviation']),normalize(as.vector(fluxes(sol))))
+	fluxes <- as.vector(fluxes(sol))
+	if(i>1){
+		changed <- (old - fluxes) != 0
+	}
+	old <- fluxes
+	setNodeAttributesDirect(met,'flux','numeric',as.character(GDMO.M.reactions[,'abbreviation'])[changed],normalize(fluxes)[changed])
 	redraw(met)
 	msg(met,paste('timestep',i))
 }
