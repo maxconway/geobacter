@@ -756,34 +756,4 @@ Toluene exchange	EX_tol(e)	[e] : tol <==>	0	Inf	1	0		1	1
 L-Valine exchange	EX_val-L(e)	[e] : val-L <==>	0	Inf	1	0		1	1		
 tungstate exchange	EX_wo4(e)	[e] : wo4 <==>	0	Inf	1	0		1	1		
 Zinc exchange	EX_zn2(e)	[e] : zn2 <==>	0	Inf	1	0		1	1		
-ATP maintenance requirment	ATPM	[c] : atp + h2o --> adp + h + pi	0.45	Inf	1	0		1	1		
-Butyrate transport via proton symport, reversible	BUTt2	but[e] + h[e] <==> but[c] + h[c]	-Inf	Inf	1	0		1	1		
-benzoate transport in/out via proton symport	BZt6	bz[e] + h[e] <==> bz[c] + h[c]	-Inf	Inf	1	0		1	1		
-cob(II)yrinic acid a,c-diamide reductase	CO2DAMR	[c] : (2) co2dam + nadh --> (2) co1dam + h + nad	0	Inf	1	0		1	1		
-CO2 transport out via diffusion	CO2t	co2[e] <==> co2[c]	-Inf	Inf	1	0		1	1		
-precorrin-6A reductase	CPC6R	[c] : copre6 + h + nadph --> codhpre6 + nadp	0	Inf	1	0		1	1		
-p-cresol transport vis diffusion	CRESt	4crsol[e] <==> 4crsol[c]	-Inf	Inf	1	0		1	1		
-cytochrome-c reductase (menaquinol 7: 1 protons)	CYOR1m	(2) ficytcc[c] + mql7[c] --> (2) focytcc[c] + h[e] + h[c] + mqn7[c]	0	Inf	1	0		1	1		
-ethanol transporter	ETOHt4	etoh[e] + h[e] <==> etoh[c] + h[c]	-Inf	Inf	1	0		1	1		
-Fe (III) Reductase: G sulfurreducens	FERCYT	fe3[e] + focytcc[c] --> fe2[e] + ficytcc[c]	0	Inf	1	0		1	1		
-L-glutamate 5-semialdehyde dehydratase (spontaneous)	G5SADs	[c] : glu5sa <==> 1pyr5c + h + h2o	-Inf	Inf	1	0		1	1		
-H2O transport via diffusion	H2Ot5	h2o[e] <==> h2o[c]	-Inf	Inf	1	0		1	1		
-hydrogen transport	H2td	h2[c] <==> h2[e]	-Inf	Inf	1	0		1	1		
-homoserine kinase	HSK	[c] : atp + hom-L --> adp + h + phom	0	Inf	1	0		1	1		
-Isochorismate Synthase	ICHORSi	[c] : chor --> ichor	0	Inf	1	0		1	1		
-b-ketoacyl synthetase (Iso-C14:0)	KAS1	[c] : (14) h + ibcoa + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa1 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		
-b-ketoacyl synthetase (n-C18:1)	KAS17	[c] : accoa + (22) h + (8) malcoa + (15) nadph --> (8) co2 + (9) coa + (7) h2o + (15) nadp + ocdcea	0	Inf	1	0		1	1		
-b-ketoacyl synthetase (Iso-C15:0)	KAS3	[c] : (14) h + ivcoa + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa3 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		
-b-ketoacyl synthetase (Anteiso-C15:0)	KAS4	[c] : 2mbcoa + (14) h + (5) malcoa + (10) nadph --> (5) co2 + (6) coa + fa4 + (4) h2o + (10) nadp	0	Inf	1	0		1	1		
-b-ketoacyl synthetase (Iso-C17:1)	KAS9	[c] : (16) h + ivcoa + (6) malcoa + (11) nadph --> (6) co2 + (7) coa + fa9 + (5) h2o + (11) nadp	0	Inf	1	0		1	1		
-nitrogen transport diffusion	N2t	n2[c] <==> n2[e]	-Inf	Inf	1	0		1	1		
-oxopimelylcoa:glutarylcoa acyltransferase	OGCOAAT	[c] : 3opimcoa + coa <==> accoa + glutcoa	-Inf	Inf	1	0		1	1		
-2-oxoisovalerate dehydrogenase (acylating; 4-methyl-2-oxopentaoate)	OIVD1	[c] : 4mop + coa + nad <==> co2 + ivcoa + nadh	-Inf	Inf	1	0		1	1		
-2-oxoisovalerate dehydrogenase (acylating; 3-methyl-2-oxobutanoate)	OIVD2	[c] : 3mob + coa + nad --> co2 + ibcoa + nadh	0	Inf	1	0		1	1		
-2-oxoisovalerate dehydrogenase (acylating; 3-methyl-2-oxopentanoate)	OIVD3	[c] : 3mop + coa + nad --> 2mbcoa + co2 + nadh	0	Inf	1	0		1	1		
-2-Oxo-4-methyl-3-carboxypentanoate decarboxylation	OMCDC	[c] : 3c4mop + h --> 4mop + co2	0	Inf	1	0		1	1		
-phenol transport via diffusion	PHENOLt	phenol[e] <==> phenol[c]	-Inf	Inf	1	0		1	1		
-pantothenate kinase	PNTK	[c] : atp + pnto-R --> 4ppan + adp + h	0	Inf	1	0		1	1		
-succinyl-diaminopimelate desuccinylase	SDPDS	[c] : h2o + sl26da --> 26dap-LL + succ	0	Inf	1	0		1	1		
-tetrahydropicolinate succinylase	THDPS	[c] : h2o + succoa + thdp --> coa + sl2a6o	0	Inf	1	0		1	1		
 Biomass composition	biomass	[c] : (0.022284123) 26dap-M + (0.0177014) 3pg + (0.021845986) akg + (0.022284123) ala-D + (0.372353129) ala-L + (0.20157662) arg-L + (0.164274185) asn-L + (0.164274185) asp-L + (46.718804) atp + (0.000940527) ca2 + (0.040129178) ctp + (0.062409843) cys-L + (0.020714) datp + (0.020714656) dctp + (0.020714656) dgtp + (0.020714656) dttp + (0.001307241) fa1 + (0.062391063) fa3 + (0.002733323) fa4 + (0.011170971) fa9 + (0.191964286) g3p + (0.026552099) g6p + (0.17933863) gln-L + (0.022284123) glu-D + (0.17933863) glu-L + (0.417500331) gly + (0.925925926) glycogen + (0.064652564) gtp + (13.07392627) h2o + (0.225997835) hdca + (0.276897481) hdcea + (0.064561907) his-L + (0.197989848) ile-L + (0.221964448) k + (0.307027735) leu-L + (0.233857574) lys-L + (0.10473376) met-L + (0.031977929) mg2 + (0.0177014) nad + (0.056687258) nadph + (0.061393371) nh4 + (0.003862304) ocdca + (0.023114403) ocdcea + (0.0177014) pep + (0.126254396) phe-L + (0.28381802) ppi + (0.150644449) pro-L + (0.0177014) r5p + (0.471859373) ser-L + (0.17288244) thr-L + (0.038737144) trp-L + (0.021391222) ttdca + (0.093973442) tyr-L + (0.034085056) uacgam + (0.022284123) uamr + (0.011800933) udpg + (0.043314033) utp + (0.288376518) val-L --> (46.666254) adp + (46.70524) h + (0.0177014) nadh + (0.056687) nadp + (46.714415) pi	0.06	Inf	1	0		1	1		
