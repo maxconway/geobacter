@@ -27,7 +27,7 @@ for(i in 1:nrow(t)){
 	sol <- optimizeProb(object=mod,gene=names(chrom)[chrom==T])
 	fluxes <- as.vector(fluxes(sol))
 	if(i>1){
-		changed <- (old - fluxes) != 0
+		changed <- old != fluxes
 	}
 	old <- fluxes
 	setNodeAttributesDirect(met,'flux','numeric',as.character(GDMO.M.reactions[,'abbreviation'])[changed],normalize(fluxes)[changed])
