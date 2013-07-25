@@ -15,7 +15,7 @@ obj_coef(mod)[match(c('biomass','EX_fe2(e)'),react_id(mod))] <- c(100,1)
 
 setNodeColorRule(met,
 								 node.attribute.name='flux',
-								 control.points=c(-2,0,2),
+								 control.points=c(-3.3,0,3.3),
 								 colors=col2hex(c('black','red','white','green','black')),
 								 mode='interpolate'
 )
@@ -24,10 +24,11 @@ t <- GDMO.M.chromosomes[order(GDMO.M.chromosomes$pos),grep(pattern='Gmet_.*',col
 changed <- T
 for(i in 1:nrow(t)){
 	chrom<-t[i,]
-	sol <- optimizeProb(object=mod,gene=names(chrom)[chrom==T])
+	sol <- optimizeProb(object=mod,gene=names(chrom)[chrom==T],lb=0,ub=0)
 	fluxes <- as.vector(fluxes(sol))
 	if(i>1){
 		changed <- old != fluxes
+		print(summary(old-fluxes))
 	}
 	old <- fluxes
 	setNodeAttributesDirect(met,'flux','numeric',as.character(GDMO.M.reactions[,'abbreviation'])[changed],normalize(fluxes)[changed])
