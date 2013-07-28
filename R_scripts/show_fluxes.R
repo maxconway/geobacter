@@ -28,7 +28,7 @@ for(i in 1:nrow(t)){
 	fluxes <- as.vector(fluxes(sol))
 	if(i>1){
 		changed <- old != fluxes
-		print(summary(old-fluxes))
+#		print(summary(old-fluxes))
 	}
 	old <- fluxes
 	setNodeAttributesDirect(met,'flux','numeric',as.character(GDMO.M.reactions[,'abbreviation'])[changed],normalize(fluxes)[changed])
