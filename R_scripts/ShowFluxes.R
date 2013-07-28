@@ -6,6 +6,8 @@ Normalize <- function(x){
 }
 
 ShowFluxes <- function(cytoscapeWindow, mod, chromosomes, reactions){
+	require(gplots)
+	require(sybil)
 	# Shows the normalized fluxes in cytoscape.
 	# Requires that the graph is already present, and cytoscape attached.
 	#
