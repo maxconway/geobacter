@@ -1,4 +1,11 @@
 ShowKnockedOut <- function(cytoscapeWindow, chromosomes, reactions){
+	# Shows the knockouts in cytoscape.
+	# Requires that the graph is already present, and cytoscape attached.
+	#
+	# Args:
+	#   cytoscapeWindow: the cytoscape window which is to be used
+	#   chromosomes: the chromosomes that are to be displayed, in order
+	#   reactions: reaction table containing columns 'Abbreviation' and 'GeneAssociation'
 	setNodeColorRule(cytoscapeWindow,
 									 node.attribute.name='knockout',
 									 control.points=c('TRUE','FALSE'),
