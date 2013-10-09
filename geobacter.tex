@@ -1,7 +1,12 @@
 \documentclass[a4paper,twocolumn]{article}
 \usepackage{graphicx}
-\usepackage{todonotes}
 \usepackage{siunitx}
+
+%development
+\usepackage{todonotes}
+\setlength{\marginparwidth}{2cm}
+
+
 \graphicspath{ {./figures/} }
 %http://www.biomedcentral.com/authors/report
 
@@ -16,7 +21,7 @@
 
 
 \begin{document}
-\title{Genetic Design of Geobacter}
+\title{Genetic Design of Geobacter for electricity generation}
 \maketitle
 \begin{abstract}
 \todo[inline]{The Abstract of the manuscript should not exceed 350 words and must be structured into separate sections: Background, the context and purpose of the study; Results, the main findings;Conclusions, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
@@ -37,48 +42,50 @@ Genetic design~\cite{} is the process of choosing how to modify an organism in o
 
 Metabolic engineering~\cite{} is one of the most industrially important areas of genetic design, and is commonly achieved by the combination of a heuristic search algorithm, to generate draft genomes, and Flux Balance Analysis, to evaluate them \cite{}. One of the bottlenecks in this procedure can be that feedback for human interpretation is not necessarily clear. Here we discuss the use of one heuristic search, Genetic Design by Multi-objective Optimization\cite{}, and the development of a framework to allow efficient visual interpretation of its results.
 
-Genetic Design by Multi-objective Optimization is based on the generic multi-objective optimization algorithm NSGA-II (Non-domination Sort Genetic Algorithm II)~\cite{}. It finds a Pareto front, which is a set of possible genomes whose phenotypes are pareto optimal - phenotypes for which there is no other phenotype which is superior in all ways. Using NSGA-II as the core allows for the efficient creation of a front that represents a wide variety of different phenotypes. This is important since the later analysis is focussed on relating properties of the phenotypes back to the genomes.
+Genetic Design by Multi-objective Optimization is based on the generic multi-objective optimization algorithm NSGA-II (Non-domination Sort Genetic Algorithm II)~\cite{}. It finds a Pareto front, which is a set of possible genomes whose phenotypes are Pareto optimal - phenotypes for which there is no other phenotype which is superior in all ways. Using NSGA-II as the core allows for the efficient creation of a front that represents a wide variety of different phenotypes. This is important since the later analysis is focussed on relating properties of the phenotypes back to the genomes.
 
 This framework is used to compare how electricity generation could be enhanced in Geobacter \emph{Sulfurreducens} and \emph{Metallireducens}.
 
 \section{Results and discussion}
 \todo[inline]{The Results and discussion may be combined into a single section or presented separately.	 The Results and discussion sections may also be broken into subsections with short, informative headings.}
 
-This investigation has three main result areas: firstly, the knockouts used to generate a \SI{4}{\percent} improvement in electricity production achieved over wildtype Geobacter Sulphurreducens, and secondly the framework created in order to interpret these results and guide future research.
+This investigation has two main result areas: firstly, the knockouts used to generate a \SI{4}{\percent} improvement in electricity production achieved over wildtype Geobacter Sulphurreducens, and secondly the framework created in order to interpret these results and guide future research.
 
 \subsection{Geobacter optimization using GDMO}
 Genetic Design by Multiobjective Optimization was able to increase maximum iron(III) reduction ability in Geobacter Sulfurreducens by a maximum of  \SI{4}{\percent}, and was also able to produce an increase in minimum possible capacity of  \SI{0.6}{\percent}, while keeping biomass production at  \SI{88}{\percent} of the wildtype value. This increase is especially promising given that, unlike many common synthetic objectives, this electricity production is part of the core metabolic pathway being used, rather than just a byproduct. 
 
-GDMO also allowed the generation of 2000 other Pareto optimal genomes for each Geobacter species. The optimization objectives used were:
+The optimization objectives used were:
 \begin{itemize}
 	\item Maximizing biomass production - the engineered bacteria should be as healthy as possible,
 	\item Minimizing knockouts - this selects for easier to engineer genomes, and suppresses superfluous knockouts,
-	\item Maximizing Electricity Production - FBA gives a range of possible values for the production of a genotype, so this involved maximizing two values:
+	\item Maximizing Electricity Production - Flux Balance Analysis gives a range of possible values for the production of a genotype, so this involved maximizing two values:
 	\begin{itemize}
 		\item Lower limit on electricity production
 		\item Upper limit on electricity production
 	\end{itemize}
 \end{itemize}
-These genomes showed a relatively linear pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large scale wastewater electricity production, or for better environmental tolerances in smaller applications.
+
+GDMO allowed the generation of 2000 other Pareto optimal genomes for each Geobacter species. These genomes showed a relatively linear pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large scale wastewater electricity production, or for better environmental tolerances in smaller applications.
 
 \begin{figure}[h]
+\label{fig:heatmap}
 \includegraphics[width=0.5\textwidth]{pfront_max}
 \caption{Four-objective Pareto fronts projected down to just objectives of synthesis upper limit and biomass production. Jittering used to reveal solutions obscured by projection. Metallireducens has superior properties for small synthesis increases, but cannot achieve high synthesis rates.}
 \end{figure}
 
 
-This large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the Geobacter species studied, and therefore in attempting to perform more targeted genetic design. Figure X shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and correlations between the activation of genes. 
-
-A possible additional analysis stage would be, rather than examining simply the on-off state of genes, examining the throughput of reactions that they control. This analysis, though not practical in living cells, would allow for more effective understanding of control structures, and could guide both further analysis and the continuing knockout process.
+This large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the Geobacter species studied, and therefore in attempting to perform more targeted genetic design. Figure~\ref{fig:heatmap} shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and secondly correlations between the activation of genes. 
 
 \begin{figure}[h]
 \includegraphics[width=0.5\textwidth]{heatmap_geo_s_react_lessknockouts}
 \caption{Heatmap of Geobacter Sulfurreducens. Purple indicates knocked out. We can see clearly demarcated essential genes, and those with varying degrees of activity in electricity production.}
 \end{figure}
 
-One of the major difficulties in finding patterns in genomes was the difficulty in visualizing their effects. To ease this difficulty, a graphical visualization method was required.
+
 
 \subsection{Network Visualization}
+One of the major difficulties in finding patterns in genomes was the difficulty in visualizing their effects. To ease this difficulty, a graphical visualization method was required.
+
 The cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms, and it has a number of useful plugins. Cytoscape was connected to R in order to allow visualization of the genes found to have outlying correlation with position in the pareto front. Figure X highlights the reactions involved with these gene sets, and shows that they are all involved in acetate metabolism, as expected. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
 
 \begin{figure}[h]
@@ -91,12 +98,19 @@ The cytoscape network visualization package was used as a base for the network v
 
 Genetic engineering is a challenging field to create CAD tools for, since a lack of complete information makes human interpretation very important, but, simultaneously, this interpretation is difficult due to the complexity and connectivity of the systems under study. 
 
+\todo{biological conclusions}
+
 The combination of genetic design by multi-objective optimization and network visualization discussed here allows for high throughput design and interpretation. This has allowed us to identify knockout vectors to increase electricity production in G. Sulfurreducens and G. Metallireducens, as well as discovering systematic effects of individual knockouts.
 
 \section{Methods}
 \todo[inline]{The methods section should include the design of the study, the type of materials involved, a clear description of all comparisons, and the type of analysis used, to enable replication.}
 
-Figure X presents an outline of the design framework created. This framework is not only a conceptual description of the steps taken, but is an automated software pipeline, meaning that all steps taken are fully documented and replicable, and can be reused on other metabolic models with minimal configuration changes. Steps 1:M are written in Matlab and perform Genetic Design by Multiobjective Optimization, based on the NSGA-II multiobjective optimization algorithm. This is a relatively long-running process, so during execution a large amount of information is logged so that it need not be repeated. [need some description of individual steps, probably easier once I’ve made a diagram]. Steps M+1:Q are written in R, and are analysis steps. These look at the relationship between the resultant genotypes and phenotypes, as described by position in the pareto front. This allows for interesting subsets of the genes to be selected and examined in cytoscape, described in steps Q+1:Z.
+Figure~\ref{fig:flowdiagram} presents an outline of the design framework created. This framework is not only a conceptual description of the steps taken, but is an automated software pipeline, meaning that all steps taken are fully documented and replicable, and can be reused on other metabolic models with minimal configuration changes. Steps 1:M are written in Matlab and perform Genetic Design by Multiobjective Optimization, based on the NSGA-II multiobjective optimization algorithm. This is a relatively long-running process, so during execution a large amount of information is logged so that it need not be repeated. \todo{need some description of individual steps, probably easier once I’ve made a diagram.} Steps M+1:Q are written in R, and are analysis steps. These look at the relationship between the resultant genotypes and phenotypes, as described by position in the pareto front. This allows for interesting subsets of the genes to be selected and examined in cytoscape, described in steps Q+1:Z.
+
+\begin{figure}
+\label{fig:flowdiagram}
+\missingfigure{Flow diagram}
+\end{figure}
 
 GDMO was chosen for the optimization step since the evolutionary basis of this algorithm gives it greater robustness. It was compared to Genetic Design by Local Search~\cite{}, and found to be somewhat slower for simple cases, but it was able to find solutions in situations where GDLS could not, and of course was able to provide a wide range of solutions. The GDMO source code was modified from the original so that it maximized both upper and lower bounds on synthesis rate, as well as minimizing unnecessary knockouts.
 
