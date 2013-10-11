@@ -86,11 +86,16 @@ This large number of Pareto optimal genomes is obviously of interest in attempti
 \subsection{Network Visualization}
 One of the major difficulties in finding patterns in genomes was the difficulty in visualizing their effects. To ease this difficulty, a graphical visualization method was required.
 
-The cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms, and it has a number of useful plugins. Cytoscape was connected to R in order to allow visualization of the genes found to have outlying correlation with position in the pareto front. Figure X highlights the reactions involved with these gene sets, and shows that they are all involved in acetate metabolism, as expected. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
+The cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms, and it has a number of useful plugins. Cytoscape was connected to R via the the RCytoscape R package, XML-RPC, and the Cytoscape plugin CytoscapeRPC.
+
+Using this connection virtually every property of the network shown in Cytoscape could be set from R, but the most important method was to set how node and edge appearance to be a function of the attributes of the node or edge, and then set those attributes to be the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
+
+Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. They are all involved in acetate metabolism, as expected. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
 
 \begin{figure}[h]
+\label{fig:cytoscape-screenshot}
 \includegraphics[width=0.5\textwidth]{cytoscape-screenshot}
-\caption{Excerpt from the Cytoscape visualization of the Geobacter Sulfurreducens metabolic network. Diamonds are reactions, circles metabolites. The section of the network shown contains the reactions that showed unusually high correlations with electricity production capability.}
+\caption{Excerpt from the Cytoscape visualization of the Geobacter Sulfurreducens metabolic network. Diamonds are reactions, circles metabolites. The excerpt of the network that has been isolated contains the reactions that showed unusually high correlations with electricity production capability.}
 \end{figure}
 
 \section{Conclusions}
