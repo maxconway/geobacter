@@ -114,7 +114,8 @@ Figure~\ref{fig:flowdiagram} presents an outline of the design framework created
 
 \begin{figure}
 \label{fig:flowdiagram}
-\missingfigure{Flow diagram}
+\includegraphics[width=0.5\textwidth]{GeobacterFlowChart}
+\caption{Overview flow chart of analysis process. Green parallelograms show data used and generated. Red rectangles show processes conducted.}
 \end{figure}
 
 GDMO was chosen for the optimization step since the evolutionary basis of this algorithm gives it greater robustness. It was compared to Genetic Design by Local Search~\cite{}, and found to be somewhat slower for simple cases, but it was able to find solutions in situations where GDLS could not, and of course was able to provide a wide range of solutions. The GDMO source code was modified from the original so that it maximized both upper and lower bounds on synthesis rate, as well as minimizing unnecessary knockouts.
