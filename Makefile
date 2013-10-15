@@ -7,4 +7,7 @@ DUMMY : geobacter.pdf
 	pdflatex $*.tex
 
 clean : 
-	rm -f geobacter.pdf geobacter.aux geobacter.bbl geobacter.blg geobacter.log geobacter.out
+	rm -f geobacter.pdf geobacter.aux geobacter.bbl geobacter.blg geobacter.log geobacter.out geobacter.rtf
+
+%.rtf : %.tex
+	latex2rtf $*.tex
