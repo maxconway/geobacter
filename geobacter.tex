@@ -3,6 +3,7 @@
 \usepackage{siunitx}
 \usepackage[version=3]{mhchem}
 \usepackage{hyperref}
+\usepackage{subcaption}
 
 %development
 \usepackage{todonotes}
@@ -44,9 +45,14 @@ Genetic design~\cite{} is the process of choosing how to modify an organism in o
 
 Metabolic engineering~\cite{} is one of the most industrially important areas of genetic design, and is commonly achieved by the combination of a heuristic search algorithm, to generate draft genomes, and Flux Balance Analysis, to evaluate them \cite{}. One of the bottlenecks in this procedure can be that feedback for human interpretation is not necessarily clear. Here we discuss the use of one heuristic search, Genetic Design by Multi-objective Optimization~\cite{Costanza2012}, and the development of a framework to allow efficient visual interpretation of its results.
 
-Genetic Design by Multi-objective Optimization is based on the generic multi-objective optimization algorithm NSGA-II (Non-domination Sort Genetic Algorithm II)~\cite{Deb2002a}. It finds a Pareto front, which is a set of possible genomes whose phenotypes are Pareto optimal - phenotypes for which there is no other phenotype which is superior in all ways. Using NSGA-II as the core allows for the efficient creation of a front that represents a wide variety of different phenotypes. This is important since the later analysis is focussed on relating properties of the phenotypes back to the genomes.
+Genetic Design by Multi-objective Optimization is based on the generic multi-objective optimization algorithm NSGA-II (Non-domination Sort Genetic Algorithm II)~\cite{Deb2002a}. As a multi-objective algorithm~\cite{Gen2008}, it finds a Pareto front, which is a set of possible genomes whose phenotypes are Pareto optimal - phenotypes for which there is no other phenotype which is superior in all ways. Using NSGA-II as the core allows for the efficient creation of a front that represents a wide variety of different phenotypes. This is important since the later analysis is focussed on relating properties of the phenotypes back to the genomes.
 
 This framework is used to compare how electricity generation could be enhanced in {\it Geobacter} {\it Sulfurreducens} and {\it Metallireducens}.
+
+{\it Geobacter}~\cite{Lovley2011} is a genus of anaerobic proteobacteria with a number of possible industrial applications, stemming from their ability to utilize soluble and insoluble metal oxides as electron acceptors~\cite{Bond2003}. 
+
+The ability to perform these unusual redox reactions could be relevant to bioremediation, both by allowing clean up of hydrocarbon spills in anaerobic conditions, and by fixing oxides of toxic and radioactive metals, such as uranium. 
+Furthermore, the ability to utilize insoluble materials as electron acceptors make Geobacter interesting as a candidate for use in bacterial fuel cells with, and without, membranes; and the pilli used to transport electrons have applications in themselves, as nanowires.
 
 \section{Results and discussion}
 \todo[inline]{The Results and discussion may be combined into a single section or presented separately.	 The Results and discussion sections may also be broken into subsections with short, informative headings.}
@@ -69,11 +75,13 @@ The optimization objectives used were:
 
 GDMO allowed the generation of 2000 other Pareto optimal genomes for each {\it Geobacter} species. These genomes showed a relatively linear Pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large scale wastewater electricity production, or for better environmental tolerances in smaller applications.
 
-Figure~\ref{fig:pfronts} shows a projection of the Pareto fronts for the two {\it Geobacter} species investigated. We can see that in the tradeoff between upper synthesis limit and biomass production, {\it Sulfurreducens} may be capable of a higher total production, but that for higher biomass applications, {\it Metallireducens }offers a superior tradeoff, and far less variability over most of the front.
+Figure~\ref{fig:pfronts} shows a projection of the Pareto fronts for the two {\it Geobacter} species investigated. We can see that in the tradeoff between upper synthesis limit and biomass production, {\it Sulfurreducens} may be capable of a higher total production, but that for higher biomass applications, {\it Metallireducens }offers a superior tradeoff, and far less variability over most of the front. It must, however, be noted that this comparison is based on values for electricity generation and biomass production normalized against the wildtype. Non-normalized, {\it G. Metallireducens} produced significantly more electricity and less biomass, but since the metabolic models used are not complete, they are more valid for comparison than for raw production.
 
-Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Metallireducens} pareto front for the lower limit on synthesis. A knee point is a sharp change in the direction of the pareto front, which can be indicative of a qualitative difference in the properties of the networks on either side. Closer examination revealed that the distinguishing difference was the knockout of the gene {\it Gmet\_3497}, which is associated with calcium transport via the ABC system. With {\it Gmet\_3497} present, the bound on synthesis were very close, but once {\it Gmet\_3497} was knocked out, the lower bound was much lower, though the upper bound could be increased slightly.
+Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Metallireducens} Pareto front for the lower limit on synthesis. A knee point is a sharp change in the direction of the Pareto front, which can be indicative of a qualitative difference in the properties of the networks on either side. Closer examination revealed that the distinguishing difference was the knockout of the gene {\it Gmet\_3497}, which is associated with calcium transport via the ABC system. With {\it Gmet\_3497} present, the bound on synthesis were very close, but once {\it Gmet\_3497} was knocked out, the lower bound was much lower, though the upper bound could be increased slightly.
 
-\begin{figure}[h]
+The hypervolumes for the Pareto fronts for {\it Geobacter} {\it Sulfurreducens} and {\it Metallireducens} were \SI{1.026} and \SI{1.05} respectively. This highlights that Sulfurreducens is amenable to a greater degree of modification, if at the expense of performance in near-wildtype genotypes.
+
+\begin{figure}[!htb]
 \includegraphics[width=0.5\textwidth]{pfronts}
 \caption{4D Pareto fronts projected down to two dimensions}
 \label{fig:pfronts}
@@ -81,10 +89,27 @@ Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Met
 
 The large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the {\it Geobacter} species studied, and therefore in attempting to perform more targeted genetic design. Figure~\ref{fig:heatmap} shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and secondly correlations between the activation of genes. 
 
-\begin{figure}[h]
+\begin{figure}[!htb]
 \includegraphics[width=0.5\textwidth]{heatmap_geo_s_react_lessknockouts}
 \caption{Heatmap of Geobacter Sulfurreducens. Purple indicates knocked out. We can see clearly demarcated essential genes, and those with varying degrees of activity in electricity production.}
 \label{fig:heatmap}
+\end{figure}
+
+Figure~\ref{fig:outlyinggenes} shows how correlation between the presence of genes, and the position of the phenotype in the Pareto front, was used to select unnusual genes. The kernel density plot at the top shows the correlations: most are in a central normal hump, which represents random variance in gene activation, but the outliers are selected (\( \rho > 2 \times \sigma \) ), as shown in the bottom section. These outliers are shown in the network in figure~\ref{fig:cytoscape-screenshot}.
+
+\begin{figure}[!htb]
+	\begin{subfigure}[htb]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{interestingByPos_geo_s_react_lessknockouts}
+                \caption{\it Geobacter Sulfurreducens}
+                \label{fig:outlyinggenes:sul}
+	\end{subfigure}
+	\begin{subfigure}[htb]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{interestingByPos_geo_m_react_lessknockouts}
+                \caption{\it Geobacter Metallireducens}
+                \label{fig:outlyinggenes:sul}
+	\end{subfigure}
+	\caption{Finding outlying genes of by their correlation with Pareto front position}
+	\label{fig:outlyinggenes}
 \end{figure}
 
 \subsection{Network Visualization}
@@ -96,9 +121,9 @@ Using this connection virtually every property of the network shown in Cytoscape
 
 Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. They are all involved in acetate metabolism, as expected. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
 
-\begin{figure}[h]
+\begin{figure}[!htb]
 \includegraphics[width=0.5\textwidth]{cytoscape-screenshot}
-\caption{Excerpt from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The excerpt of the network that has been isolated contains the reactions that showed unusually high correlations with electricity production capability.}
+\caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The excerpt of the network that has been isolated contains the reactions that showed unusually high correlations with electricity production capability.}
 \label{fig:cytoscape-screenshot}
 \end{figure}
 
@@ -116,6 +141,12 @@ The combination of genetic design by multi-objective optimization and network vi
 
 Figure~\ref{fig:flowdiagram} presents an overview of the design framework created. This framework is not only a conceptual description of the steps taken, but is an automated software pipeline, meaning that all steps taken are fully documented and replicable, and can be reused on other metabolic models with minimal configuration changes. 
 
+\begin{figure}[!htb]
+\includegraphics[width=0.5\textwidth]{GeobacterFlowChart}
+\caption{Overview flow chart of analysis process. Green parallelograms show data used and generated. Red rectangles show processes conducted.}
+\label{fig:flowdiagram}
+\end{figure}
+
 \subsection{Genetic Design by Multi-objective Optimization}
 This process was much as described in~\cite{Costanza2012}, and used the same source code as a base. However, the code was altered to add the additional objectives of increasing both upper and lower bounds on synthesis, and of minimizing the total number of knockouts. Looking at both upper and lower bounds allows us to see, loosely, which knockouts are active in increasing the resources available for synthesis, and which act by restricting those resources to the goals we intend. Minimizing total knockouts was found to be beneficial when we looked at genes on an individual basis, since this reduced the background level of knockouts that had little effect on synthesis.
 
@@ -125,19 +156,13 @@ The use of four optimization objectives means that looking at the relationship b
 \subsection{Cytoscape Visualization}
 \todo{some of the stuff in results should probably be here}
 
-\begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{GeobacterFlowChart}
-\caption{Overview flow chart of analysis process. Green parallelograms show data used and generated. Red rectangles show processes conducted.}
-\label{fig:flowdiagram}
-\end{figure}
-
 GDMO was chosen for the optimization step since the evolutionary basis of this algorithm gives it good robustness. It was compared to Genetic Design by Local Search~\cite{Lun2009}, and found to be somewhat slower for simple cases, but it was able to find many solutions which GDLS could not, and of course was able to provide a wide range of solutions. The GDMO source code was modified from the original so that it maximized both upper and lower bounds on synthesis rate, as well as minimizing unnecessary knockouts.
 
 Both metabolic models were constructed with import and export constraints such that their growth was limited by availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
 
 \todo[inline]{Need to fill in all citations}
 
-\nocite{R-base,R-ggplot2,R-grid,R-RCytoscape}
+\nocite{R-base,R-ggplot2,R-RCytoscape}
 
 \bibliographystyle{plain}
 \bibliography{geobacter,packages}
