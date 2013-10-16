@@ -11,3 +11,6 @@ clean :
 
 %.rtf : %.tex
 	latex2rtf $*.tex
+
+wordcount : geobacter.tex
+	texcount geobacter.tex
