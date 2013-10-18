@@ -27,8 +27,8 @@
 \title{Genetic Design of Geobacter for Electricity Generation}
 \maketitle
 \begin{abstract}
-\todo[inline]{The Abstract of the manuscript should not exceed 350 words and must be structured into separate sections: Background, the context and purpose of the study; Results, the main findings;Conclusions, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
-}
+% The Abstract of the manuscript should not exceed 350 words and must be structured into separate sections: Background, the context and purpose of the study; Results, the main findings;Conclusions, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
+
 \paragraph{Background}
 We present a framework for genetic engineering of metabolic networks. This system is demonstrated on two species in the genus {\it Geobacter}: {\it Sulfurreducens} and {\it Metallireducens}. These bacteria are able to oxidize organic compounds by using metallic ions, or indeed electrodes, as the electron acceptor, and so have huge industrial potential. Here we optimize for increased electricity production in the context of use in a microbial fuel cell. The system used is based on Genetic Design by Multi-objective Optimization, but includes a number of enhancements to allow further visualization and interpretation of the knockout vectors produced.
 \paragraph{Results}
@@ -39,7 +39,7 @@ Enhancing electricity production is a more challenging proposition than some oth
 \end{abstract}
 
 \section{Background}
-\todo[inline]{The Background section should be written in a way that is accessible to researchers without specialist knowledge in that area and must clearly state --- and, if helpful, illustrate --- the background to the research and its aims. The section should end with a brief statement of what is being reported in the article.}
+% The Background section should be written in a way that is accessible to researchers without specialist knowledge in that area and must clearly state --- and, if helpful, illustrate --- the background to the research and its aims. The section should end with a brief statement of what is being reported in the article.
 
 Genetic design~\cite{} is the process of choosing how to modify an organism in order to make it more useful. Much like in traditional engineering disciplines, small modifications are possible purely by human knowledge and understanding, but for more complex modifications, computer aide will be increasingly necessary.
 
@@ -55,7 +55,7 @@ The ability to perform these unusual redox reactions could be relevant to biorem
 Furthermore, the ability to utilize insoluble materials as electron acceptors make Geobacter interesting as a candidate for use in bacterial fuel cells with, and without, membranes; and the pilli used to transport electrons have applications in themselves, as nanowires.
 
 \section{Results and discussion}
-\todo[inline]{The Results and discussion may be combined into a single section or presented separately.	 The Results and discussion sections may also be broken into subsections with short, informative headings.}
+% The Results and discussion may be combined into a single section or presented separately. The Results and discussion sections may also be broken into subsections with short, informative headings.
 
 This investigation has two main result areas: firstly, the knockouts used to generate a \SI{4}{\percent} improvement in electricity production achieved over wildtype {\it Geobacter Sulphurreducens}, and secondly the framework created in order to interpret these results and guide future research.
 
@@ -122,13 +122,13 @@ Using this connection virtually every property of the network shown in Cytoscape
 Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. They are all involved in acetate metabolism, as expected. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
 
 \begin{figure}[!htb]
-\includegraphics[width=0.5\textwidth]{cytoscape-screenshot}
-\caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The excerpt of the network that has been isolated contains the reactions that showed unusually high correlations with electricity production capability.}
+\includegraphics[width=0.5\textwidth]{cytoscape-diagram}
+\caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The enlarged part of the network contains reactions that showed unusually high correlations with electricity production capability.}
 \label{fig:cytoscape-screenshot}
 \end{figure}
 
 \section{Conclusions}
-\todo[inline]{This should state clearly the main conclusions of the research and give a clear explanation of their importance and relevance. Summary illustrations may be included.}
+% This should state clearly the main conclusions of the research and give a clear explanation of their importance and relevance. Summary illustrations may be included.
 
 Genetic engineering is a challenging field to create CAD tools for, since a lack of complete information makes human interpretation very important, but, simultaneously, this interpretation is difficult due to the complexity and connectivity of the systems under study. 
 
@@ -137,7 +137,7 @@ Genetic engineering is a challenging field to create CAD tools for, since a lack
 The combination of genetic design by multi-objective optimization and network visualization discussed here allows for high throughput design and interpretation. This has allowed us to identify knockout vectors to increase electricity production in {\it G. Sulfurreducens} and {\it G. Metallireducens}, as well as discovering systematic effects of individual knockouts.
 
 \section{Methods}
-\todo[inline]{The methods section should include the design of the study, the type of materials involved, a clear description of all comparisons, and the type of analysis used, to enable replication.}
+% The methods section should include the design of the study, the type of materials involved, a clear description of all comparisons, and the type of analysis used, to enable replication.
 
 Figure~\ref{fig:flowdiagram} presents an overview of the design framework created. This framework is not only a conceptual description of the steps taken, but is an automated software pipeline, meaning that all steps taken are fully documented and replicable, and can be reused on other metabolic models with minimal configuration changes. 
 
@@ -147,20 +147,23 @@ Figure~\ref{fig:flowdiagram} presents an overview of the design framework create
 \label{fig:flowdiagram}
 \end{figure}
 
+\subsection{Metabolic models}
+Both metabolic models were constructed with import and export constraints such that their growth was limited by availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
+
 \subsection{Genetic Design by Multi-objective Optimization}
 This process was much as described in~\cite{Costanza2012}, and used the same source code as a base. However, the code was altered to add the additional objectives of increasing both upper and lower bounds on synthesis, and of minimizing the total number of knockouts. Looking at both upper and lower bounds allows us to see, loosely, which knockouts are active in increasing the resources available for synthesis, and which act by restricting those resources to the goals we intend. Minimizing total knockouts was found to be beneficial when we looked at genes on an individual basis, since this reduced the background level of knockouts that had little effect on synthesis.
+
+GDMO was chosen for the optimization step since the evolutionary basis of this algorithm gives it good robustness. It was compared to Genetic Design by Local Search~\cite{Lun2009}, and found to be somewhat slower for simple cases, but it was able to find many solutions which GDLS could not, and of course was able to provide a wide range of solutions. The GDMO source code was modified from the original so that it maximized both upper and lower bounds on synthesis rate, as well as minimizing unnecessary knockouts.
 
 \subsection{Correlation, Clustering and Analysis}
 The use of four optimization objectives means that looking at the relationship between the position in the Pareto front of an objective and its properties can be difficult. Fortunately, in this case the Pareto fronts were approximately 1 dimensional, though they passed through 4D space, so it was possible to use dimensional reduction to create a single position measure. This was then used to find the correlation with the Pareto front, and to arrange the rows in the heatmaps.
 
 \subsection{Cytoscape Visualization}
-\todo{some of the stuff in results should probably be here}
+\todo[inline]{some of the stuff in results should probably be here}
 
-GDMO was chosen for the optimization step since the evolutionary basis of this algorithm gives it good robustness. It was compared to Genetic Design by Local Search~\cite{Lun2009}, and found to be somewhat slower for simple cases, but it was able to find many solutions which GDLS could not, and of course was able to provide a wide range of solutions. The GDMO source code was modified from the original so that it maximized both upper and lower bounds on synthesis rate, as well as minimizing unnecessary knockouts.
 
-Both metabolic models were constructed with import and export constraints such that their growth was limited by availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
 
-\todo[inline]{Need to fill in all citations}
+\todo[inline]{Need more citations, correct citations, and to fill them in}
 
 \nocite{R-base,R-ggplot2,R-RCytoscape}
 
