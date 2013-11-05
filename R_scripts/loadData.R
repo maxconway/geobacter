@@ -25,3 +25,8 @@ GDMO <- loadGDMO()
 GDMOsubset <- GDMO[signif(GDMO$id) %in% signif(c(1348023624,1216065381)),]
 chromosomes <- loadChromosomes(split(GDMOsubset,GDMOsubset$id))
 
+# save for server
+invisible(lapply(c('./data/heatmapify.R','./data/outlyingGenes.R'),source))
+save(heatmapify,outlyingGenes,chromosomes,
+		 file = './serverdata.RData'
+		 )
