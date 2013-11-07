@@ -2,7 +2,7 @@ require(shiny)
 require(ggplot2)
 require(grid)
 
-load(file = './serverdata.RData',verbose=TRUE)
+load(file = './serverdata.RData')
 
 shinyServer(function(input, output) {
   
