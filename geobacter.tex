@@ -18,9 +18,12 @@
 \maketitle
 \begin{abstract}
 % The Abstract of the manuscript should not exceed 350 words and must be structured into separate sections: Background, the context and purpose of the study; Results, the main findings;Conclusions, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
-
+\paragraph{Introduction}
+We present a methodology combining Multi-objective Optimization based global analysis of properties of metabolic networks with local properties. A tool implementing this methodology is presented, and demonstrated by comparing two species of Geobacter.
 \paragraph{Background}
-We present a framework for genetic engineering of metabolic networks. This system is demonstrated on two species in the genus {\it Geobacter}: {\it Sulfurreducens} and {\it Metallireducens}. These bacteria are able to oxidize organic compounds by using metallic ions, or even electrodes, as the electron acceptor, and so have huge industrial potential. Here we optimize for increased electricity production in the context of use in a microbial fuel cell. The system used is based on Genetic Design by Multi-objective Optimization, but includes a number of enhancements to allow further visualization and interpretation of the knockout vectors produced.
+Genetic Design by Multi-Objective Optimization is a global approach, which produces a wide range of Pareto optimal genomes. This Pareto front can highlight interesting properties of the genetic landscape around a given species; the tool presented here builds on this by using a plugin for the Cytoscape Network visualization package to facilitate examination of the local features that cause these global properties.
+
+This system is demonstrated on two species in the genus {\it Geobacter}: {\it Sulfurreducens} and {\it Metallireducens}. These bacteria are able to oxidize organic compounds by using metallic ions, or even electrodes, as the electron acceptor, and so have huge industrial potential. Here we optimize for increased electricity production in the context of use in a microbial fuel cell.
 \paragraph{Results}
 We find 2000 knockout vectors that are capable of enhancing electricity production in each bacteria by up to \SI{4}{\percent}. These knockout vectors are analysed to identify a number of genes with disproportionately large impacts on synthesis capability. We compare the Pareto fronts of {\it G. Sulfurreducens} and {\it G. Metallireducens} showing that {\it Sulfurreducens} offers a higher upper limit on electricity production, but that for lower production situations, {\it Metallireducens} is superior.
 \paragraph{Conclusions}
@@ -48,12 +51,58 @@ This paper presents three related outcomes:
 	\item The tool used to accomplish this, based around the genetic design technique GDMO, and the Cytoscape network visualization package.
 \end{itemize}
 
-\section{Results and discussion}
-% The Results and discussion may be combined into a single section or presented separately. The Results and discussion sections may also be broken into subsections with short, informative headings.
+We first discuss the methodology of combining local and global views on a metabolic Pareto front, and the instantiation of this methodology to a tool, and secondly describe the case study of comparing {\it Geobacter} {\it Sulfurreducens} and {\it Metallireducens}.
 
-This investigation has two main result areas: firstly, the knockouts used to generate a \SI{4}{\percent} improvement in electricity production achieved over wildtype {\it Geobacter Sulphurreducens}, and secondly the framework created in order to interpret these results and guide future research.
+\section{Methodology and tool}
+The framework created can be broken down into three components: 
+\begin{itemize}
+\item Genetic Design by Multi-objective Optimization, which was used to create the Pareto fronts,
+\item Correlation, Clustering and Analysis, to identify the most important reactions from the Pareto fronts, and
+\item Network Visualization, using Cytoscape to see the parts of the metabolic network that were identified as being associated with particular features 
+\end{itemize}
 
-\subsection{Geobacter optimization using GDMO}
+Figure~\ref{fig:flowdiagram} presents an overview of the design framework created. This framework is not only a conceptual description of the steps taken, but is an automated software pipeline, meaning that all steps taken are fully documented and replicable, and can be reused on other metabolic models with minimal configuration changes. 
+
+\begin{figure}[!htb]
+\includegraphics[width=0.5\textwidth]{GeobacterFlowChart}
+\caption{Overview flow chart of analysis process. Green parallelograms show data used and generated. Red rectangles show processes conducted.}
+\label{fig:flowdiagram}
+\end{figure}
+
+\subsection{Genetic Design by Multi-objective Optimization}
+This process was much as described in~\cite{Costanza2012}, and used the same source code as a base. However, the code was altered to include the additional objectives of increasing both upper and lower bounds on synthesis, and of minimizing the total number of knockouts. Looking at both upper and lower bounds allows us to see, loosely, which knockouts are active in increasing the resources available for synthesis, and which act by restricting those resources to the goals we intend. Minimizing total knockouts was found to be beneficial when we looked at genes on an individual basis, since this reduced the background level of knockouts of genes with little effect on synthesis.
+
+GDMO was chosen for the optimization step since the evolutionary basis of this algorithm gives it good robustness. It was compared to Genetic Design by Local Search~\cite{Lun2009}, and found to be somewhat slower for simple cases, but it was able to find many solutions which GDLS could not, and of course was able to provide a wide range of solutions. The GDMO source code was modified from the original so that it maximized both upper and lower bounds on synthesis rate, as well as minimizing unnecessary knockouts.
+
+\subsection{Correlation, Clustering and Analysis}
+Pareto front analysis, via GDMO, can reveal tradeoffs implicit in the genotype of a species which would not be obvious from examination of any one set of knockouts, but only when many different knockouts are viewed together. For instance, {\it G. Metallireducens} was found to display a sharp cutoff beyond which it is difficult to increase the upper bound on synthesis rate.
+
+However, understanding the low level causes of the shape of the Pareto front is not necessarily simple. The first step was to use an unsupervised learning approach to identify reactions that were likely to be strongly associated with certain properties.
+
+The use of four optimization objectives means that looking at the relationship between the position in the Pareto front of an objective and its properties can be difficult. Fortunately, in this case the Pareto fronts were approximately 1 dimensional, though they passed through 3D space (the upper and lower bounds on synthesis rate, and biomass production), so it was possible to use dimensional reduction to create a single position measure. This was then used to find the correlation with the Pareto front, and to arrange the rows in the heatmaps.
+
+Once this correlation was found, we modelled the correlation of activation of each gene with the position measure as being formed of two components: random genetic drift, and selection, whether positive or negative. The genes with a large selection component were then identified for later visualization.
+
+While this correlation based approach worked well in this case, we have also developed code to conduct a number of other, potentially more robust analyses, such as building a decision tree to help identify interacting sets of reactions.
+
+\subsection{Network Visualization}
+After identifying these reactions, a graphical visualization method was required.
+
+The cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms, and it has a number of useful plugins. Cytoscape was connected to R via the the RCytoscape R package, XML-RPC, and the Cytoscape plugin CytoscapeRPC.
+
+Using this connection virtually every property of the network shown in Cytoscape could be set from R, but the most important method was to set how node and edge appearance to be a function of the attributes of the node or edge, and then assign those attributes to be the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
+
+Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. 
+
+\begin{figure}[!htb]
+\includegraphics[width=0.5\textwidth]{cytoscape-diagram}
+\caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The enlarged part of the network contains reactions that showed unusually high correlations with electricity production capability.}
+\label{fig:cytoscape-screenshot}
+\end{figure}
+
+\section{Geobacter Case Study}
+This section discusses in more detail the application of the framework to comparing metabolic models of two species of {\it Geobacter}. Both metabolic models were constructed with import and export constraints such that their growth was limited by availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
+
 Genetic Design by Multiobjective Optimization was able to increase the upper bound of \ce{FE3} reduction ability in {\it Geobacter Sulfurreducens} by a maximum of \SI{4}{\percent}, and was also able to produce an increase in lower bound capacity of  \SI{0.6}{\percent}, while keeping biomass production at  \SI{88}{\percent} of the wildtype value. 
 {\it Geobacter Metallireducens} was able to have a much more tightly bounded output, with upper and lower bounds increased by a maximum of \SI{2.5}{\percent} of the wildtype value, with a biomass production of \SI{74}{\percent}.
 
@@ -90,6 +139,7 @@ The hypervolumes for the Pareto fronts for {\it Geobacter} {\it Sulfurreducens} 
 \label{fig:heatmap}
 \end{figure}
 \todo{maybe list essential genes?}
+\todo{all graphs: explain axes in caption}
 
 The large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the {\it Geobacter} species studied, and therefore in attempting to perform more targeted genetic design. Figure~\ref{fig:heatmap} shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and secondly correlations between the activation of genes. 
 
@@ -108,22 +158,7 @@ The large number of Pareto optimal genomes is obviously of interest in attemptin
 	\label{fig:outlyinggenes}
 \end{figure}
 
-Figure~\ref{fig:outlyinggenes} shows how correlation between the presence of genes, and the position of the phenotype in the Pareto front, was used to select unnusual genes. The kernel density plot at the top shows the correlations: most are in a central normal hump, which represents random variance in gene activation, but the outliers are selected (\( \rho > 2\sigma \) ), as shown in the bottom section. These outliers are shown in the network in figure~\ref{fig:cytoscape-screenshot}.
-
-\subsection{Network Visualization}
-One of the major difficulties in finding patterns in genomes was the difficulty in visualizing their effects. To ease this difficulty, a graphical visualization method was required.
-
-The cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms, and it has a number of useful plugins. Cytoscape was connected to R via the the RCytoscape R package, XML-RPC, and the Cytoscape plugin CytoscapeRPC.
-
-Using this connection virtually every property of the network shown in Cytoscape could be set from R, but the most important method was to set how node and edge appearance to be a function of the attributes of the node or edge, and then assign those attributes to be the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
-
-Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. They are involved in acetate metabolism, as expected. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
-
-\begin{figure}[!htb]
-\includegraphics[width=0.5\textwidth]{cytoscape-diagram}
-\caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The enlarged part of the network contains reactions that showed unusually high correlations with electricity production capability.}
-\label{fig:cytoscape-screenshot}
-\end{figure}
+Figure~\ref{fig:outlyinggenes} shows how correlation between the presence of genes, and the position of the phenotype in the Pareto front, was used to select unnusual genes. The kernel density plot at the top shows the correlations: most are in a central normal hump, which represents random variance in gene activation, but the outliers are selected (\( \rho > 2\sigma \) ), as shown in the bottom section. These outliers are shown in the network in figure~\ref{fig:cytoscape-screenshot}, and were involved in acetate metabolism. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
 
 \section{Conclusions}
 % This should state clearly the main conclusions of the research and give a clear explanation of their importance and relevance. Summary illustrations may be included.
@@ -133,31 +168,6 @@ Genetic engineering is a challenging field to create CAD tools for, since a lack
 \todo{biological conclusions}
 
 The combination of genetic design by multi-objective optimization and network visualization discussed here allows for high throughput design and interpretation. This has allowed us to identify knockout vectors to increase electricity production in {\it G. Sulfurreducens} and {\it G. Metallireducens}, as well as discovering systematic effects of individual knockouts.
-
-\section{Methods}
-% The methods section should include the design of the study, the type of materials involved, a clear description of all comparisons, and the type of analysis used, to enable replication.
-
-Figure~\ref{fig:flowdiagram} presents an overview of the design framework created. This framework is not only a conceptual description of the steps taken, but is an automated software pipeline, meaning that all steps taken are fully documented and replicable, and can be reused on other metabolic models with minimal configuration changes. 
-
-\begin{figure}[!htb]
-\includegraphics[width=0.5\textwidth]{GeobacterFlowChart}
-\caption{Overview flow chart of analysis process. Green parallelograms show data used and generated. Red rectangles show processes conducted.}
-\label{fig:flowdiagram}
-\end{figure}
-
-\subsection{Metabolic models}
-Both metabolic models were constructed with import and export constraints such that their growth was limited by availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
-
-\subsection{Genetic Design by Multi-objective Optimization}
-This process was much as described in~\cite{Costanza2012}, and used the same source code as a base. However, the code was altered to include the additional objectives of increasing both upper and lower bounds on synthesis, and of minimizing the total number of knockouts. Looking at both upper and lower bounds allows us to see, loosely, which knockouts are active in increasing the resources available for synthesis, and which act by restricting those resources to the goals we intend. Minimizing total knockouts was found to be beneficial when we looked at genes on an individual basis, since this reduced the background level of knockouts of genes with little effect on synthesis.
-
-GDMO was chosen for the optimization step since the evolutionary basis of this algorithm gives it good robustness. It was compared to Genetic Design by Local Search~\cite{Lun2009}, and found to be somewhat slower for simple cases, but it was able to find many solutions which GDLS could not, and of course was able to provide a wide range of solutions. The GDMO source code was modified from the original so that it maximized both upper and lower bounds on synthesis rate, as well as minimizing unnecessary knockouts.
-
-\subsection{Correlation, Clustering and Analysis}
-The use of four optimization objectives means that looking at the relationship between the position in the Pareto front of an objective and its properties can be difficult. Fortunately, in this case the Pareto fronts were approximately 1 dimensional, though they passed through 3D space (the upper and lower bounds on synthesis rate, and biomass production), so it was possible to use dimensional reduction to create a single position measure. This was then used to find the correlation with the Pareto front, and to arrange the rows in the heatmaps.
-
-\subsection{Cytoscape Visualization}
-\todo[inline]{some of the stuff in results should probably be here}
 
 
 
