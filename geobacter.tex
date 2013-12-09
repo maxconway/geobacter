@@ -123,7 +123,7 @@ GDMO allowed the generation of 2000 other Pareto optimal genomes for each {\it G
 
 \begin{figure}[!h]
 \includegraphics[width=0.5\textwidth]{pfronts}
-\caption{4D Pareto fronts projected down to two dimensions}
+\caption{4D Pareto fronts projected down to two dimensions. x-axis shows biomass production, divided by the wild type value. y axes show the upper (top) and lower (bottom) limits on electricity production, divided by their respective wild type values.}
 \label{fig:pfronts}
 \end{figure}
 
@@ -135,11 +135,9 @@ The hypervolumes for the Pareto fronts for {\it Geobacter} {\it Sulfurreducens} 
 
 \begin{figure}[!htb]
 \includegraphics[width=0.5\textwidth]{heatmap_geo_s_react_lessknockouts}
-\caption{Heatmap of Geobacter Sulfurreducens. Purple indicates knocked out. Essential genes - those with no purple, are obviously clustered together, and nonessential genes have varying amounts of purple, according to how often they were knocked out.} 
+\caption{Heatmap of Geobacter Sulfurreducens. Purple indicates knocked out. Essential genes---those with no purple, are obviously clustered together, and nonessential genes have varying amounts of purple, according to how often they were knocked out.} 
 \label{fig:heatmap}
 \end{figure}
-\todo{maybe list essential genes?}
-\todo{all graphs: explain axes in caption}
 
 The large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the {\it Geobacter} species studied, and therefore in attempting to perform more targeted genetic design. Figure~\ref{fig:heatmap} shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and secondly correlations between the activation of genes. 
 
@@ -154,11 +152,11 @@ The large number of Pareto optimal genomes is obviously of interest in attemptin
                 \caption{\it Geobacter Metallireducens}
                 \label{fig:outlyinggenes:met}
 	\end{subfigure}
-	\caption{Finding outlying genes of by their correlation with Pareto front position}
+	\caption{Finding outlying genes of by their correlation with Pareto front position. The kernel density plots illustrate that activation of most gene sets is due to genetic drift, and hence normally distributed. Genes outlying this normal distribution are selected for further investigation.}
 	\label{fig:outlyinggenes}
 \end{figure}
 
-Figure~\ref{fig:outlyinggenes} shows how correlation between the presence of genes, and the position of the phenotype in the Pareto front, was used to select unnusual genes. The kernel density plot at the top shows the correlations: most are in a central normal hump, which represents random variance in gene activation, but the outliers are selected (\( \rho > 2\sigma \) ), as shown in the bottom section. These outliers are shown in the network in figure~\ref{fig:cytoscape-screenshot}, and were involved in acetate metabolism. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
+Figure~\ref{fig:outlyinggenes} shows how correlation between the presence of genes, and the position of the phenotype in the Pareto front, was used to select unnusual genes. The kernel density plot at the top shows the correlations: most are in a central normal hump, which represents variance in gene activation due to genetic drift, but the outliers are selected (\( \rho > 2\sigma \) ), as shown in the bottom section. These outliers are shown in the network in figure~\ref{fig:cytoscape-screenshot}, and were involved in acetate metabolism. We hypothesize that these knockouts are forcing acetate to be metabolized less efficiently, and so require more electrons for the same amount of energy production.
 
 \section{Conclusions}
 % This should state clearly the main conclusions of the research and give a clear explanation of their importance and relevance. Summary illustrations may be included.
