@@ -90,7 +90,7 @@ After identifying these reactions, a graphical visualization method was required
 
 The cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms, and it has a number of useful plugins. Cytoscape was connected to R via the the RCytoscape R package, XML-RPC, and the Cytoscape plugin CytoscapeRPC.
 
-Using this connection virtually every property of the network shown in Cytoscape could be set from R, but the most important method was to set how node and edge appearance to be a function of the attributes of the node or edge, and then assign those attributes to be the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
+By using this connection, virtually every property of the network shown in Cytoscape could be set from R. The most important method was to set how node and edge appearance to be a function of the attributes of the node or edge, and then assign those attributes to the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
 
 Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. 
 
@@ -101,7 +101,7 @@ Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use
 \end{figure}
 
 \section{Geobacter Case Study}
-This section discusses in more detail the application of the framework to comparing metabolic models of two species of {\it Geobacter}. Both metabolic models were constructed with import and export constraints such that their growth was limited by availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
+This section discusses in more detail the application of the framework to comparing metabolic models of two species of {\it Geobacter}. Both metabolic models were constructed with import and export constraints such that their growth was limited by the availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
 
 Genetic Design by Multiobjective Optimization was able to increase the upper bound of \ce{FE3} reduction ability in {\it Geobacter Sulfurreducens} by a maximum of \SI{4}{\percent}, and was also able to produce an increase in lower bound capacity of  \SI{0.6}{\percent}, while keeping biomass production at  \SI{88}{\percent} of the wildtype value. 
 {\it Geobacter Metallireducens} was able to have a much more tightly bounded output, with upper and lower bounds increased by a maximum of \SI{2.5}{\percent} of the wildtype value, with a biomass production of \SI{74}{\percent}.
@@ -129,7 +129,7 @@ GDMO allowed the generation of 2000 other Pareto optimal genomes for each {\it G
 
 Figure~\ref{fig:pfronts} shows a projection of the Pareto fronts for the two {\it Geobacter} species investigated. We can see that in the tradeoff between upper synthesis limit and biomass production, {\it Sulfurreducens} may be capable of a higher total production, but that for higher biomass applications, {\it Metallireducens }offers a superior tradeoff, and far less variability over most of the front. It must, however, be noted that this comparison is based on values for electricity generation and biomass production normalized against the wildtype. Non-normalized, {\it G. Metallireducens} produced significantly more electricity and less biomass, but since the metabolic models used are not complete, they are more valid for comparison than for raw production.
 
-Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Metallireducens} Pareto front for the lower limit on synthesis. A knee point is a sharp change in the direction of the Pareto front, which can be indicative of a qualitative difference in the properties of the networks on either side. Closer examination revealed that the distinguishing difference was the knockout of the gene {\it Gmet\_3497}, which is associated with calcium transport via the ABC system. With {\it Gmet\_3497} present, the bound on synthesis were very close, but once {\it Gmet\_3497} was knocked out, the lower bound was much lower, though the upper bound could be increased slightly.
+Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Metallireducens} Pareto front for the lower limit on synthesis. A knee point is a sharp change in the direction of the Pareto front, which can be indicative of a qualitative difference in the properties of the networks on either side. Closer examination revealed that the distinguishing difference was the knockout of the gene {\it Gmet\_3497}, which is associated with calcium transport via the ABC system. With {\it Gmet\_3497} present, the bounds on synthesis were very close, but once {\it Gmet\_3497} was knocked out, the lower bound was much lower, though the upper bound could be increased slightly.
 
 The hypervolumes for the Pareto fronts for {\it Geobacter} {\it Sulfurreducens} and {\it Metallireducens} were \SI{1.026} and \SI{1.05} respectively. This highlights that Sulfurreducens is amenable to a greater degree of modification, if at the expense of performance in near-wildtype genotypes.
 
@@ -152,7 +152,7 @@ The large number of Pareto optimal genomes is obviously of interest in attemptin
                 \caption{\it Geobacter Metallireducens}
                 \label{fig:outlyinggenes:met}
 	\end{subfigure}
-	\caption{Finding outlying genes of by their correlation with Pareto front position. The kernel density plots illustrate that activation of most gene sets is due to genetic drift, and hence normally distributed. Genes outlying this normal distribution are selected for further investigation.}
+	\caption{Finding outlying genes by their correlation with Pareto front position. The kernel density plots illustrate that activation of most gene sets is due to genetic drift, and hence normally distributed. Genes outlying this normal distribution are selected for further investigation.}
 	\label{fig:outlyinggenes}
 \end{figure}
 
