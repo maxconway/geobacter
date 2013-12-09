@@ -1,4 +1,4 @@
-\documentclass[a4paper,twocolumn]{article}
+\documentclass[a4paper]{article}
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage[version=3]{mhchem}
@@ -7,7 +7,7 @@
 
 %development
 \usepackage{todonotes}
-\setlength{\marginparwidth}{2cm}
+%\setlength{\marginparwidth}{2cm}
 
 
 \graphicspath{ {./figures/} }
@@ -18,17 +18,24 @@
 \maketitle
 \begin{abstract}
 % The Abstract of the manuscript should not exceed 350 words and must be structured into separate sections: Background, the context and purpose of the study; Results, the main findings;Conclusions, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
-\paragraph{Introduction}
+\begin{description}
+\item[]
+
+\item[Introduction] 
 We present a methodology combining Multi-objective Optimization based global analysis of properties of metabolic networks with local properties. A tool implementing this methodology is presented, and demonstrated by comparing two species of Geobacter.
-\paragraph{Background}
+
+\item[Background]
 Genetic Design by Multi-Objective Optimization is a global approach, which produces a wide range of Pareto optimal genomes. This Pareto front can highlight interesting properties of the genetic landscape around a given species; the tool presented here builds on this by using a plugin for the Cytoscape Network visualization package to facilitate examination of the local features that cause these global properties.
 
 This system is demonstrated on two species in the genus {\it Geobacter}: {\it Sulfurreducens} and {\it Metallireducens}. These bacteria are able to oxidize organic compounds by using metallic ions, or even electrodes, as the electron acceptor, and so have huge industrial potential. Here we optimize for increased electricity production in the context of use in a microbial fuel cell.
-\paragraph{Results}
+
+\item[Results]
 We find 2000 knockout vectors that are capable of enhancing electricity production in each bacteria by up to \SI{4}{\percent}. These knockout vectors are analysed to identify a number of genes with disproportionately large impacts on synthesis capability. We compare the Pareto fronts of {\it G. Sulfurreducens} and {\it G. Metallireducens} showing that {\it Sulfurreducens} offers a higher upper limit on electricity production, but that for lower production situations, {\it Metallireducens} is superior.
-\paragraph{Conclusions}
+
+\item[Conclusions]
 Enhancing electricity production is a much more challenging proposition than some other metabolic engineering since it requires modifications to the functioning of the core metabolism, rather than just promotion of a specific by-product. Nevertheless, our framework has been able to increase electricity production by operating on a system-wide level. This is the first use of a comparison between Pareto fronts of this sort, and this technique proves able to reveal properties that could not readily be shown by single-objective optimization.
 
+\end{description}
 \end{abstract}
 
 \section{Background}
@@ -64,7 +71,7 @@ The framework created can be broken down into three components:
 Figure~\ref{fig:flowdiagram} presents an overview of the design framework created. This framework is not only a conceptual description of the steps taken, but is an automated software pipeline, meaning that all steps taken are fully documented and replicable, and can be reused on other metabolic models with minimal configuration changes. 
 
 \begin{figure}[!htb]
-\includegraphics[width=0.5\textwidth]{GeobacterFlowChart}
+\includegraphics[width=\textwidth]{GeobacterFlowChart}
 \caption{Overview flow chart of analysis process. Green parallelograms show data used and generated. Red rectangles show processes conducted.}
 \label{fig:flowdiagram}
 \end{figure}
@@ -95,7 +102,7 @@ By using this connection, virtually every property of the network shown in Cytos
 Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. 
 
 \begin{figure}[!htb]
-\includegraphics[width=0.5\textwidth]{cytoscape-diagram}
+\includegraphics[width=\textwidth]{cytoscape-diagram}
 \caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The enlarged part of the network contains reactions that showed unusually high correlations with electricity production capability.}
 \label{fig:cytoscape-screenshot}
 \end{figure}
@@ -122,7 +129,7 @@ The optimization objectives used were:
 GDMO allowed the generation of 2000 other Pareto optimal genomes for each {\it Geobacter} species. These genomes showed a relatively linear Pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large scale wastewater electricity production, or for better environmental tolerances in smaller applications.
 
 \begin{figure}[!h]
-\includegraphics[width=0.5\textwidth]{pfronts}
+\includegraphics[width=\textwidth]{pfronts}
 \caption{4D Pareto fronts projected down to two dimensions. x-axis shows biomass production, divided by the wild type value. y axes show the upper (top) and lower (bottom) limits on electricity production, divided by their respective wild type values.}
 \label{fig:pfronts}
 \end{figure}
@@ -134,7 +141,7 @@ Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Met
 The hypervolumes for the Pareto fronts for {\it Geobacter} {\it Sulfurreducens} and {\it Metallireducens} were \SI{1.026} and \SI{1.05} respectively. This highlights that Sulfurreducens is amenable to a greater degree of modification, if at the expense of performance in near-wildtype genotypes.
 
 \begin{figure}[!htb]
-\includegraphics[width=0.5\textwidth]{heatmap_geo_s_react_lessknockouts}
+\includegraphics[width=\textwidth]{heatmap_geo_s_react_lessknockouts}
 \caption{Heatmap of Geobacter Sulfurreducens. Purple indicates knocked out. Essential genes---those with no purple, are obviously clustered together, and nonessential genes have varying amounts of purple, according to how often they were knocked out.} 
 \label{fig:heatmap}
 \end{figure}
@@ -142,12 +149,12 @@ The hypervolumes for the Pareto fronts for {\it Geobacter} {\it Sulfurreducens} 
 The large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the {\it Geobacter} species studied, and therefore in attempting to perform more targeted genetic design. Figure~\ref{fig:heatmap} shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and secondly correlations between the activation of genes. 
 
 \begin{figure}[!htb]
-	\begin{subfigure}[htb]{0.5\textwidth}
+	\begin{subfigure}[htb]{\textwidth}
                 \includegraphics[width=\textwidth]{interestingByPos_geo_s_react_lessknockouts}
                 \caption{\it Geobacter Sulfurreducens}
                 \label{fig:outlyinggenes:sul}
 	\end{subfigure}
-	\begin{subfigure}[htb]{0.5\textwidth}
+	\begin{subfigure}[htb]{\textwidth}
                 \includegraphics[width=\textwidth]{interestingByPos_geo_m_react_lessknockouts}
                 \caption{\it Geobacter Metallireducens}
                 \label{fig:outlyinggenes:met}
