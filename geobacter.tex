@@ -41,9 +41,9 @@ Enhancing electricity production is a much more challenging proposition than som
 \section{Background}
 % The Background section should be written in a way that is accessible to researchers without specialist knowledge in that area and must clearly state --- and, if helpful, illustrate --- the background to the research and its aims. The section should end with a brief statement of what is being reported in the article.
 
-Genetic design~\cite{} is the process of choosing how to modify an organism in order to make it more useful. Much like in traditional engineering disciplines, small modifications are possible purely by human knowledge and understanding, but for more complex modifications, computer aide will become increasingly necessary.
+Genetic design is the process of choosing how to modify an organism in order to make it more useful. Much like in traditional engineering disciplines, small modifications are possible purely by human knowledge and understanding, but for more complex modifications, computer aide will become increasingly necessary.
 
-Metabolic engineering~\cite{} is one of the most industrially important areas of genetic design, and is commonly achieved by the combination of a heuristic search algorithm, to generate draft genomes, and Flux Balance Analysis, to evaluate them \cite{}. One of the bottlenecks in this procedure can be that feedback for human interpretation is not necessarily clear. Here we discuss the use of one heuristic search, Genetic Design by Multi-objective Optimization~\cite{Costanza2012}, and the development of a framework to allow efficient visual interpretation of its results.
+Metabolic engineering~\cite{stephanopoulos1999metabolic} is one of the most industrially important areas of genetic design, and is commonly achieved by the combination of a heuristic search algorithm, to generate draft genomes, and Flux Balance Analysis, to evaluate them \cite{Orth2010}. One of the bottlenecks in this procedure can be that feedback for human interpretation is not necessarily clear. Here we discuss the use of one heuristic search, Genetic Design by Multi-objective Optimization~\cite{Costanza2012}, and the development of a framework to allow efficient visual interpretation of its results.
 
 Genetic Design by Multi-objective Optimization is based on the generic multi-objective optimization algorithm NSGA-II (Non-domination Sort Genetic Algorithm II)~\cite{Deb2002a}. As a multi-objective optimization  algorithm~\cite{Gen2008}, it finds a Pareto front, which is a set of possible genomes whose phenotypes are Pareto optimal - phenotypes for which there is no other phenotype which is superior in all ways. Using NSGA-II as the core allows for the efficient creation of a front that represents a wide variety of different phenotypes. This is important since the later analysis is focussed on relating properties of the phenotypes back to the genomes.
 
@@ -173,10 +173,6 @@ Genetic engineering is a challenging field to create CAD tools for, since a lack
 \todo{biological conclusions}
 
 The combination of genetic design by multi-objective optimization and network visualization discussed here allows for high throughput design and interpretation. This has allowed us to identify knockout vectors to increase electricity production in {\it G. Sulfurreducens} and {\it G. Metallireducens}, as well as discovering systematic effects of individual knockouts.
-
-
-
-\todo[inline]{Need more citations, correct citations, and to fill them in}
 
 \nocite{R-base,R-ggplot2,R-RCytoscape}
 
