@@ -102,7 +102,9 @@ By using this connection, virtually every property of the network shown in Cytos
 Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. 
 
 \begin{figure}[!htb]
-\includegraphics[width=\textwidth]{cytoscape-diagram}
+\makebox[\textwidth][c]{
+\includegraphics[width=1.4\textwidth]{cytoscape-diagram}
+}
 \caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The enlarged part of the network contains reactions that showed unusually high correlations with electricity production capability.}
 \label{fig:cytoscape-screenshot}
 \end{figure}
@@ -128,10 +130,20 @@ The optimization objectives used were:
 
 GDMO allowed the generation of 2000 other Pareto optimal genomes for each {\it Geobacter} species. These genomes showed a relatively linear Pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large scale wastewater electricity production, or for better environmental tolerances in smaller applications.
 
-\begin{figure}[!h]
-\includegraphics[width=\textwidth]{pfronts}
-\caption{4D Pareto fronts projected down to two dimensions. x-axis shows biomass production, divided by the wild type value. Y-axes show the upper (top) and lower (bottom) limits on electricity production, divided by their respective wild type values.}
-\label{fig:pfronts}
+\begin{figure}[!htb]
+\makebox[\textwidth][c]{
+	\begin{subfigure}[t]{0.7\textwidth}
+                \includegraphics[width=\textwidth]{pfront_max}
+                \caption{Upper bound on electricity production against biomass production}
+                \label{fig:pfronts:upper}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.7\textwidth}
+                \includegraphics[width=\textwidth]{pfront_min}
+                \caption{Lower bound on electricity production against biomass production. The light brown line in the {\it Geobacter Metallireducens} front separates strains with {\it Gmet\_3497} present (right) or absent (left)}
+                \label{fig:pfronts:lower}
+	\end{subfigure}
+}
+	\caption{4D Pareto fronts projected down to two dimensions. X-axis shows biomass production, divided by the wild type value. Y-axes show the upper (\ref{fig:pfronts:upper}) and lower (\ref{fig:pfronts:lower}) limits on electricity production, divided by their respective wild type values. \label{fig:pfronts}}
 \end{figure}
 
 Figure~\ref{fig:pfronts} shows a projection of the Pareto fronts for the two {\it Geobacter} species investigated. We can see that in the tradeoff between upper synthesis limit and biomass production, {\it Sulfurreducens} may be capable of a higher total production, but that for higher biomass applications, {\it Metallireducens }offers a superior tradeoff, and far less variability over most of the front. It must, however, be noted that this comparison is based on values for electricity generation and biomass production normalized against the wildtype. Non-normalized, {\it G. Metallireducens} produced significantly more electricity and less biomass, but since the metabolic models used are not complete, they are more valid for comparison than for raw production.
