@@ -1,4 +1,4 @@
-DUMMY : geobacter.pdf
+geobacter.pdf : geobacter.pdf figures/*
 
 %.pdf : %.tex
 	pdflatex $*.tex
