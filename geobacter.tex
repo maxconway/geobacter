@@ -14,7 +14,7 @@
 %http://www.biomedcentral.com/authors/report
 
 \begin{document}
-\title{Genetic Design of Geobacter for Electricity Generation}
+\title{Combining Multi-objective Optimization with Cytoscape Visualization for Comparison, Design and Analysis of Metabolic Networks}
 \maketitle
 \begin{abstract}
 % The Abstract of the manuscript should not exceed 350 words and must be structured into separate sections: Background, the context and purpose of the study; Results, the main findings;Conclusions, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
@@ -25,15 +25,14 @@
 We present a novel methodology combining Multi-objective Optimization based global analysis of properties of metabolic networks with local properties. A tool implementing this methodology is presented, and demonstrated by comparing two species of Geobacter. Multi-objective Optimization has not previously been used in this sort of comparison between models, and it reveals differences that would not be obvious using other techniques.
 
 \item[Background]
-Genetic Design by Multi-Objective Optimization is a global approach, which produces a wide range of Pareto optimal genomes. This Pareto front can highlight interesting properties of the genetic landscape around a given species; the tool presented here builds on this by using a plugin for the Cytoscape Network visualization package to facilitate examination of the local features that cause these global properties.
+Genetic Design by Multi-Objective Optimization is a global approach, which produces a set of Pareto optimal genomes. This Pareto front can highlight interesting properties of the genetic landscape around a given species; in addition, we compare Pareto fronts from different species. To facilitate investigation of the local basis for global  differences between Pareto fronts, we have created a tool to visualize portions of the Pareto front in Cytoscape.
 
 This system is demonstrated on two species in the genus {\it Geobacter}: {\it Sulfurreducens} and {\it Metallireducens}. These bacteria are able to oxidize organic compounds by using metallic ions, or even electrodes, as the electron acceptor, and so have huge industrial potential. Here we optimize for increased electricity production in the context of use in a microbial fuel cell.
 
 \item[Results]
-We find 2000 knockout vectors that are capable of enhancing electricity production in each bacteria by up to \SI{4}{\percent}. These knockout vectors are analysed to identify a number of genes with disproportionately large impacts on synthesis capability. We compare the Pareto fronts of {\it G. Sulfurreducens} and {\it G. Metallireducens} showing that {\it Sulfurreducens} offers a higher upper limit on electricity production, but that for lower production situations, {\it Metallireducens} is superior.
+Comparing metabolic Pareto fronts is effective in identifying differences between strains, but the root causes of these differences are difficult to interpret directly. However, the tool described successfully identifies important reactions and their controlling genes, and shows these reactions in the Cytoscape network visualization package, to aid understanding of why the reactions produce the effects that they do.
 
-\item[Conclusions]
-Enhancing electricity production is a much more challenging proposition than some other metabolic engineering since it requires modifications to the functioning of the core metabolism, rather than just promotion of a specific by-product. Nevertheless, our framework has been able to increase electricity production by operating on a system-wide level. This is the first use of a comparison between Pareto fronts of this sort, and this technique proves able to reveal properties that could not readily be shown by single-objective optimization.
+We find 2000 knockout vectors that are capable of enhancing electricity production in each bacteria by up to \SI{4}{\percent}. These knockout vectors are analysed to identify a number of genes with disproportionately large impacts on synthesis capability---{\it Gmet\_3497} has a particularly large effect. We compare the Pareto fronts of {\it G. Sulfurreducens} and {\it G. Metallireducens} showing that {\it Sulfurreducens} offers a higher upper limit on electricity production, but that for lower production situations, {\it Metallireducens} is superior.
 
 \end{description}
 \end{abstract}
