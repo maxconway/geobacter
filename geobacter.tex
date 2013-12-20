@@ -152,9 +152,19 @@ Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Met
 The hypervolumes for the Pareto fronts for {\it Geobacter} {\it Sulfurreducens} and {\it Metallireducens} were \SI{1.026} and \SI{1.05} respectively. This highlights that Sulfurreducens is amenable to a greater degree of modification, if at the expense of performance in near-wildtype genotypes.
 
 \begin{figure}[!htb]
-\includegraphics[width=\textwidth]{heatmap_geo_s_react_lessknockouts}
-\caption{Heatmap of Geobacter Sulfurreducens. Purple indicates knocked out. Essential genes---those with no purple, are obviously clustered together, and nonessential genes have varying amounts of purple, according to how often they were knocked out.} 
-\label{fig:heatmap}
+\makebox[\textwidth][c]{
+	\begin{subfigure}[t]{0.7\textwidth}
+		\includegraphics[width=\textwidth]{heatmap_geo_s_react_lessknockouts}
+		\caption{Heatmap of Geobacter Sulfurreducens}
+		\label{fig:heatmap:sul}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.7\textwidth}
+		\includegraphics[width=\textwidth]{heatmap_geo_m_react_lessknockouts}
+		\caption{Heatmap of Geobacter Metallireducens}
+		\label{fig:heatmap:met}
+	\end{subfigure}
+}
+\caption{Colour indicates knocked out. Essential genes---those with no purple, are obviously clustered together, and nonessential genes have varying amounts of purple, according to how often they were knocked out. X-axis is genes, hierarchically clustered by Manhattan distance. Y-axis is strain, ordered by the phenotypic distance to wild type, wild type at the bottom. \label{fig:heatmap}} 
 \end{figure}
 
 The large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the {\it Geobacter} species studied, and therefore in attempting to perform more targeted genetic design. Figure~\ref{fig:heatmap} shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and secondly correlations between the activation of genes. 
