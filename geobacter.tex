@@ -102,12 +102,15 @@ Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use
 \makebox[\textwidth][c]{
 \includegraphics[width=1.4\textwidth]{cytoscape-diagram}
 }
-\caption{Detail from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. Diamonds are reactions, circles metabolites. The enlarged part of the network contains reactions that showed unusually high correlations with electricity production capability.}
+\caption{Screenshots from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. 
+Diamonds are reactions, circles metabolites. 
+The whole network `hairball' visualization demonstrates the difficulty of manual comprehension. 
+The detail has been automatically produced via the outlier detection technique described (presence of the reactions in it show unusually high correlations with electricity production), and clearly highlights a coherent fragment of the whole network.}
 \label{fig:cytoscape-screenshot}
 \end{figure}
 
 \section{Geobacter Case Study}
-This section discusses in more detail the application of the framework to comparing metabolic models of two species of {\it Geobacter}. Both metabolic models were constructed with import and export constraints such that their growth was limited by the availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens }are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
+This section discusses in more detail the application of the framework to comparing metabolic models of two species of {\it Geobacter}. Both metabolic models were constructed with import and export constraints such that their growth was limited by the availability of Acetate as an energy source. The models for {\it G. Sulfurreducens} and {\it G. Metallireducens} are described in \cite{Mahadevan2006} and \cite{Sun2009}, respectively.
 
 Genetic Design by Multiobjective Optimization was able to increase the upper bound of \ce{FE3} reduction ability in {\it Geobacter Sulfurreducens} by a maximum of \SI{4}{\percent}, and was also able to produce an increase in lower bound capacity of  \SI{0.6}{\percent}, while keeping biomass production at  \SI{88}{\percent} of the wildtype value. 
 {\it Geobacter Metallireducens} was able to have a much more tightly bounded output, with upper and lower bounds increased by a maximum of \SI{2.5}{\percent} of the wildtype value, with a biomass production of \SI{74}{\percent}.
