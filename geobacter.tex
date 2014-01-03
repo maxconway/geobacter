@@ -83,13 +83,11 @@ GDMO was chosen for the optimization step since the evolutionary basis of this a
 \subsection{Correlation, Clustering and Analysis}
 Pareto front analysis, via GDMO, can reveal tradeoffs implicit in the genotype of a species which would not be obvious from examination of any one set of knockouts, but only when many different knockouts are viewed together. For instance, {\it G. Metallireducens} was found to display a sharp cutoff beyond which it is difficult to increase the upper bound on synthesis rate.
 
-However, understanding the low level causes of the shape of the Pareto front is not necessarily simple. The first step was to use an unsupervised learning approach to identify reactions that were likely to be strongly associated with certain properties.
+However, understanding the low level causes of the shape of the Pareto front is not necessarily simple. The first step was to use an unsupervised learning approach to identify reactions that were likely to be strongly associated with certain properties. Several techniques were tested in the case study, such as such as building a decision tree to help identify interacting sets of reactions, and the heat maps shown in figure \ref{fig:heatmap}. The best analysis in a given case depends on the shape of the Pareto front, and the exact information desired. 
 
-The use of four optimization objectives means that looking at the relationship between the position in the Pareto front of an objective and its properties can be difficult. Fortunately, in this case the Pareto fronts were approximately 1 dimensional, though they passed through 3D space (the upper and lower bounds on synthesis rate, and biomass production), so it was possible to use dimensional reduction to create a single position measure. This was then used to find the correlation with the Pareto front, and to arrange the rows in the heatmaps.
+A fairly simple correlation based procedure was possible and effective in the {\it Geobacter} case study: we established a measure of phenotypic similarity to the wild type, and and looked at the correlation between this measure and gene activation; genes where this correlation laid outside normal genetic drift were identified as selected for, or against. Figure~\ref{fig:outlyinggenes} shows a graphical representation of this procedure. 
 
-Once this correlation was found, we modelled the correlation of activation of each gene with the position measure as being formed of two components: random genetic drift, and selection, whether positive or negative. The genes with a large selection component were then identified for later visualization.
-
-While this correlation based approach worked well in this case, we have also developed code to conduct a number of other, potentially more robust analyses, such as building a decision tree to help identify interacting sets of reactions.
+Establishing a single measure of phenotypic similarity to the wild type would not typically be possible in Pareto fronts with more than two dimensions, but in the case study the highly linear nature of the fronts meant that it was reasonable to use dimensional reduction.
 
 \subsection{Network Visualization}
 After identifying these reactions, a graphical visualization method was required.
