@@ -90,8 +90,9 @@ A fairly simple correlation based procedure was possible and effective in the {\
 Establishing a single measure of phenotypic similarity to the wild type would not typically be possible in Pareto fronts with more than two dimensions, but in the case study the highly linear nature of the fronts meant that it was reasonable to use dimensional reduction.
 
 \subsection{Network Visualization}
-After identifying these reactions, a graphical visualization method was required.
+Even once important reactions have been identified, understanding what these reactions mean is not easy from just their equations. We need to be able to see how they fit into the whole metabolic network --- for instance, if all of the reactions identified as important are involved in the same pathway, we might posit that disrupting this pathway directs resources towards our objective; if they are in separate pathways, this might be because they have similar products, or products that are used together. Finally, scattered and unconnected reactions could show a poor choice of significance threshold, either too strict or too lenient.
 
+Interactive network visualization was therefore the next component needed to find the underlying meaning of the shape of the pareto front. 
 The cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms, and it has a number of useful plugins. Cytoscape was connected to R via the the RCytoscape R package, XML-RPC, and the Cytoscape plugin CytoscapeRPC.
 
 By using this connection, virtually every property of the network shown in Cytoscape could be set from R. The most important method was to set how node and edge appearance to be a function of the attributes of the node or edge, and then assign those attributes to the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
