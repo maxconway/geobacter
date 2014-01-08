@@ -15,13 +15,13 @@
 
 \begin{document}
 \title{Local and Global Comparative Analysis of Metabolic Networks}
+\author{Conway, M. \and Lio, P. \and Lovley, D. \and Aklujkar, M.}
 \date{}
 \maketitle
 \begin{abstract}
-% The Abstract of the manuscript should not exceed 350 words and must be structured into separate sections: Background, the context and purpose of the study; Results, the main findings;Conclusions, brief summary and potential implications. Please minimize the use of abbreviations and do not cite references in the abstract.
+{\footnotesize
 \begin{description}
 \item[]
-
 \item[Introduction] 
 We present a novel methodology combining Multi-objective Optimization based global analysis of properties of metabolic networks with local properties. A tool implementing this methodology is presented, and then demonstrated by comparing two species of Geobacter. Multi-objective Optimization has not previously been used in this sort of comparison between models, and it reveals differences that would not be obvious using other techniques.
 
@@ -34,9 +34,10 @@ This system is demonstrated on two species in the genus {\it Geobacter}: {\it Su
 Comparing metabolic Pareto fronts is effective in identifying differences between strains, but the root causes of these differences are difficult to interpret directly. However, the tool described successfully identifies important reactions and their controlling genes, and shows these reactions in the Cytoscape network visualization package, to aid understanding of why the reactions produce the effects that they do.
 
 We find 2000 knockout vectors that are capable of enhancing electricity production in each bacteria by up to \SI{4}{\percent}. These knockout vectors are analysed to identify a number of genes with disproportionately large impacts on synthesis capability---{\it Gmet\_3497} has a particularly large effect. We compare the Pareto fronts of {\it G. Sulfurreducens} and {\it G. Metallireducens} showing that {\it Sulfurreducens} offers a higher upper limit on electricity production, but that for lower production situations, {\it Metallireducens} is superior.
-
 \end{description}
+}
 \end{abstract}
+\pagebreak
 
 \section{Background}
 % The Background section should be written in a way that is accessible to researchers without specialist knowledge in that area and must clearly state --- and, if helpful, illustrate --- the background to the research and its aims. The section should end with a brief statement of what is being reported in the article.
@@ -91,7 +92,7 @@ A fairly simple correlation based procedure was possible and effective in the {\
 Establishing a single measure of phenotypic similarity to the wild type would not typically be possible in Pareto fronts with more than two dimensions, but in the case study the highly linear nature of the fronts meant that it was reasonable to use dimensional reduction.
 
 \subsection{Network Visualization}
-Even once important reactions have been identified, understanding what these reactions mean is not easy from just their equations --- we need to be able to see how they fit into the whole metabolic network. For instance, if all of the reactions identified as important are involved in the same pathway, we might posit that disrupting this pathway directs resources towards our objective; if they are in separate pathways, this might be because they have similar products, or products that are used together. Finally, scattered and unconnected reactions could show a poor choice of significance threshold, either too strict or too lenient.
+Even once important reactions have been identified, understanding what these reactions mean is not easy from just their equations---we need to be able to see how they fit into the whole metabolic network. For instance, if all of the reactions identified as important are involved in the same pathway, we might posit that disrupting this pathway directs resources towards our objective; if they are in separate pathways, this might be because they have similar products, or products that are used together. Finally, scattered and unconnected reactions could show a poor choice of significance threshold, either too strict or too lenient.
 
 Interactive network visualization was therefore the next component needed to find the underlying meaning of the shape of the Pareto front. 
 The Cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms and it has a number of useful plugins. Cytoscape was connected to R via the the RCytoscape R package, XML-RPC, and the Cytoscape plugin CytoscapeRPC.
@@ -102,7 +103,7 @@ Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use
 
 \begin{figure}[!htb]
 \makebox[\textwidth][c]{
-\includegraphics[width=1.4\textwidth]{cytoscape-diagram}
+\includegraphics[width=0.9\paperwidth]{cytoscape-diagram}
 }
 \caption{Screenshots from the Cytoscape visualization of the {\it Geobacter Sulfurreducens} metabolic network. 
 Diamonds are reactions, circles metabolites. 
