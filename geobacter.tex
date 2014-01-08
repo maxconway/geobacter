@@ -121,15 +121,15 @@ Genetic Design by Multiobjective Optimization was able to increase the upper bou
 These increases are especially promising given that, unlike many common synthetic objectives, this electricity production is part of the core metabolic pathway being used, rather than just a byproduct. 
 
 The optimization objectives used were:
-\begin{itemize}
-	\item Maximizing biomass production - the engineered bacteria should be as healthy as possible,
-	\item Minimizing knockouts - this selects for easier to engineer genomes, and suppresses superfluous knockouts,
-	\item Maximizing Electricity Production - Flux Balance Analysis gives a range of possible values for the production of a genotype, so this involved maximizing two values:
+\begin{description}
+	\item[Maximizing biomass production ---] the engineered bacteria should be as healthy as possible,
+	\item[Minimizing knockouts ---] this selects for easier to engineer genomes, and suppresses superfluous knockouts,
+	\item[Maximizing Electricity Production ---] Flux Balance Analysis gives a range of possible values for the production of a genotype, so this involved maximizing two values:
 	\begin{itemize}
 		\item Lower bound on electricity production
 		\item Upper bound on electricity production
 	\end{itemize}
-\end{itemize}
+\end{description}
 
 GDMO allowed the generation of 2000 other Pareto optimal genomes for each {\it Geobacter} species. These genomes showed a relatively linear Pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large scale wastewater electricity production, or for better environmental tolerances in smaller applications.
 
