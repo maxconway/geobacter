@@ -97,7 +97,7 @@ Even once important reactions have been identified, understanding what these rea
 Interactive network visualization was therefore the next component needed to find the underlying meaning of the shape of the Pareto front. 
 The Cytoscape network visualization package was used as a base for the network viewing facility in this framework, since it is freely available for all major platforms and it has a number of useful plugins. Cytoscape was connected to R via the the RCytoscape R package, XML-RPC, and the Cytoscape plugin CytoscapeRPC.
 
-By using this connection, virtually every property of the network shown in Cytoscape could be set from R. The most important method was to set how node and edge appearance to be a function of the attributes of the node or edge, and then assign those attributes to the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
+By using this connection, virtually every property of the network shown in Cytoscape could be set from R. The most important method was to set node and edge appearance to be a function of the attributes of the node or edge, and then assign those attributes to the results of analyses conducted in R. This allowed the implications of results to be visualized in real time. Temporal variation of the network was also used to add an extra dimension to the information that could be shown.
 
 Figure~\ref{fig:cytoscape-screenshot} shows an example of this connection in use. A number of gene sets were identified as having outlying correlation with electricity production, and figure~\ref{fig:cytoscape-screenshot} highlights the reactions associated with these genes. 
 
@@ -131,7 +131,7 @@ The optimization objectives used were:
 	\end{itemize}
 \end{description}
 
-GDMO allowed the creation of 2000 other Pareto optimal genomes for each {\it Geobacter} species. These genomes showed a relatively linear Pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large scale wastewater electricity production, or for better environmental tolerances in smaller applications.
+GDMO allowed the creation of 2000 other Pareto optimal genomes for each {\it Geobacter} species. These genomes showed a relatively linear Pareto front, which indicates that genomes could plausibly be designed to fit individual circumstances, such as high efficiency in large-scale wastewater electricity production, or for better environmental tolerances in smaller applications.
 
 \begin{figure}[!htb]
 \makebox[\textwidth][c]{
@@ -166,7 +166,7 @@ Figure~\ref{fig:pfronts} also reveals a very clear knee point in the {\it G. Met
 		\label{fig:heatmap:met}
 	\end{subfigure}
 }
-\caption{Colour indicates knocked out. Essential genes---those with no colour, are obviously together, while nonessential genes have varying amounts of colour, according to how often they were knocked out. X-axis is genes, hierarchically clustered by Manhattan distance. Y-axis is strain, ordered by the phenotypic distance to wild type, wild type at the bottom. \label{fig:heatmap}} 
+\caption{Colour indicates knocked out. Essential genes---those with no colour, are obviously together, while non-essential genes have varying amounts of colour, according to how often they were knocked out. X-axis is genes, hierarchically clustered by Manhattan distance. Y-axis is strain, ordered by the phenotypic distance to wild type, wild type at the bottom. \label{fig:heatmap}} 
 \end{figure}
 
 The large number of Pareto optimal genomes is obviously of interest in attempting to form a more complete understanding of the implications of the metabolic network structure of the {\it Geobacter} species studied, and therefore in attempting to perform more targeted genetic design. Figure~\ref{fig:heatmap} shows these genomes heatmapped. Two features of genes were extracted: firstly, the correlation between the gene’s presence and a projection of the normalized values of the synthetic objectives down to one dimension, and secondly correlations between the activation of genes. 
